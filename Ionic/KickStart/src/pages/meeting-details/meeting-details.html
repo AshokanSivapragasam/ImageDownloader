@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf='selectedMeeting'>{{selectedMeeting.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngIf='selectedMeeting'>
+        <ion-item>
+            <ion-icon item-start large name="calendar"></ion-icon>
+            <h2>{{ selectedMeeting.title }}</h2>
+            <p>{{ selectedMeeting.startsAt }}</p>
+            <h2 item-end style='color: #007acc'>{{ selectedMeeting.durationInMinutes + ' mins' }}</h2>
+          </ion-item>
+          
+          <ion-card-content>
+            <p>{{ selectedMeeting.description }}</p>
+            <p>{{ selectedMeeting.location }}</p>
+          </ion-card-content>
+    
+          <ion-row>
+            <ion-col col-4 style="display: flex; justify-content: center;">
+              <button ion-button icon-left clear small color="secondary">
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>Join</div>
+              </button>
+            </ion-col>
+            <ion-col col-4 style="display: flex; justify-content: center;">
+              <button ion-button icon-left clear small color="primary">
+                <ion-icon name="thumbs-down"></ion-icon>
+                <ion-icon name="clock"></ion-icon>
+                <div>Tentative</div>
+              </button>
+            </ion-col>
+            <ion-col col-4 style="display: flex; justify-content: center;">
+              <button ion-button icon-left clear small color="danger">
+                <ion-icon name="thumbs-down"></ion-icon>
+                <div>Defer</div>
+              </button>
+            </ion-col>
+          </ion-row>
+  </ion-card>
+</ion-content>

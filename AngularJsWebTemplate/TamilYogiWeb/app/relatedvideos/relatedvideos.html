@@ -1,0 +1,33 @@
+<md-content class="relatedvideos-container">
+    <md-card ng-repeat="tamilMovie in tamilMovies | limitTo: 3" flex
+             style="position: relative; float: left; width: 260px; height: 370px" layout-padding>
+        <img ng-src="{{tamilMovie.ThumbnailUrl}}" class="md-card-image" alt="{{tamilMovie.Title}}"/>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{tamilMovie.Title}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <div class="md-subheader"
+                 style="white-space: nowrap; text-overflow:ellipsis; overflow:hidden; width: 228px; height: 14px">
+                <b>Genre: </b>{{tamilMovie.Genre}}
+            </div>
+            <div class="md-subheader"
+                 style="white-space: nowrap; text-overflow:ellipsis; overflow:hidden; width: 228px; height: 14px">
+                <b>Quality: </b>{{tamilMovie.Quality}}
+            </div>
+            <div class="md-subheader"
+                 style="white-space: nowrap; text-overflow:ellipsis; overflow:hidden; width: 228px; height: 14px">
+                <b>AgeRestrictions: </b>{{tamilMovie.Certificate}}<sup>{{tamilMovie.AgeRestrictions}}</sup>
+            </div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-icon-button" aria-label="followers" href="#/videoplayer/{{tamilMovie.MovieId}}">
+                <md-icon md-svg-icon="mdi:play"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="followers">
+                <md-icon md-svg-icon="mdi:download"></md-icon>
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</md-content>

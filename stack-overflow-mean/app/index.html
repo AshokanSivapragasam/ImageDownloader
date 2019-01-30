@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>stack overflow</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-cloak>
+<md-toolbar class="site-header">
+    <div class="md-toolbar-tools" ng-controller="AppCtrl">
+        <md-button class="md-icon-button" aria-label="Icon" ng-click="toggleLeft()">
+            <md-icon md-svg-icon="mdi:menu" style="fill: #e91e63"></md-icon>
+        </md-button>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Icon">
+            <md-icon md-svg-icon="mdi:stackoverflow" style="fill: #e91e63"></md-icon>
+        </md-button>
+        <h1 style="cursor: pointer;">
+            stack <span style="font-weight: bold">overflow</span>
+        </h1>
+        <span flex></span>
+        <md-input-container class="md-block" id="search">
+            <input class="md-hue-2" type="text" required>
+        </md-input-container>
+        <span flex></span>
+        <md-button class="md-icon-button md-primary md-hue-2 md-raised" aria-label="Icon" ng-click="toggleLeft()">
+            <md-icon md-svg-icon="mdi:account-plus" style="fill: #e91e63"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button md-primary md-hue-2 md-raised" aria-label="Icon" ng-click="toggleLeft()">
+            <md-icon md-svg-icon="mdi:account-key" style="fill: #e91e63"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<section class="sub-pages-position">
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <section ng-view></section>
+
+    <section class="site-footer">Angular seed app: v<span app-version></span></section>
+</section>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="app.js"></script>
+<script src="common/common.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="stackoverflow/stackoverflow.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

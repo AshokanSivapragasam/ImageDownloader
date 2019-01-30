@@ -1,0 +1,100 @@
+.charaters-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.characters-section {
+    width: 77%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 14px;
+    margin-left: 0;
+}
+
+.character-card {
+    position: relative;
+    border: 3px solid transparent; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 14px;
+}
+
+.character-card:hover {
+    border: 3px solid lightseagreen;
+    transition-duration: 2s;
+}
+
+.character-card-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.character-gravator {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 14px;
+}
+
+.character-gravator>img {
+    height:100px;
+    width:177px;
+}
+
+.character-card:hover .character-gravator>img {
+    height:114px;
+    width:195px;
+    margin: -9px;
+    transition-duration: 400ms;
+}
+
+.character-card:hover .character-card-overlay {
+    display: inline;
+    transition-duration: 200ms;
+}
+
+.character-facts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 14px;
+}
+
+.character-label {
+    color: tomato;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.character-actions-group {
+    display: flex;
+    width: 100%;
+    height: 75%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.character-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.character-actions>span {
+    margin: 0px;
+}

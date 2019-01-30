@@ -1,0 +1,92 @@
+<md-content class="serial-card-holder">
+    <div layout="row" layout-padding>
+        <div layout="column" ng-cloak flex="60">
+            <md-content layout-padding>
+                <h1>Silicon Valley<span class="md-subheader">Download complete episodes and enjoy!</span></h1>
+            </md-content>
+        </div>
+        <div layout="column" ng-cloak class="md-inline-form" flex>
+            <md-content layout-padding>
+                <form name="serialMovieForm">
+                    <div layout="row">
+                        <md-input-container class="md-block" flex="50">
+                            <label>Search your favorite serial</label>
+                            <input ng-model="serialSearchModel.searchText">
+                            <span class="hint">Type in 3 letters</span>
+                        </md-input-container>
+                    </div>
+                </form>
+            </md-content>
+        </div>
+    </div>
+
+    <div layout="row">
+        <div layout="column" ng-cloak flex="35" class="serial-image-card">
+            <md-card><img src="http://localhost/vault/images/posters/SiliconValley.jpg" class="md-card-image" style="height: 455px; width: 360px;"></md-card>
+        </div>
+        <div layout="column" ng-cloak flex>
+            <div layout="row" layout-padding style="display: flex; align-items: center; flex-direction: row">
+                <md-button class="md-icon-button" aria-label="first aired date">
+                    <md-icon md-svg-icon="mdi:clock" style="fill: magenta"></md-icon>
+                </md-button>
+                <span style="color: magenta">First aired date: 2015-Sept-27</span>
+
+                <md-button class="md-icon-button" aria-label="ratings">
+                    <md-icon md-svg-icon="mdi:star-outline" style="color: red"></md-icon>
+                </md-button>
+                <span style="color: red">Ratings: 5.75</span>
+            </div>
+            <div layout="row" layout-padding style="display: flex; justify-content: center; flex-direction: column">
+                <h4 style="color: blueviolet">About the series</h4>
+                <p>In the high-tech gold rush of modern Silicon Valley, the people most qualified to succeed are the least capable of handling success. Partially inspired by Mike Judge's own experiences as a Silicon Valley engineer in the late '80s, Silicon Valley is an American sitcom that centers around six programmers who are living together and trying to make it big in the Silicon Valley.</p>
+            </div>
+            <div layout="row" layout-padding style="display: flex; justify-content: center; flex-direction: column">
+                <h4 style="color: blueviolet">Download available?</h4>
+                <a ng-href="#">Yes! 480p quality</a>
+            </div>
+            <div layout="row" layout-padding style="display: flex; align-items: center; flex-direction: row">
+                <h4 style="color: blueviolet">Check this out</h4>
+                <md-button class="md-icon-button" aria-label="wikipedia">
+                    <md-icon md-svg-icon="mdi:wikipedia" style="fill: teal"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="twitter">
+                    <md-icon md-svg-icon="mdi:twitter" style="fill: lightblue"></md-icon>
+                </md-button>
+            </div>
+        </div>
+    </div>
+    <div class="serial-downloads-section">
+        <div layout="row" layout-padding class="serial-season-navigation-container">
+            <h4>Available episodes</h4>
+            <ul>
+                <li class="selected"><a href="#">Season#1</a></li>
+                <li><a href="#">Season#2</a></li>
+                <li><a href="#">Season#3</a></li>
+            </ul>
+        </div>
+        <div layout="row" layout-padding class="serial-list-table">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>AgeRestrictions</th>
+                    <th>Quality</th>
+                    <th>Action</th>
+                </tr>
+                <tr ng-repeat="tamilMovie in tamilMovies" style="border-top: solid 2px lightblue">
+                    <td>{{tamilMovie.Title}}</td>
+                    <td>{{tamilMovie.Genre}}</td>
+                    <td>{{tamilMovie.AgeRestrictions}}</td>
+                    <td>{{tamilMovie.Quality}}</td>
+                    <td>
+                        <md-button class="md-primary md-hue-2 md-raised" ng-href="#/videoplayer/{{tamilMovie.MovieId}}">
+                            <md-icon md-svg-icon="mdi:play"></md-icon>
+                            Watch it
+                        </md-button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</md-content>
+    

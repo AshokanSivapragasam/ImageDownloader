@@ -1,0 +1,22 @@
+<section class="delete-element-container">
+  <span>
+    <span>Position</span>
+    <span>{{ deletableElement.position }}</span>
+  </span>
+  <span>
+    <span>Name</span>
+    <span>{{ deletableElement.name }}</span>
+  </span>
+  <span>
+    <span>Weight</span>
+    <span>{{ deletableElement.weight }}</span>
+  </span>
+  <span>
+    <span>Symbol</span>
+    <span>{{ deletableElement.symbol }}</span>
+  </span>
+  <span>
+    <a routerLink="/elements">Back to list</a>
+    <button mat-raised-button (click)="deleteElement()">Delete</button>
+  </span>
+</section>

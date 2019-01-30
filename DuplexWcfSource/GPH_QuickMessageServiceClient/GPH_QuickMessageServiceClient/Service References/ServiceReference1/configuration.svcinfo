@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.WSDualHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;WSDualHttpBinding_GPH_QuickMessageService1&quot; /&gt;" bindingType="wsDualHttpBinding" name="WSDualHttpBinding_GPH_QuickMessageService1" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:8084/GPH_QuickMessageService/service&quot; binding=&quot;wsDualHttpBinding&quot; bindingConfiguration=&quot;WSDualHttpBinding_GPH_QuickMessageService1&quot; contract=&quot;ServiceReference1.GPH_QuickMessageService&quot; name=&quot;WSDualHttpBinding_GPH_QuickMessageService1&quot;&gt;&lt;identity&gt;&lt;userPrincipalName value=&quot;v-assiva@fareast.corp.microsoft.com&quot; /&gt;&lt;/identity&gt;&lt;/Data&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:8084/GPH_QuickMessageService/service&quot; binding=&quot;wsDualHttpBinding&quot; bindingConfiguration=&quot;WSDualHttpBinding_GPH_QuickMessageService1&quot; contract=&quot;ServiceReference1.GPH_QuickMessageService&quot; name=&quot;WSDualHttpBinding_GPH_QuickMessageService1&quot;&gt;&lt;identity&gt;&lt;userPrincipalName value=&quot;v-assiva@fareast.corp.microsoft.com&quot; /&gt;&lt;/identity&gt;&lt;/Data&gt;" contractName="ServiceReference1.GPH_QuickMessageService" name="WSDualHttpBinding_GPH_QuickMessageService1" />
+  </endpoints>
+</configurationSnapshot>

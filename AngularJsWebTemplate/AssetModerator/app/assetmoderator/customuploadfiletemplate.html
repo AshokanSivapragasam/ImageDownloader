@@ -1,0 +1,14 @@
+<input id="hiddenFileInputSelector" type="file" accept="images/*" layout="column" ng-file-model="imageFiles" class="ng-show" multiple>
+<md-input-container class="md-block" layout="column" flex>
+    <label>File name</label>
+    <input id="customFileInputSelector" ng-model="selectedImageFiles" type="text" ng-readonly="true" multiple>
+    <span class="hint">Bulksend input data file</span>
+</md-input-container>
+<md-input-container class="md-block" layout="column" flex="15">
+    <md-button id="uploadButton"
+           class="md-icon-button"
+           aria-label="attach_file"
+           layout="column">
+    <md-icon md-svg-icon="mdi:upload"></md-icon>
+    </md-button>
+</md-input-container>

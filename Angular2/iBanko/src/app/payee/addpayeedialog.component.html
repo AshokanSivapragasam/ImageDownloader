@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Add New Payee</h1>
+<section mat-dialog-content class="content-wrapper">
+    <form name="form" (ngSubmit)="addPayee(f)" #f="ngForm" novalidate>
+        <mat-form-field>
+            <input matInput placeholder="Payee Name" name="payeeName" [(ngModel)]="model.payeeName" #payeeName="ngModel" type="text" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Payee Bank" [formControl]="payeeBankControl" (selectionChange)="model.payeeBank = payeeBankControl.value;" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let payeeBank of payeeBanks" [value]="payeeBank">
+                {{payeeBank}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="payeeBankControl.hasError('required')">Please choose a bank</mat-error>
+        </mat-form-field>
+        <!--<mat-form-field>
+            <input matInput placeholder="Payee Bank" name="payeeBank" [(ngModel)]="model.payeeBank" #payeeBank="ngModel" type="text" required>
+        </mat-form-field>-->
+        <mat-form-field>
+            <input matInput placeholder="Account Number" [type]="passwordHidden ? 'password' : 'text'" name="payeeAccountNumber" [(ngModel)]="model.payeeAccountNumber" #payeeAccountNumber="ngModel">
+            <mat-icon matSuffix (click)="passwordHidden = !passwordHidden">{{passwordHidden ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+    </form>
+</section>
+<section mat-dialog-actions>
+  <button mat-button (click)="difuseDialog()" cdkFocusInitial>Cancel</button>
+  <button mat-button [mat-dialog-close]="model" (click)='f.ngSubmit.emit()'>Add</button>
+</section>

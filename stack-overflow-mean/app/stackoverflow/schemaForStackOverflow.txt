@@ -1,0 +1,28 @@
+table:problem
+	id
+	title
+	description
+	by = userRefId
+	when
+	viewed
+	tags
+	votes
+	
+table:user
+	id
+	displayName
+	profilePictureUri
+	firstName
+	lastName
+	passwordHash
+	
+table:answer
+	id
+	description
+	by = userRefId
+	when
+	votes
+	problemReferenceId
+	
+
+	

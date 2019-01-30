@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 Usage
+  p
+    a(href='/problems') ../problems
+    span - Get list of problems as json array
+  p
+    a(href='/problems/2') ../problem/:problemId
+    span - Get a problem by id
+  p
+    a(href='/answers?problemRefId=2') ../answers?problemRefId=:problemRefId
+    span - Get list of answers for a problem as json array
+  p
+    a(href='/answers/1') ../answers/:answerId
+    span - Get an answer by id
+  p
+    a(href='/users') ../users
+    span - Get list of users as json array
+  p
+    a(href='/users/1') ../users/:userId
+    span - Get an user by id
+
+  h2 Use cases
+  p Get list of problems by activeness
+  p Get list of problems by user
+  p Get list of problems by category
+  p Get list of problems by activeness

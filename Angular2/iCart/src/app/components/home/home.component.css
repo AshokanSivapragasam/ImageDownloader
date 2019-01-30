@@ -1,0 +1,13 @@
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-sidenav-container {
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: white;
+}

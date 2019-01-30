@@ -1,0 +1,21 @@
+li {
+    list-style: none;
+    max-width: 200px;
+    margin-bottom: 10px;
+    padding: 3px 3px 3px 0px;
+    border-radius: 6px;
+    background-color: #eeeeee;
+}
+
+li.selected {
+    color: whitesmoke;
+    background-color: #cfd8dc;
+}
+
+.badge {
+    color: whitesmoke;
+    border-radius: 6px 0 0 6px;
+    padding: 3px 13px 3px 13px;
+    margin: 0;
+    background-color: #5f7d8c;
+}

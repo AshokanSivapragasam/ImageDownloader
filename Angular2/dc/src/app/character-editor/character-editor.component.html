@@ -1,0 +1,85 @@
+<section class="character-editor-group">
+    <section class="character-editor-section">
+      <form #characterForm="ngForm" (ngSubmit)="addCharacter()">
+        <section class="block001">
+          <section class="align-left">
+            <mat-form-field class="character-name-tag">
+              <input matInput placeholder="Character Name" type="text" id="name" class="form-control" name="name" #name="ngModel" [(ngModel)]="model.name" required>
+              <mat-hint>A catchy name!</mat-hint>
+              <mat-error *ngIf="!name.valid && !name.pristine">
+                Please enter a valid character name
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="character-gravator-tag">
+              <input matInput placeholder="Character Gravator" type="text" id="gravatorUri" class="form-control" name="gravatorUri" #gravatorUri="ngModel" [(ngModel)]="model.gravatorUri" required>
+              <mat-hint>Drop or select an image!</mat-hint>
+              <mat-error *ngIf="!gravatorUri.valid && !gravatorUri.pristine">
+                Please enter a valid Gravator Uri
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="character-addressline01-tag">
+              <input matInput placeholder="Address Line" type="text" id="addressLine01" class="form-control" name="addressLine01" #addressLine01="ngModel" [(ngModel)]="model.addressLine01" required>
+              <mat-hint>A valid address!</mat-hint>
+              <mat-error *ngIf="!addressLine01.valid && !addressLine01.pristine">
+                Please enter a valid address
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="character-addressline02-tag">
+              <input matInput placeholder="Address Line" type="text" id="addressLine02" class="form-control" name="addressLine02" #addressLine02="ngModel" [(ngModel)]="model.addressLine02">
+              <mat-hint>This is optional!</mat-hint>
+            </mat-form-field>
+          </section>
+          <section class="character-gravator align-right">    
+              <img src="{{model.gravatorUri}}" alt="{{model.name}}">
+          </section>
+        </section>
+        <section class="block002">
+          <section class="align-left">
+            <mat-form-field class="character-powers-tag">
+              <mat-select placeholder="Special Abilities" id="powers" class="form-control" multiple  name="powers" #powers="ngModel" [(ngModel)]="model.powers" required>
+                <mat-option *ngFor="let power of allpowers" [value]="power">{{power}}</mat-option>
+              </mat-select>
+              <mat-hint>Select as many!</mat-hint>
+              <mat-error *ngIf="!powers.valid && !powers.pristine">
+                Please select at least one
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="character-sidekicks-tag">
+              <mat-chip-list #sidekicks>
+                <mat-chip *ngFor="let sidekick of model.sidekicks" [selectable]="selectable"
+                        [removable]="removable" (remove)="removeSidekick(sidekick)">
+                  {{sidekick}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="New sidekick..."
+                      [matChipInputFor]="sidekicks"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                      [matChipInputAddOnBlur]="addOnBlur"
+                      (matChipInputTokenEnd)="addSidekick($event)" />
+              </mat-chip-list>
+            </mat-form-field>
+            <mat-form-field class="character-villians-tag">
+                <mat-chip-list id="villians">
+                  <mat-chip *ngFor="let villian of model.villians" [selectable]="selectable"
+                            [removable]="removable" (remove)="removeVillian(villian)">
+                    {{villian}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="New villian..."
+                        [matChipInputFor]="villians"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="addOnBlur"
+                        (matChipInputTokenEnd)="addVillian($event)" />
+                </mat-chip-list>
+            </mat-form-field>
+          </section>
+        </section>
+      </form>
+    </section>
+  </section>
+  <section class="action-block-group">
+    <section class="action-block-section">
+      <button mat-raised-button color="accent" (click)="goBack()">Cancel</button>
+      <button mat-raised-button color="primary">Save</button>
+    </section>
+  </section>

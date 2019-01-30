@@ -1,0 +1,23 @@
+<section class="transaction-container">
+  <form name="form" (ngSubmit)="transferMoney()" #f="ngForm" novalidate>
+      <mat-form-field>
+          <input matInput placeholder="Payer Account" name="payerAccount" [(ngModel)]="model.payerAccount" #payerAccount="ngModel" type="text" disabled required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Select Payee" [formControl]="selectedPayeeControl" (selectionChange)="model.selectedPayee = selectedPayeeControl.value;" required>
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let selectedPayee of payees" [value]="selectedPayee">
+            {{selectedPayee.name}}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="selectedPayeeControl.hasError('required')">Please choose a payee</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Money" name="sumToBeTransferred" [(ngModel)]="model.sumToBeTransferred" #sumToBeTransferred="ngModel" type="number" required>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Remarks" name="remarks" [(ngModel)]="model.remarks" #remarks="ngModel" type="text">
+      </mat-form-field>
+      <button mat-raised-button style="width: 100%; background-color: #b01248;">TRANSFER</button>
+    </form>
+</section>

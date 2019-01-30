@@ -1,0 +1,39 @@
+<md-dialog aria-label="Login">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Login</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-icon="mdi:close" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <h2>Identify yourself! <small>Else we will fire you down</small> <md-icon md-svg-icon="mdi:emoticon-happy"></md-icon></h2>
+                <md-input-container class="md-block">
+                    <label>Username</label>
+                    <input type="text" required name="username" ng-model="LoginUserId">
+                    <div class="hint">Tell us what we should call you!</div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input type="password" required name="password" ng-model="LoginPassword">
+                    <div class="hint">Tell system your secret!</div>
+                </md-input-container>
+                <md-input-container>
+                    <md-switch ng-model="rememberMe">Remember me</md-switch>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="answer('not useful')" aria-label="Continue as guest">
+                <md-icon md-svg-icon="mdi:account-outline"></md-icon> Continue as guest
+            </md-button>
+            <md-button ng-click="answer('useful')" style="margin-right:20px;"  aria-label="Login">
+                <md-icon md-svg-icon="mdi:account-key"></md-icon> Login
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

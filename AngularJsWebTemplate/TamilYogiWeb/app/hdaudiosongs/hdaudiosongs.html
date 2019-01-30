@@ -1,0 +1,21 @@
+<div class="flexbox-parent" ng-cloak>
+    <div ng-repeat="hdaudiosong in hdaudiosongs" layout-padding layout="column" flex="20"
+         style="position: relative; float: left;">
+        <!--layout="row" layout-align="center center">-->
+        <!--<md-content class="md-block md-whiteframe-24dp" layout-padding layout="row" flex="auto"
+                    style="border-radius: 10px">-->
+        <custom-audio-skin
+                audioThumbnailUrl="hdaudiosong.thumbnailUrl"
+                audioTitle="hdaudiosong.title"
+                audioUrl="hdaudiosong.url"
+                audioType="hdaudiosong.audioType"
+                audioPlayerId="hdaudiosong.id"
+                openAudioPlayer="hdaudiosong.openPlayer"
+                canPlay="true"
+                audioPlayedPercentage="0"
+                radialprogressbardecoratorclass="'c100 p0 small dark none'"
+                customaudioskinoverlayclass="'customaudioskinoverlay none'">
+        </custom-audio-skin>
+        <!--</md-content>-->
+    </div>
+</div>

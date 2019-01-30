@@ -1,0 +1,76 @@
+<section class="charaters-group">
+    <section class="characters-section">
+        <section class="character-card" *ngFor="let character of characters">
+            <section class="character-card-overlay">
+                <section class="character-label">
+                    <span>{{character.name}}</span>
+                </section>
+                <section class="character-actions-group">    
+                    <section class="character-actions">
+                        <span>
+                            <a mat-icon-button [href]="'character-editor/' + character.id">
+                                <mat-icon aria-label="'Edit ' + character.name" color="accent">edit</mat-icon>
+                            </a>
+                        </span>
+                        <span>
+                            <a mat-icon-button [href]="'character-viewer/' + character.id">
+                                <mat-icon aria-label="'View ' + character.name" color="primary">visibility</mat-icon>
+                            </a>
+                        </span>
+                    </section>
+                </section>
+            </section>
+            <section class="character-gravator">    
+                <img src="{{character.gravatorUri}}" alt="{{character.name}}">
+            </section>
+            <!--<section class="character-facts">
+                <span class="character-name-tag">
+                    <span>Name:</span>
+                    <span>{{character.name}}</span>
+                </span>
+                <span class="charater-address-tag">
+                    <span>Address:</span>
+                    <span>
+                        <div>{{character.addressLine01}}</div>
+                        <div>{{character.addressLine02}}</div>
+                    </span>
+                </span>
+            </section>-->
+            <!--<section class="character-actions">
+                <span><button mat-raised-button>Edit</button></span>
+                <span><button mat-raised-button>View</button></span>
+            </section>-->
+        </section>
+        <section class="character-card" *ngFor="let character of characters">
+            <section class="character-card-overlay"></section>
+            <section class="character-gravator">
+                <img src="{{character.gravatorUri}}" alt="{{character.name}}" height="100px;" width="177px;">
+            </section>
+        </section>
+        <section class="character-card" *ngFor="let character of characters">
+            <section class="character-card-overlay"></section>
+            <section class="character-gravator">
+                <img src="{{character.gravatorUri}}" alt="{{character.name}}" height="100px;" width="177px;">
+            </section>
+        </section>
+    </section>
+</section>
+
+<!--<div *ngFor="let character of characters" style="float:left; width: 20%"> 
+  <h2>{{character.name}}</h2>
+  <span>Abilities
+    <ul>
+        <li *ngFor="let power of character.powers">{{power}}</li>
+    </ul>
+  </span>
+  <span>Villians
+      <ul>
+          <li *ngFor="let villian of character.villians">{{villian}}</li>
+      </ul>
+  </span>
+  <span>Sidekicks
+      <ul>
+          <li *ngFor="let sidekick of character.sidekicks">{{sidekick}}</li>
+      </ul>
+  </span>
+</div>-->

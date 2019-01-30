@@ -1,0 +1,45 @@
+<div style="display: block;">
+  <mat-accordion style="display: block;">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          View Balance
+        </mat-panel-title>
+        <mat-panel-description>
+          Balance, debts & more
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <app-viewbalance></app-viewbalance>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Payees
+        </mat-panel-title>
+        <mat-panel-description>
+          Add, manage & delete payees
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <app-payee></app-payee>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Transactions
+        </mat-panel-title>
+        <mat-panel-description>
+          Add, manage & delete transactions
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <app-transaction></app-transaction>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

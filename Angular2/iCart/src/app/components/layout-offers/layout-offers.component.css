@@ -1,0 +1,36 @@
+.offers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.offers-inner-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.offers-inner-container > span:first-child {
+    padding: 5px 20px 5px 5px;
+}
+
+.offers-inner-container > span::first-letter {
+    color: brown;
+    font-size: 14px;
+}
+
+.offers-inner-container > span {
+    padding: 5px 20px 5px 20px;
+    transition: all ease-in-out .5s;
+    border-right: solid 1px lightgrey;
+    letter-spacing: .5px;
+    font-size: 11px;
+}
+
+.offers-inner-container > span:hover {
+    background-color: lightgrey;
+    border-radius: 4px;
+}

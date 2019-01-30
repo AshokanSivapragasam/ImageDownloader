@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" />
+    <link rel="stylesheet" href="fonts/BuxtonSketch/font.css" />
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="circle.css">
+
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-cloak style="font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;">
+<md-toolbar>
+    <div class="md-toolbar-tools" ng-controller="AppCtrl">
+        <md-button class="md-icon-button" aria-label="Icon" ng-click="toggleLeft()">
+            <md-icon md-svg-icon="mdi:menu"></md-icon>
+        </md-button>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Icon">
+            <md-icon md-svg-icon="mdi:airplay"></md-icon>
+        </md-button>
+        <h1>
+            TamilYogi.tv
+        </h1>
+        <span flex></span>
+        <!--<md-button class="md-icon-button" aria-label="smile">
+            <md-icon md-svg-icon="mdi:emoticon-happy"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="frown">
+            <md-icon md-svg-icon="mdi:emoticon-sad"></md-icon>
+        </md-button>-->
+
+        <md-button class="md-primary md-hue-1 md-raised" ng-click="showAdvanced($event, 'register')" ng-hide="isidentifieduser">
+            <md-icon md-svg-icon="mdi:account-plus"></md-icon>
+            Register
+        </md-button>
+        <md-button class="md-primary md-hue-1 md-raised" ng-click="showAdvanced($event, 'login')" ng-hide="isidentifieduser">
+            <md-icon md-svg-icon="mdi:account-key"></md-icon>
+            Login
+        </md-button>
+        <md-label ng-show="isidentifieduser" class="text-transform: capitalize">
+            Hello {{siteuser | propercase}}!
+        </md-label>
+        <md-label ng-show="isidentifieduser" ng-click="isidentifieduser=false" class="text-transform: capitalize">
+            <u>Logout</u>
+        </md-label>
+    </div>
+</md-toolbar>
+<div ng-controller="AppCtrl">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+        <md-toolbar class="md-theme-indigo">
+            <div class="md-toolbar-tools">
+                <h1>What would you like to do?</h1>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="close('left')">
+                    <md-icon md-svg-icon="mdi:close"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding>
+            <md-button ng-click="goTo('tamilnewmovies', 'left')">
+                <md-icon md-svg-icon="mdi:film"></md-icon>
+                Tamil New Movies
+            </md-button>
+            <md-button ng-click="goTo('tamilbluraymovies', 'left')">
+                <md-icon md-svg-icon="mdi:film"></md-icon>
+                Tamil BluRay Movies
+            </md-button>
+            <md-button ng-click="goTo('tamildvdripmovies', 'left')">
+                <md-icon md-svg-icon="mdi:film"></md-icon>
+                Tamil DvdRip Movies
+            </md-button>
+            <md-button ng-click="goTo('tamildubbedmovies', 'left')">
+                <md-icon md-svg-icon="mdi:film"></md-icon>
+                Tamil Dubbed Movies
+            </md-button>
+            <md-button ng-click="goTo('hdvideosongs', 'left')">
+                <md-icon md-svg-icon="mdi:file-music"></md-icon>
+                Hd Video Songs
+            </md-button>
+            <md-button ng-click="goTo('hdaudiosongs', 'left')">
+                <md-icon md-svg-icon="mdi:file-music"></md-icon>
+                Hd Audio Songs
+            </md-button>
+            <md-button ng-click="goTo('hdtrailers', 'left')">
+                <md-icon md-svg-icon="mdi:filmstrip"></md-icon>
+                Hd Trailers
+            </md-button>
+            <span flex></span>
+
+            <div class="nav-buttons">
+                <md-button class="md-icon-button md-accent">
+                    <md-icon md-svg-icon="mdi:account"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button md-warn">
+                    <md-icon md-svg-icon="mdi:walk"></md-icon>
+                </md-button>
+            </div>
+        </md-content>
+    </md-sidenav>
+</div>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div ng-view></div>
+
+<!--<div>Angular seed app: v<span app-version></span></div>-->
+
+<md-toolbar>
+    <div class="md-toolbar-tools md-hue-2" ng-controller="AppCtrl">
+        <span flex></span>
+        <small>
+            <small>Angular seed app: v<span app-version></span> &copy; All rights reserved {{copyrightedyear}}</small>
+        </small>
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-bootstrap-datetimepicker/node_modules/moment/moment.js"></script>
+    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="bower_components/videogular/videogular.js"></script>
+<script src="bower_components/videogular-controls/vg-controls.js"></script>
+<script src="bower_components/videogular-overlay-play/vg-overlay-play.js"></script>
+<script src="bower_components/videogular-poster/vg-poster.js"></script>
+<script src="bower_components/videogular-buffering/vg-buffering.js"></script>
+<script src="bower_components/angular-base64/angular-base64.js"></script>
+<script type="text/javascript" src="../node_modules/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script src="app.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="vsoreleasetool/vsoreleasetool.js"></script>
+<script src="tamilnewmovies/tamilnewmovies.js"></script>
+<script src="videoplayer/videoplayer.js"></script>
+<script src="relatedvideos/relatedvideos.js"></script>
+<script src="fabsocialdiscussionspeeddial/fabsocialdiscussionspeeddial.js"></script>
+<script src="view3/view3.js"></script>
+<script src="bulksendrequest/bulksendrequest.js"></script>
+<script src="comments/comments.js"></script>
+<script src="experiments/experiments.js"></script>
+<script src="calendar/calendar.js"></script>
+<script src="hdaudiosongs/hdaudiosongs.js"></script>
+<script src="videobackground/videobackground.js"></script>
+<script src="grabthebeast/grabthebeast.js"></script>
+<script src="devtips/devtips.js"></script>
+<script src="uploadfile/uploadfile.js"></script>
+<script src="common/common.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

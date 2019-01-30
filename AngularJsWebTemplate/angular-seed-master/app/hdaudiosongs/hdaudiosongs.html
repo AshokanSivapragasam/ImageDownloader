@@ -1,0 +1,19 @@
+<div class="flexbox-parent" ng-cloak>
+    <div ng-repeat="hdaudiosong in hdaudiosongs" layout-padding layout="row" layout-align="center center">
+        <md-content class="center-align-items md-block md-whiteframe-24dp" layout-padding layout="row" flex="65" style="border-radius: 10px">
+            <span layout="column" class="md-subheader">{{hdaudiosong.title}}</span>
+            <md-button layout="column" class="md-icon-button" target="_self" ng-href="{{hdaudiosong.url}}" download="{{hdaudiosong.title+'.mp3'}}">
+                <md-icon md-svg-icon="mdi:download"></md-icon>
+            </md-button>
+            <md-button layout="column" class="md-icon-button" href="" ng-hide="hdaudiosong.openPlayer" ng-click="hdaudiosong.openPlayer=!hdaudiosong.openPlayer; playMusic(hdaudiosong.id)">
+                <md-icon md-svg-icon="mdi:play"></md-icon>
+            </md-button>
+            <md-button layout="column" class="md-icon-button" href="" ng-hide="!hdaudiosong.openPlayer" ng-click="hdaudiosong.openPlayer=!hdaudiosong.openPlayer; stopMusic(hdaudiosong.id)">
+                <md-icon md-svg-icon="mdi:stop"></md-icon>
+            </md-button>
+            <audio id="{{hdaudiosong.id}}" controls style="margin-top: 10px" ng-hide="!hdaudiosong.openPlayer">
+                <source ng-src="{{hdaudiosong.url}}" type="{{hdaudiosong.audioType}}">
+            </audio>
+        </md-content>
+    </div>
+</div>

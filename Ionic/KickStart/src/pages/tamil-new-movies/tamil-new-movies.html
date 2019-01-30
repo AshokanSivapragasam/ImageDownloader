@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Tamil New Movies</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-card *ngFor='let tamilMovie of tamilMovies'>
+    <img [src]="tamilMovie.ThumbnailUrl"/>
+    <div class="movie-card-tile-overlay">
+        <div class="movie-card-title">{{tamilMovie.Title}}</div>
+        <div class="movie-card-subtitle">{{tamilMovie.Quality}}</div>
+    </div>
+  </ion-card>
+</ion-content>

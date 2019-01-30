@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>English New Movies</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor='let englishMovie of englishMovies'>
+      <ion-item class="right">
+        <ion-avatar item-start>
+          <img [src]="englishMovie.ThumbnailUrl">
+        </ion-avatar>
+        <h2>{{englishMovie.Title}}</h2>
+        <p>November 6, 1955</p>
+      </ion-item>
+      
+      <!--<img [src]="englishMovie.ThumbnailUrl">-->
+
+      <ion-card-content>
+        <p>Design discussion on Modern Events.</p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+          </button>
+          <ion-note>3 Likes</ion-note>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center >
+          <ion-note>
+            11h ago
+          </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

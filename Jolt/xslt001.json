@@ -1,0 +1,28 @@
+{
+  "xsl:stylesheet": {
+    "@version": "1.0",
+    "@xmlns:xsl": "http://www.w3.org/1999/XSL/Transform",
+    "@exclude-result-prefixes": "msxsl mslib fo",
+    "@xmlns:fo": "http://www.w3.org/1999/XSL/Format",
+    "@xmlns:mslib": "http://microsoft.com/mip/libraries",
+    "@xmlns:msxsl": "urn:schemas-microsoft-com:xslt",
+    "xsl:output": {
+      "@indent": "yes",
+      "@method": "html"
+    },
+    "xsl:template": [
+      {
+        "@match": ".",
+        "@name": "Name001",
+        "xsl:apply-templates": {
+          "@mode": "",
+          "xsl:sort": [
+            {
+              "@case-order": "lower-first"
+            }
+          ]
+        }
+      }
+    ]
+
+}

@@ -1,0 +1,15 @@
+<section>
+  <mat-nav-list dense disableRipple>
+      <mat-list-item *ngFor="let payee of payees; index as idx">
+        <mat-icon matListIcon (click)="getPayeeInfo(payee.name)" >face</mat-icon>
+        <div (click)="getPayeeInfo(payee.name)" style="width: 97%; padding: 0 16px;">
+          <span matLine>{{payee.name}}</span>
+          <span matLine>{{payee.bank}}</span>
+        </div>
+        <button mat-icon-button (click)="deletePayee(idx)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-list-item>
+  </mat-nav-list>
+  <app-add-payee (onAddingPayee)="addPayee($event)"></app-add-payee>
+</section>

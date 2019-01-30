@@ -1,0 +1,15 @@
+<input id="fileInput" type="file" accept=".tsv" layout="column" ng-click="getFileDetails(this)" data-file-model="bulksenddatafile" class="ng-hide">
+<md-input-container class="md-block" layout="column" flex>
+    <label>File name</label>
+    <input id="textInput" ng-model="bulkSendModel.BulksendInputDataFile" type="text" ng-readonly="true">
+    <span class="hint">Bulksend input data file</span>
+</md-input-container>
+<md-input-container class="md-block" layout="column" flex="15">
+    <md-button id="uploadButton"
+           class="md-icon-button"
+           aria-label="attach_file"
+           layout="column"
+           ng-click="uploadFiles()">
+    <md-icon md-svg-icon="mdi:upload"></md-icon>
+    </md-button>
+</md-input-container>

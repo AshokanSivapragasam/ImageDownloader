@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{87F0B8A8-D5C0-4D74-8EFA-82E9EDCB8E77}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Windows.Services.AuthN.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client.S2S\IS2SAuthClient.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client.S2S\S2SAuthClient.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client.S2S\S2SAuthErrorCode.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client.S2S\S2SAuthException.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client\AppTicket.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client\CertificateFinder.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client\HttpWebClient.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client\IWebClient.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client\RpsAuthPolicy.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client\S2SClientEventInfo.cs" />
+    <Compile Include="Microsoft.Windows.Services.AuthN.Client\S2SWebRequestHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

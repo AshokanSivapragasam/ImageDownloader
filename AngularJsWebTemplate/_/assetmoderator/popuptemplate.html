@@ -1,0 +1,40 @@
+<md-dialog aria-label="Azure Cognitive Intelligence">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Azure Cognitive Intelligence</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-icon="mdi:close" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" style="width: 1000px;">
+        <div style="width: 50%; height: 350px; float: left;padding-right: 10px;">
+            <img style="margin: auto; max-width: 100%; height: 350px;" alt="{{ currentImageFile.name }}" ng-src="{{ currentImageFile.cognitiveDocument.imageurl }}">
+        </div>
+        <div style="width: 45%; height: 350px; float: left;padding-right: 10px; margin-top-20px;">
+            <h3>&mdash;image properties&mdash;</h3>
+            <div style="font-size: .8em"><b>Categories:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.categories | json}}</div>
+            <div style="font-size: .8em"><b>Captions:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.description.captions[0] | json}}</div>
+            <div style="font-size: .8em"><b>Tags:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.tags | json}}</div>
+            <div style="font-size: .8em"><b>Image format:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.metadata | json}}</div>
+            <div style="font-size: .8em"><b>Adult content:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.adult.isAdultContent}}(<i>{{currentImageFile.cognitiveDocument.contentanalysisresponse.adult.adultScore}}</i>)</div>
+            <div style="font-size: .8em"><b>Racy content:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.adult.isRacyContent}}(<i>{{currentImageFile.cognitiveDocument.contentanalysisresponse.adult.racyScore}}</i>)</div>
+            <div style="font-size: .8em"><b>Faces:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.faces[0] | json}}</div>
+            <div style="font-size: .8em"><b>Dominant color background:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.color.dominantColorBackground}}</div>
+            <div style="font-size: .8em"><b>Dominant color forground:</b> {{currentImageFile.cognitiveDocument.contentanalysisresponse.color.dominantColorForeground}}</div>
+        </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="answer('got it')" class="md-primary">
+        Got it
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

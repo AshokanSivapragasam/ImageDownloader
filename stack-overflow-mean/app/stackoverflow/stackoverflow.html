@@ -1,0 +1,143 @@
+<md-content class="question-answer-holder">
+    <h2 class="md-title">{{problem.title}}</h2>
+    <hr/>
+    <div layout="row">
+        <div layout="column" flex="65">
+            <div class="question-description-holder" layout="row" layout-padding>
+                <div class="voting-section" layout="column">{{problem.votes}}</div>
+                <div layout="column" layout-padding>
+                    <div class="question-description md-body-2" layout="row">{{problem.description}}</div>
+                    <md-chips ng-model="problem.tags" readonly="true" layout="row">
+                    </md-chips>
+                    <div class="user-info" layout="column" layout-padding>
+                        <div layout="row">
+                            <div class="user-action" layout="column" flex>
+                                <div layout="row" layout-padding>
+                                    <span layout="column">share</span>
+                                    <span layout="column">edit</span>
+                                </div>
+                            </div>
+                            <div class="user-contact-card" layout="column" flex="50">
+                                <div layout="row">
+                            <span flex="35" layout="column" class="user-icon" style="align-self: center">
+                                <img style="width: 50px; height: 44px;" ng-src="{{problem.postedBy.userProfilePictureUri}}" alt="Profile Picture"/>
+                            </span>
+                                    <div flex layout="column">
+                                        <span class="time-stamp">{{problem.when}}</span>
+                                        <span class="user-display-name">{{problem.postedBy.userDisplayName}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="answer-description-holder" layout="row" layout-padding>
+                <div layout="column">
+                    <hr/>
+                    <div layout="row">
+                        <div layout="column" flex="45" style="font-weight: bold">#{{answers.length}} answers</div>
+                        <div layout="column" flex style="width: 380px;">
+                            <md-tabs>
+                                <md-tab label="oldest"></md-tab>
+                                <md-tab label="active"></md-tab>
+                                <md-tab label="votes"></md-tab>
+                            </md-tabs>
+                        </div>
+                    </div>
+                    <div layout="row" ng-repeat="answer in problem.answers">
+                        <div layout="column">
+                            <div layout="row">
+                                <div class="voting-section" layout="column">{{answer.votes}}</div>
+                                <div layout="column" layout-padding>
+                                    <div class="answer-description" layout="row">{{answer.description}}</div>
+                                    <div class="user-info" layout="column" layout-padding>
+                                        <div layout="row">
+                                            <div class="user-action" layout="column" flex>
+                                                <div layout="row" layout-padding>
+                                                    <span layout="column">share</span>
+                                                    <span layout="column">edit</span>
+                                                </div>
+                                            </div>
+                                            <div class="user-contact-card" layout="column" flex="50">
+                                                <div layout="row">
+                                            <span flex="35" layout="column" class="user-icon" style="align-self: center">
+                                                <img style="width: 50px; height: 44px;" ng-src="{{answer.postedBy.userProfilePictureUri}}" alt="Profile Picture"/>
+                                            </span>
+                                                    <div flex layout="column">
+                                                        <span class="time-stamp">{{answer.when}}</span>
+                                                        <span class="user-display-name">{{answer.postedBy.userDisplayName}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+            <div class="leave-your-comment-holder" layout="row" layout-padding>
+                <div layout="column" flex="100">
+                    <div layout="row" flex="100" ng-if="false">
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-bold" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-italic" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-underline" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:link-variant" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:code-braces" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:image" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-align-center" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-align-justify" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-align-left" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-align-right" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-indent-decrease" style="fill: grey"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Icon">
+                            <md-icon md-svg-icon="mdi:format-indent-increase" style="fill: grey"></md-icon>
+                        </md-button>
+                    </div>
+                    <div layout="row" flex="100">
+                        <form name="commentForm" flex="100">
+                            <md-input-container class="md-block" layout="column" flex>
+                                <label>Want to answer?</label>
+                                <textarea name="description" ng-model="newAnswer.description" columns="2" md-maxlength="150" rows="5" required></textarea>
+                                <span class="hint">Please bear with us! Currently rich text editor not available.</span>
+                                <div ng-messages="commentForm.description.$error">
+                                    <div ng-message="required">Description is required.</div>
+                                    <div ng-message="md-maxlength">The name has to be less than 150 characters long.</div>
+                                </div>
+                            </md-input-container>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div layout="column" flex>
+            <div layout="row" layout-padding>
+            </div>
+        </div>
+    </div>
+</md-content>

@@ -1,0 +1,81 @@
+﻿@model VsoReleaseTool.Models.ReleasesModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReleasesModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.createdBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.createdBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.createdOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.createdOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modifiedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modifiedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modifiedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.selfViewLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.selfViewLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.webViewLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.webViewLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noOfGlobalVariables)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noOfGlobalVariables)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

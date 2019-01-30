@@ -1,0 +1,12 @@
+<section class="recommendations-container">
+  <h1 class="headline001"><span></span>RECOMMENDED COLLECTIONS<span></span></h1>
+  <section class="recommendations-grid">
+    <mat-card class="recommendation-card" *ngFor="let recommendation of recommendations">
+      <img mat-card-image [src]="recommendation.imageSrc" [alt]="recommendation.imageAlt">
+      <mat-card-content>
+        <h2>{{recommendation.title}}</h2>
+        <h3>{{recommendation.subtitle}}</h3>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</section>

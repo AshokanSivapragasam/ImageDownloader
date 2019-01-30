@@ -1,0 +1,33 @@
+<md-content>
+    <p>Asset Moderator is the bulk utility tool inspecting the pool of images using Azure Cognitive Intelligence, store the outstanding interpretations in DocumentDB, apply business rules against data-set and categorize the image-assets.</p>
+    <input type="file" ng-file-model="currentImageFiles" multiple accept="image/*" style="width: 600px;"/>
+    <md-button class="md-primary md-raised" ng-click="uploadFiles()">Inspect</md-button>
+    <md-list flex>
+    <md-subheader class="md-no-sticky">Recently assessed images</md-subheader>
+    <!--<md-list-item class="md-3-line" ng-click="null">
+      <span layout="column">#</span>
+      <div class="md-list-item-text" layout="column" flex="25">
+        Captions
+      </div>
+      <flex></flex>
+      <span layout="column" style="padding-left: 5px; padding-right: 5px; max-width: 420px;">Upload</span>
+      <flex></flex>
+      <span layout="column" style="padding-left: 5px; padding-right: 5px; max-width: 420px;">Inspect</span>
+      <flex></flex>
+      <span layout="column">Hydrate</span>
+    </md-list-item>-->
+    <md-list-item class="md-3-line" ng-repeat="imageFile in imageFiles" ng-click="null">
+      <img ng-src="{{ imageFile.url }}" class="md-avatar" alt="{{imageFile.name}}" />
+      <div class="md-list-item-text" layout="column" flex="25">
+        <p>Name: {{ imageFile.name }}</p>
+        <p>Size: {{ imageFile.size }} bytes</p>
+      </div>
+      <flex></flex>
+      <md-progress-linear md-mode="determinate" value="{{ imageFile.uploadProgressPercentage }}" style="padding-left: 5px; padding-right: 5px; max-width: 420px;"></md-progress-linear>
+      <flex></flex>
+      <md-progress-linear md-mode="determinate" value="{{ imageFile.cognitiveProgressPercentage }}" style="padding-left: 5px; padding-right: 5px; max-width: 420px;"></md-progress-linear>
+      <flex></flex>
+      <md-button class="md-primary md-raised" ng-disabled="imageFile.cognitiveProgressPercentage != 100" ng-click="showAdvanced($event, imageFile)">Show</md-button>
+    </md-list-item>
+    </md-list>
+</md-content>

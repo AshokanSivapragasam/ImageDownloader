@@ -1,0 +1,55 @@
+<div class="flexbox-parent">
+    <div ng-repeat="comment in comments" layout-padding layout="row" layout-align="center center">
+        <md-content class="md-block md-whiteframe-24dp" layout-padding flex="65" style="border-radius: 10px">
+            <div><span class="md-body-2">{{comment.By}} | <small>
+                <small class="md-theme-green" ng-bind="comment.On"></small>
+            </small></span><span><small>
+                <small> | Reply</small>
+            </small></span></div>
+            <div><span class="md-subheader">{{comment.Words}}</span></div>
+        </md-content>
+    </div>
+
+    <div layout-padding layout="row" layout-align="center center">
+        <md-content class="md-block md-whiteframe-24dp" flex="65" style="border-radius: 10px">
+            <div>
+                <span class="md-body-2" layout="row">
+                    <md-input-container class="md-block" layout="column" flex="45">
+                        <label>By</label>
+                        <input type="text" ng-model="newComment.By" name="commentedBy" required>
+
+                        <div class="hint">
+                            <small>
+                                <small current-time></small>
+                            </small>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block" layout="column" flex="45">
+                        <label>Email</label>
+                        <input type="email" ng-model="newComment.Email" name="commentedEmail" required>
+
+                        <div class="hint">
+                            <small>
+                                <small>Don't worry! We will not use or share with anyone</small>
+                            </small>
+                        </div>
+                    </md-input-container>
+                </span>
+            </div>
+            <div>
+                <span class="md-body-2" layout="row">
+                    <md-input-container class="md-block" layout="column" flex="80">
+                        <label>Words</label>
+                        <textarea ng-model="newComment.Words" name="commentedWords" columns="1" md-maxlength="150"
+                                  required></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" layout="column" flex>
+                        <md-button class="md-icon-button" ng-click="publishComment()">
+                            <md-icon md-svg-icon="mdi:send"></md-icon>
+                        </md-button>
+                    </md-input-container>
+                </span>
+            </div>
+        </md-content>
+    </div>
+</div>

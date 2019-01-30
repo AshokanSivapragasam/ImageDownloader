@@ -1,0 +1,130 @@
+.filter-container {
+    width: 500px;
+    padding: 6px;
+}
+
+.quicklinks {
+    background-color: #1b756d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quicklinks-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.quicklinks-lhs {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.quicklinks-rhs {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.quicklinks-lhs > span, .quicklinks-rhs > span {
+    padding: 12px;
+}
+
+.quicklinks-lhs > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.quicklinks-rhs > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.quicklinks-lhs > span > a, .quicklinks-rhs > span > a {
+    color: ivory;
+    font-size: 10.5px;
+    transition: all ease-in-out 300ms;
+    -webkit-transition: all ease-in-out 300ms;
+    text-decoration-line: none;
+    text-decoration-color: transparent;
+}
+
+.quicklinks-lhs > span > a:hover, .quicklinks-rhs > span > a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: aliceblue;
+}
+
+.header-container {
+    background-color: #1e8178;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-toolbar {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1e8178;
+}
+
+.left-hand-side {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right-hand-side {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.left-hand-side > span, .right-hand-side > span {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: ivory;
+}
+
+.left-hand-side > span > button, .right-hand-side > span > button {
+    font-size: 12px;
+}
+
+.right-hand-side > span > span {
+    font-size: 13px;
+}
+
+.searchBox {
+    width: 570px;
+    height: 30px;
+    border: 2px solid ivory;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.searchBox::-webkit-input-placeholder {
+    font-size: 11px;
+}

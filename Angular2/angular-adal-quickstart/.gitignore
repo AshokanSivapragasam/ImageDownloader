@@ -1,0 +1,7 @@
+.idea
+node_modules
+npm-debug.*
+app/**/*.js
+*.js.map
+dist/**/*.js
+app/services/secret.service.ts

@@ -1,0 +1,12 @@
+<div ng-controller="firstCtrl" style="border:2px solid #E75D5C; padding:5px;">
+    <h1>Parent Controller</h1>
+    <p>Emit Message : {{message}}</p>
+    <br />
+    <div ng-controller="secondCtrl" style="border:2px solid #428bca;padding:5px;">
+        <h1>Child Controller</h1>
+        <input ng-model="msg">
+        <button ng-click="handleClick(msg);">Emit</button>
+        
+        <p>Broadcast status : {{status}}</p>
+    </div>
+</div>

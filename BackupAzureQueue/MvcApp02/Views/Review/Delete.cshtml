@@ -1,0 +1,36 @@
+﻿@model MvcApp02.Models.RestaurantReview
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>RestaurantReview</legend>
+
+    <div class="display-label">ReviewerName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReviewerName)
+    </div>
+
+    <div class="display-label">Rating</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rating)
+    </div>
+
+    <div class="display-label">ReviewBody</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReviewBody)
+    </div>
+
+    @Html.HiddenFor(model => model.RestaurantId)
+
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "List", new { restaurantId = Model.RestaurantId})
+    </p>
+}

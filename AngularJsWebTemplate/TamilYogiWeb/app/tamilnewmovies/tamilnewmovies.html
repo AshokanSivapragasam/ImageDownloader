@@ -1,0 +1,82 @@
+<md-content class="movie-card-tile-holder">
+    <md-card ng-repeat="tamilMovie in tamilMovies" flex class="movie-card-tile" layout-padding>
+        <div class="ribbon">
+            <span style="background: linear-gradient(rgb(33,150,243) 0%, rgb(33,150,243) 100%);">1080p</span>
+            <div class="ribbon-stitch"></div>
+        </div>
+        <img ng-src="{{tamilMovie.ThumbnailUrl}}" class="md-card-image" alt="{{tamilMovie.Title}}"/>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{tamilMovie.Title}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <!--<md-card-content>
+            <div class="md-subheader" style="white-space: nowrap; text-overflow:ellipsis; overflow:hidden; width: 228px; height: 14px">
+                <b>Genre: </b>{{tamilMovie.Genre}}
+            </div>
+            <div class="md-subheader" style="white-space: nowrap; text-overflow:ellipsis; overflow:hidden; width: 228px; height: 14px">
+                <b>Quality: </b>{{tamilMovie.Quality}}
+            </div>
+            <div class="md-subheader" style="white-space: nowrap; text-overflow:ellipsis; overflow:hidden; width: 228px; height: 14px">
+                <b>AgeRestrictions: </b>{{tamilMovie.Certificate}}<sup>{{tamilMovie.AgeRestrictions}}</sup>
+            </div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-icon-button" aria-label="play video" href="#/videoplayer/{{tamilMovie.MovieId}}">
+                <md-icon md-svg-icon="mdi:play"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="download video">
+                <md-icon md-svg-icon="mdi:download"></md-icon>
+            </md-button>
+        </md-card-actions>-->
+        <div ng-class="'movie-card-tile-overlay'">
+            <div style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; display: table; height: 100%; width: 100%">
+                <div style="display: table-cell; vertical-align: middle">
+                    <div style="margin: 0 auto; width: 220px;">
+                        <div class="movie-basic-meta-info">
+                            <b>Genre: </b>{{tamilMovie.Genre}}
+                        </div>
+                        <div class="movie-basic-meta-info">
+                            <b>Quality: </b>{{tamilMovie.Quality}}
+                        </div>
+                        <div class="movie-basic-meta-info">
+                            <b>AgeRestrictions: </b>{{tamilMovie.Certificate}}<sup>{{tamilMovie.AgeRestrictions}}</sup>
+                        </div>
+                        <div>
+                            <md-button class="md-icon-button" aria-label="download video" href="#/videoplayer/{{tamilMovie.MovieId}}">
+                                <md-icon md-svg-icon="mdi:download" style="fill: greenyellow"></md-icon>
+                            </md-button>
+                            <md-button class="md-icon-button" aria-label="play video" href="#/videoplayer/{{tamilMovie.MovieId}}">-
+                                <md-icon md-svg-icon="mdi:play" style="fill: greenyellow"></md-icon>
+                            </md-button>
+                            <md-button class="md-icon-button" aria-label="bookmark video" href="#/videoplayer/{{tamilMovie.MovieId}}">
+                                <md-icon md-svg-icon="mdi:bookmark-plus" style="fill: greenyellow"></md-icon>
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--md-button layout="column" class="md-icon-button" href="" style="position: absolute; z-index: 1; top: 15px; left: -60px;"
+                           ng-click="pauseMusic(audioplayerid)">
+                    <md-icon md-svg-icon="mdi:pause" style="fill: #C6FF00"></md-icon>
+                </md-button>
+                <span ng-click="playMusic(audioplayerid)">
+                    <md-button layout="column" class="md-icon-button" href="" style="position: absolute; z-index: 1; top: 15px; left: 10px;"
+                               ng-click="pauseMusic(audioplayerid)" ng-hide="audioplayedpercentage > 0">
+                        <md-icon md-svg-icon="mdi:play" style="fill: #C6FF00"></md-icon>
+                    </md-button>
+                    <div ng-show="audioplayedpercentage > 0">{{audioplayedpercentage}}%</div>
+                </span>
+                <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+                <md-button layout="column" class="md-icon-button" href="" style="position: absolute; z-index: 1; top: 15px; left: 75px;"
+                           ng-click="stopMusic(audioplayerid)">
+                    <md-icon md-svg-icon="mdi:stop" style="fill: #C6FF00"></md-icon>
+                </md-button>-->
+            </div>
+        </div>
+    </md-card>
+</md-content>

@@ -1,0 +1,93 @@
+<md-content class="devtips-personal-website" layout="row" style="flex-direction: row">
+    <div class="devtips-side-header">
+        <div class="devtips-site-logo-section" layout="row" style="flex-direction: column; padding: 0px" >
+            <md-icon md-svg-icon="mdi:xbox" class="devtips-site-logo"></md-icon>
+            <span class="devtips-site-logo-title">Xbox</span>
+        </div>
+        <div class="devtips-navigation-section">
+            <ul>
+                <li ng-repeat="navigationMenuSection in navigationMenuSections" ng-click="navigateTo(navigationMenuSection.title)" ng-class="navigationMenuSection.isActive ? 'devtips-navigation-item-selected': ''"><a ng-href="{{navigationMenuSection.relativeUri}}">{{navigationMenuSection.title}}</a><md-icon md-svg-icon="mdi:chevron-left" ng-class="navigationMenuSection.isActive? 'devtips-navigation-item-selected-marker' : 'devtips-navigation-item-not-selected-marker'"></md-icon></li>
+            </ul>
+        </div>
+    </div>
+    <div layout="row" style="flex-direction: column;">
+        <div layout="row" class="content-section" id="about" style="display: block">
+            <img ng-src="{{aboutSection.posterImageSource}}" alt="" class="content-section-poster" style="position: absolute; align-items: center;"/>
+            <div class="content-section-overlay content-section-overlay-about"></div>
+            <div layout="row" class="content-focus-area-container">
+                <div class="content-focus-area-segment">
+                </div>
+                <div class="content-focus-area-segment">
+                    <div class="content-focus-area-segment-text">
+                        <p class="content-focus-area-segment-text-headline content-focus-area-segment-text-headline-about">Mistakes are always forgivable,</p>
+                        <p class="content-focus-area-segment-text-subheadline content-focus-area-segment-text-subheadline-about">...if one has the courage to admit them...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div layout="row" class="content-section" id="youtube" style="display: block">
+            <div class="content-section-overlay content-section-overlay-youtube"></div>
+            <div layout="row" class="content-focus-area-container">
+                <div class="content-focus-area-segment">
+                    <div class="content-focus-area-segment-text" md-theme="youtube">
+                        <p class="content-focus-area-segment-text-headline content-focus-area-segment-text-headline-youtube">Empty your mind,</p>
+                        <p class="content-focus-area-segment-text-subheadline content-focus-area-segment-text-subheadline-youtube">...be formless, shapeless, like water...</p>
+                        <md-button class="md-primary md-hue-1 md-raised">
+                            Watch on youtube
+                        </md-button>
+                    </div>
+                </div>
+                <div class="content-focus-area-segment">
+                    <div class="youtube-video-image-strip-container">
+                        <div class="youtube-video-image-strip" layout="row" style="flex-direction: column; align-items: center;">
+                            <div ng-repeat="youtubeVideoImage in youtubeSection.youtubeVideoImageStrips" class="youtube-video-tile">
+                                <img ng-src="{{youtubeVideoImage.source}}" alt="" class="youtube-video-image"/>
+                                <div ng-class="'youtube-video-image-overlay'">
+                                    <md-button class="md-icon-button" aria-label="play in youtube">
+                                        <md-icon md-svg-icon="mdi:youtube-play"></md-icon>
+                                    </md-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div layout="row" class="content-section" id="mentoring" style="display: block">
+            <img ng-src="{{mentoringSection.posterImageSource}}" alt="" class="content-section-poster" style="position: absolute; align-items: center;"/>
+            <div class="content-section-overlay content-section-overlay-mentoring"></div>
+            <div layout="row" class="content-focus-area-container">
+                <div class="content-focus-area-segment">
+                    <div class="content-focus-area-segment-text">
+                        <p class="content-focus-area-segment-text-headline content-focus-area-segment-text-headline-mentoring">A wise man can learn more</p>
+                        <p class="content-focus-area-segment-text-subheadline content-focus-area-segment-text-subheadline-mentoring">...from a foolish question than a fool can learn from a wise answer...</p>
+                        <md-button class="md-primary md-hue-1 md-raised">
+                            <md-icon md-svg-icon="mdi:airplane"></md-icon>
+                            Fly to Shaolin
+                        </md-button>
+                    </div>
+                </div>
+                <div class="content-focus-area-segment">
+                </div>
+            </div>
+        </div>
+        <div layout="row" class="content-section" id="vines" style="display: block">
+            <img ng-src="{{vinesSection.posterImageSource}}" alt="" class="content-section-poster" style="position: absolute; align-items: center;"/>
+            <div class="content-section-overlay content-section-overlay-vines"></div>
+            <div layout="row" class="content-focus-area-container">
+                <div class="content-focus-area-segment">
+                </div>
+                <div class="content-focus-area-segment">
+                    <div class="content-focus-area-segment-text">
+                        <p class="content-focus-area-segment-text-headline content-focus-area-segment-text-headline-vines">A wise man can learn more</p>
+                        <p class="content-focus-area-segment-text-subheadline content-focus-area-segment-text-subheadline-vines">...from a foolish question than a fool can learn from a wise answer...</p>
+                        <md-button class="md-primary md-hue-1 md-raised">
+                            <md-icon md-svg-icon="mdi:airplane"></md-icon>
+                            Fly to Shaolin
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</md-content>

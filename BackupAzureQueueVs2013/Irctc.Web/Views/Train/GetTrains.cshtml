@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Irctc.Web.Models.Train>
+
+@{
+    ViewBag.Title = "IRCTC";
+    ViewBag.Message = "Indian Railways Catering & Tourism Corporation";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<article>
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromStation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToStation)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrainName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FromStation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToStation)
+                </td>
+                <td>
+                    @Html.ActionLink("BookTicket", "BookTicket", new { Id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</article>
+
+
+<aside>
+    <h3>How to: Choose Trains</h3>
+    <ol class="round">
+        <li class="one">
+            <h5>Select the train</h5>
+            Look out for the availability and best suited by time and economy of your convenience
+        </li>
+
+        <li class="two">
+            <h5>Book your ticket</h5>
+            Hit 'BookIt' to hold your seat(s) in train and plan your trip for a specified day
+        </li>
+    </ol>
+</aside>

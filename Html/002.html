@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<style>
+            body{
+                font-family: sans-serif;
+                color: #333;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .nav-section {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                width: 100%;
+                height: 8%;
+            }
+            
+            .nav-section span {
+                margin: 14px 30px 14px 14px;
+            }
+            
+            .nav-section span a {
+                color: #757575;
+                padding: 10px;
+                font-size: 13px;
+                text-decoration: none;
+            }
+            
+            .nav-section span a:hover {
+                text-decoration: underline;
+            }
+            
+            .nav-section span button {
+                color: ivory;
+                background-color: #4585f2;
+                border: 1px solid #4585f2;
+                border-radius: 2px;
+                font-size: 14px;
+                font-weight: 300;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            
+            .main-section {
+                display: flex;
+                height: 85%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .logo-section {
+                padding: 10px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            
+            .search-box {
+                width: 600px;
+                height: 40px;
+                padding: 10px;
+                font-size: 20px;
+                font-weight: 200;
+                border: 1px solid #d4d4d4;
+                box-shadow: 2px 2px 2px #d4d4d4;
+            }
+            
+            .search-box:focus {
+                border: 1px solid #c4c4c4;
+                outline: none;
+                color: #333;
+                box-shadow: 3px 3px 3px #d4d4d4;
+            }
+            
+            .action-buttons-section {
+                margin: 30px;
+            }
+            
+            .action-buttons-section button {
+                letter-spacing: 0.5px;
+                word-spacing: 1px;
+                padding: 13px;
+                margin-right: 10px;
+                color: #757575;
+                background-color: #f2f2f2;
+                border: 1px solid #f2f2f2;
+                font-size: 13px;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            .action-buttons-section button:hover {
+                border: 1px solid #d4d4d4;
+                color: #333;
+                box-shadow: 2px 2px 2px #d4d4d4;
+            }
+            
+            .lang-section {
+                font-size: 12px;
+            }
+            
+            .lang-section span a {
+                padding: 0;
+                text-decoration-line: none;
+                margin: 4px;
+            }
+            
+            .lang-section span a:hover {
+                text-decoration-line: underline;
+            }
+            
+            .footer-section {
+                width: 100%;
+                background-color: #f2f2f2;
+                height: 7%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .business-float-left {
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+            
+            .terms-float-right {
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: flex-end;
+            }
+            
+            .business-float-left a,.terms-float-right a {
+                padding: 10px;
+                color: #757575;
+                text-decoration-line: none;
+                margin: 4px;
+            }
+            
+            .business-float-left a:hover,.terms-float-right a:hover {
+                color: #333;
+                text-decoration-line: underline;
+            }
+		</style>
+	<head>
+	<body>
+        <section class="nav-section">
+            <span>
+                <a href="#">Gmail</a>
+                <a href="#">Images</a>
+                <button>Sign in</button>
+            </span>
+        </section>
+        <section class="main-section">
+            <section class="logo-section">
+                <img src="https://doodles.google.co.in/d4g/images/splashes/featured.png" width="380px" height="160px">
+            </section>
+            <input type="text" class="search-box">
+            <section class="action-buttons-section">
+                <button>Google Search</button>
+                <button>I'm Feeling Lucky</button>
+            </section>
+            <section class="lang-section">
+                <span>Google.co.in offered in: <a href="#">हिन्दी</a> <a href="#">বাংলা</a> <a href="#">తెలుగు</a> <a href="#">मराठी</a> <a href="#">தமிழ்</a> <a href="#">ગુજરાતી</a> <a href="#">ಕನ್ನಡ</a> <a href="#">മലയാളം</a> <a href="#">ਪੰਜਾਬੀ</a></span>
+            </section>
+        </section>
+        <section class="footer-section">
+            <span class="business-float-left">
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">About</a>
+            </span>
+            <span class="terms-float-right">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Settings</a>
+            </span>
+        </section>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+{
+	"$schema" : "http://json-schema.org/draft-04/schema#",
+
+	"type" : "object",
+
+	"properties" : {
+		"id" : {
+			"$ref" : "#/definitions/id"
+		},
+		"season_name" : {
+			"$ref" : "#/definitions/season_name"
+		},
+		"user_id" : {
+			"$ref" : "#/definitions/foreign_key_id"
+		},
+		"coins" : {
+			"$ref" : "#/definitions/currency"
+		},
+		"bonus_coins" : {
+			"$ref" : "#/definitions/currency"
+		},
+		"created_at" : {
+			"$ref" : "#/definitions/timestamp"
+		},
+		"updated_at" : {
+			"$ref" : "#/definitions/timestamp"
+		}
+		"Subscribers" : {
+			"type" : "array",
+			"items" : {
+				"oneOf" : [{
+						"coin" : {
+							"type" : "array",
+							"items" : {
+								"oneOf" : [{
+										"$ref" : "#/definitions/currency"
+									}
+								]
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+
+	"required" : [
+		"id",
+		"season_name",
+		"user_id",
+		"coins",
+		"bonus_coins",
+		"created_at",
+		"updated_at"
+	],
+
+	"additionalProperties" : false,
+	"definitions" : {
+		"id" : {
+			"type" : "integer",
+			"minimum" : 1,
+			"exclusiveMinimum" : false
+		},
+
+		"foreign_key_id" : {
+			"$ref" : "#/definitions/id"
+		},
+
+		"season_name" : {
+			"type" : "string",
+			"minLength" : 1,
+			"maxLength" : 1,
+			"pattern" : "^[A-T]{1,1}$"
+		},
+
+		"currency" : {
+			"type" : "integer"
+		},
+
+		"shares" : {
+			"type" : "integer"
+		},
+
+		"username" : {
+			"type" : "string",
+			"minLength" : 1,
+			"maxLength" : 19,
+			"pattern" : "^[^ ]{1,19}$"
+		},
+
+		"name" : {
+			"type" : "string",
+			"minLength" : 1,
+			"maxLength" : 64,
+			"pattern" : "^[A-Za-z0-9][A-Za-z0-9_\\- ]*$"
+		},
+
+		"email" : {
+			"type" : "string",
+			"format" : "email"
+		},
+
+		"timestamp" : {
+			"type" : "string",
+			"format" : "date-time"
+		}
+	}
+}

@@ -1,0 +1,528 @@
+<html>
+<body>
+<form action="https://subscriptionmanagementdev.cloudapp.net/Home/EditCommunication" id="SMform" method="post" name="SMform" novalidate="novalidate">
+<!--<input name="__RequestVerificationToken" type="hidden" value="K7r-oVXFFNk_dcIc0grCQr5i1-Qk4p2aaZ1aFTMfqd72RL2MMF62DhnYkNvYgoPZxxPEmp79tft4IV3mBhkGlqNrmi01">-->
+<input name="__RequestVerificationToken" type="hidden" value="0Jo2JvZKMyysmHdz8gHT_9KoXsHu9Y-wVw2PoIDb_tViPX-rZuiKWrC-1xxFCA-BcX6uZJb2WMy2OrKmT6VAKqMhQDM1" />
+<!--<input name="__RequestVerificationToken" type="hidden" value="5sBUTNylLfm_bCleErn2DUuh7ddytQPpTlwGoZ0eNxwQzU0xLhwh_P53RMivjnHClP7avnNFohMZnGpO4A4AxGPhuA78UFP8y1H7QBYY6As1">-->
+    <div class="form-horizontal">
+        <hr>
+        
+
+        <div style="width: 600px; min-width: 600px; max-width: 600px; min-height: 350px">
+
+            <div class="row" style="display:none">
+                <div class="Column">
+                    <label for="SubscriptionId">SubscriptionId</label>
+                </div>
+                <div class="Column">
+                    <input style="width: 400px;" data-val="true" data-val-number="The field SubscriptionId must be a number." data-val-required="The SubscriptionId field is required." id="SubscriptionId" name="SubscriptionId" type="text" value="125950">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="Column">
+                    <label for="EmailPublisher">Email Publisher</label>
+                </div>
+                <div class="Column">
+                    <select data-val="true" data-val-number="The field EmailPublisherId must be a number." data-val-required="The EmailPublisherId field is required." id="EmailPublisherId" name="EmailPublisherId" style="width: 400px;"><option selected="selected" value="1">Salesforce Marketing Cloud</option>
+</select>
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','Indicates the list of marketing email providers available')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+
+                <script type="text/javascript">
+                    var e = document.getElementById("EmailPublisherId");
+                    for (i = 0; i < e.length; i++) {
+                        var x = '1';
+
+                        if (e.options[i].value == x) {
+                            e.selectedIndex = i;
+                            break;
+                        }
+                    }
+                </script>
+            </div>
+            <div class="row" style="display:block">
+                <div class="Column">
+                    <label for="AccountID">AccountID</label>
+                </div>
+                <div class="Column">
+                    <input style="width: 400px;" data-val="true" data-val-number="The field AccountID must be a number." data-val-required="* AccountID cannot be empty" id="AccountID" name="AccountID" type="text" value="10460681">
+                    <span class="field-validation-valid ErrorLabels" data-valmsg-for="AccountID" data-valmsg-replace="true"></span>
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','Indicates the Business Unit used for the Subscription.Once mapped Susbcription will be visible to users belonging to that BU only')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+            </div>
+            <div class="row">
+                <div class="Column">
+                    <label for="SubscriptionType">Subscription Type</label>
+                </div>
+                <div class="Column">
+
+                    LimitedProgram
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','<b>Newsletter</b>: A periodic or reoccuring 1:1 communication sent via e-mail to external customers, containing useful information on Microsoft products, programs, special offers, and/or technical information based on a customer’s original request to subscribe.<br /><b>Limited Program</b>: Supports a Microsoft promotional program that contains a series of discrete communications about a specific topic (product beta event, partner program, etc.) and is initiated when a customer registers or signs up for the program or service.<br /><b> Transactional Triggered (TBN)</b>: Any e-mail communication to be sent as the result of a customer or marketer action, whether immediate or queued by a system based on business rules.')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="Column">
+                    <label for="SubscriptionCategory">Subscription Category</label>
+                </div>
+                <div class="Column" style="word-wrap:break-word">
+                    <div>test_1</div>
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','A logical grouping of Subscriptions (Newsletter, Limited Programs, etc.) for a given Series, Brand, or intended Marketing Audience. Many Subscriptions may roll-up to a Subscription Category also known in the former PENS solution as a “Communication Class” (i.e TechNet)')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="Column">
+                    <label for="SubscriptionName">Subscription Name</label>
+
+                </div>
+                <div class="Column">
+                    <input style="width: 400px;" data-val="true" data-val-length="The field Subscription Name must be a string with a maximum length of 100." data-val-length-max="100" data-val-required="* Subscription Name cannot be empty" id="SubscriptionName" name="SubscriptionName" type="text" value="test me">
+                    <span class="field-validation-valid ErrorLabels" data-valmsg-for="SubscriptionName" data-valmsg-replace="true"></span>
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','A series of reoccuring emails (Newsletter, United Program, etc.) with similar targeted marketing message or branding. Many Subscriptions may roll-up to a Subscription Category. Also known in the former PENS solution as a \“Communication Name\” (i.e. TechNet - US FY09 Edition)')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="Column">
+                    <label for="SubscriptionDesc">Subscription Description</label>
+                </div>
+                <div class="Column">
+                    <textarea style="width: 400px;height:100px" cols="20" data-val="true" data-val-length="The field Subscription Description must be a string with a maximum length of 1000." data-val-length-max="1000" data-val-required="* Subscription Description cannot be empty" id="SubscriptionDesc" name="SubscriptionDesc" rows="2">test_1</textarea>
+                    <span class="field-validation-valid ErrorLabels" data-valmsg-for="SubscriptionDesc" data-valmsg-replace="true"></span>
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','A textual description of the Subscription Name for reference purposes')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="Column">
+                    <label for="SubscriptionLanguage">Subscription Language</label>
+                </div>
+                <div class="Column">
+                    <select id="SubscriptionLanguageId" name="SubscriptionLanguageId" style="width: 400px;"><option value="1">Arabic - Saudi Arabia</option>
+<option value="2">Bulgarian - Bulgaria</option>
+<option value="3">Chinese - Hong Kong</option>
+<option value="4">Chinese - People's Republic of China</option>
+<option value="5">Chinese - Taiwan</option>
+<option value="6">Croatian - Croatia</option>
+<option value="7">Czech - Czech Republic</option>
+<option value="8">Danish - Denmark</option>
+<option value="9">Dutch - Belgium</option>
+<option value="10">Dutch - Netherlands</option>
+<option value="11">English - Australia</option>
+<option value="12">English - Canada</option>
+<option value="13">English - Hong Kong</option>
+<option value="14">English - India</option>
+<option value="15">English - Indonesia</option>
+<option value="16">English - Ireland</option>
+<option value="17">English - Malaysia</option>
+<option value="18">English - New Zealand</option>
+<option value="19">English - Republic of the Philippines</option>
+<option value="20">English - Singapore</option>
+<option value="21">English - South Africa</option>
+<option value="22">English - U.A.E.</option>
+<option value="23">English - United Kingdom</option>
+<option selected="selected" value="24">English - United States</option>
+<option value="25">Estonian - Estonia</option>
+<option value="26">Finnish - Finland</option>
+<option value="27">French - Belgium</option>
+<option value="28">French - Canada</option>
+<option value="29">French - France</option>
+<option value="30">French - North Africa</option>
+<option value="31">French - Switzerland</option>
+<option value="32">German - Austria</option>
+<option value="33">German - Germany</option>
+<option value="34">German - Switzerland</option>
+<option value="35">Greek - Greece</option>
+<option value="36">Hebrew - Israel</option>
+<option value="37">Hindi - India</option>
+<option value="38">Hungarian - Hungary</option>
+<option value="39">Icelandic - Iceland</option>
+<option value="40">Italian - Italy</option>
+<option value="41">Italian - Switzerland</option>
+<option value="42">Japanese - Japan</option>
+<option value="43">Kazakh - Kazakhstan</option>
+<option value="44">Korean - Korea</option>
+<option value="45">Latvian - Latvia</option>
+<option value="46">Lithuanian - Lithuania</option>
+<option value="47">Norwegian - Norway (Bokml)</option>
+<option value="48">Polish - Poland</option>
+<option value="49">Portuguese - Brazil</option>
+<option value="50">Portuguese - Portugal</option>
+<option value="51">Romanian - Romania</option>
+<option value="52">Russian - Russia</option>
+<option value="53">Serbian (Latin) - Serbia</option>
+<option value="54">Slovak - Slovakia</option>
+<option value="55">Slovenian - Slovenia</option>
+<option value="56">Spanish - Latin America</option>
+<option value="57">Spanish - Mexico</option>
+<option value="58">Spanish - Spain (Modern Sort)</option>
+<option value="59">Swedish - Sweden </option>
+<option value="60">Turkish - Turkey</option>
+<option value="61">Ukrainian - Ukraine</option>
+<option value="62">Thai - Thailand</option>
+<option value="63">English - Middle East</option>
+</select>
+
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','Indicates the primary language used for the Subscription for reference')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+
+                <script type="text/javascript">
+                    var htmlElement = document.getElementById("SubscriptionLanguageId");
+                    for (idx = 0; idx < htmlElement.length; idx++) {
+                        var subscriptionLanguageText = 'English - United States';
+
+                        if (htmlElement.options[idx].text.trim() == subscriptionLanguageText.trim()) {
+                            htmlElement.selectedIndex = idx;
+                            break;
+                        }
+                    }
+                </script>
+            </div>
+
+            <div class="row">
+                <div class="Column">
+                    <label for="SubscriptionCountry">Subscription Country</label>
+                </div>
+                <div class="Column">
+                    <select id="SubscriptionCountryId" name="SubscriptionCountryId" style="width: 400px;"><option value="1">Andorra</option>
+<option value="2">United Arab Emirates</option>
+<option value="3">Afghanistan</option>
+<option value="4">Antigua and Barbuda</option>
+<option value="5">Anguilla</option>
+<option value="6">Albania</option>
+<option value="7">Armenia</option>
+<option value="8">Netherlands Antilles</option>
+<option value="9">Angola</option>
+<option value="10">Antarctica</option>
+<option value="11">Argentina</option>
+<option value="12">American Samoa</option>
+<option value="13">Austria</option>
+<option value="14">Australia</option>
+<option value="15">Aruba</option>
+<option value="16">Azerbaijan</option>
+<option value="17">Bosnia and Herzegovina</option>
+<option value="18">Barbados</option>
+<option value="19">Bangladesh</option>
+<option value="20">Belgium</option>
+<option value="21">Burkina Faso</option>
+<option value="22">Bulgaria</option>
+<option value="23">Bahrain</option>
+<option value="24">Burundi</option>
+<option value="25">Benin</option>
+<option value="26">Bermuda</option>
+<option value="27">Brunei</option>
+<option value="28">Bolivia</option>
+<option value="29">Brazil</option>
+<option value="30">Bahamas</option>
+<option value="31">Bhutan</option>
+<option value="32">Bouvet Island</option>
+<option value="33">Botswana</option>
+<option value="34">Belarus</option>
+<option value="35">Belize</option>
+<option value="36">Canada</option>
+<option value="37">Cocos (Keeling) Islands</option>
+<option value="38">Congo (DRC)</option>
+<option value="39">Central African Republic</option>
+<option value="40">Congo</option>
+<option value="41">Switzerland</option>
+<option value="42">Côte d'Ivoire</option>
+<option value="43">Cook Islands</option>
+<option value="44">Chile</option>
+<option value="45">Cameroon</option>
+<option value="46">China</option>
+<option value="47">Colombia</option>
+<option value="48">Costa Rica</option>
+<option value="49">Cuba</option>
+<option value="50">Cape Verde</option>
+<option value="51">Christmas Island</option>
+<option value="52">Cyprus</option>
+<option value="53">Czech Republic</option>
+<option value="54">Germany</option>
+<option value="55">Djibouti</option>
+<option value="56">Denmark</option>
+<option value="57">Dominica</option>
+<option value="58">Dominican Republic</option>
+<option value="59">Algeria</option>
+<option value="60">Ecuador</option>
+<option value="61">Estonia</option>
+<option value="62">Egypt</option>
+<option value="63">Western Sahara</option>
+<option value="64">Eritrea</option>
+<option value="65">Spain</option>
+<option value="66">Ethiopia</option>
+<option value="67">Finland</option>
+<option value="68">Fiji Islands</option>
+<option value="69">Falkland Islands (Islas Malvinas)</option>
+<option value="70">Micronesia</option>
+<option value="71">Faroe Islands</option>
+<option value="72">France</option>
+<option value="73">Gabon</option>
+<option value="74">Grenada</option>
+<option value="75">Georgia</option>
+<option value="76">French Guiana</option>
+<option value="77">Ghana</option>
+<option value="78">Gibraltar</option>
+<option value="79">Greenland</option>
+<option value="80">Gambia</option>
+<option value="81">Guinea</option>
+<option value="82">Guadeloupe</option>
+<option value="83">Equatorial Guinea</option>
+<option value="84">Greece</option>
+<option value="85">South Georgia and the South Sandwich Islands</option>
+<option value="86">Guatemala</option>
+<option value="87">Guam</option>
+<option value="88">Guinea-Bissau</option>
+<option value="89">Guyana</option>
+<option value="90">Hong Kong SAR</option>
+<option value="91">Heard and McDonald Islands</option>
+<option value="92">Honduras</option>
+<option value="93">Croatia</option>
+<option value="94">Haiti</option>
+<option value="95">Hungary</option>
+<option value="96">Indonesia</option>
+<option value="97">Ireland</option>
+<option value="98">Israel</option>
+<option value="99">India</option>
+<option value="100">British Indian Ocean Territory</option>
+<option value="101">Iraq</option>
+<option value="102">Iran</option>
+<option value="103">Iceland</option>
+<option value="104">Italy</option>
+<option value="105">Jamaica</option>
+<option value="106">Jordan</option>
+<option value="107">Japan</option>
+<option value="108">Kenya</option>
+<option value="109">Kyrgyzstan</option>
+<option value="110">Cambodia</option>
+<option value="111">Kiribati</option>
+<option value="112">Comoros</option>
+<option value="113">St. Kitts And Nevis</option>
+<option value="114">North Korea</option>
+<option value="115">Korea</option>
+<option value="116">Kuwait</option>
+<option value="117">Cayman Islands</option>
+<option value="118">Kazakhstan</option>
+<option value="119">Laos</option>
+<option value="120">Lebanon</option>
+<option value="121">St. Lucia</option>
+<option value="122">Liechtenstein</option>
+<option value="123">Sri Lanka</option>
+<option value="124">Liberia</option>
+<option value="125">Lesotho</option>
+<option value="126">Lithuania</option>
+<option value="127">Luxembourg</option>
+<option value="128">Latvia</option>
+<option value="129">Libya</option>
+<option value="130">Morocco</option>
+<option value="131">Monaco</option>
+<option value="132">Moldova</option>
+<option value="133">Madagascar</option>
+<option value="134">Marshall Islands</option>
+<option value="135">F.Y.R.O. Macedonia</option>
+<option value="136">Mali</option>
+<option value="137">Myanmar</option>
+<option value="138">Mongolia</option>
+<option value="139">Macau SAR</option>
+<option value="140">Northern Mariana Islands</option>
+<option value="141">Martinique</option>
+<option value="142">Mauritania</option>
+<option value="143">Montserrat</option>
+<option value="144">Malta</option>
+<option value="145">Mauritius</option>
+<option value="146">Maldives</option>
+<option value="147">Malawi</option>
+<option value="148">Mexico</option>
+<option value="149">Malaysia</option>
+<option value="150">Mozambique</option>
+<option value="151">Namibia</option>
+<option value="152">New Caledonia</option>
+<option value="153">Niger</option>
+<option value="154">Norfolk Island</option>
+<option value="155">Nigeria</option>
+<option value="156">Nicaragua</option>
+<option value="157">Netherlands</option>
+<option value="158">Norway</option>
+<option value="159">Nepal</option>
+<option value="160">Nauru</option>
+<option value="161">Niue</option>
+<option value="162">New Zealand</option>
+<option value="163">Oman</option>
+<option value="164">Panama</option>
+<option value="165">Peru</option>
+<option value="166">French Polynesia</option>
+<option value="167">Papua New Guinea</option>
+<option value="168">Philippines</option>
+<option value="169">Pakistan</option>
+<option value="170">Poland</option>
+<option value="171">St. Pierre and Miquelon</option>
+<option value="172">Pitcairn Islands</option>
+<option value="173">Puerto Rico</option>
+<option value="174">Portugal</option>
+<option value="175">Palau</option>
+<option value="176">Paraguay</option>
+<option value="177">Qatar</option>
+<option value="178">Reunion</option>
+<option value="179">Romania</option>
+<option value="180">Russia</option>
+<option value="181">Rwanda</option>
+<option value="182">Saudi Arabia</option>
+<option value="183">Solomon Islands</option>
+<option value="184">Seychelles</option>
+<option value="185">Sudan</option>
+<option value="186">Sweden</option>
+<option value="187">Singapore</option>
+<option value="188">St. Helena</option>
+<option value="189">Slovenia</option>
+<option value="190">Svalbard and Jan Mayen Islands</option>
+<option value="191">Slovakia</option>
+<option value="192">Sierra Leone</option>
+<option value="193">San Marino</option>
+<option value="194">Senegal</option>
+<option value="195">Somalia</option>
+<option value="196">Suriname</option>
+<option value="197">Sao Tome and Principe</option>
+<option value="198">El Salvador</option>
+<option value="199">Syria</option>
+<option value="200">Swaziland</option>
+<option value="201">Turks and Caicos Islands</option>
+<option value="202">Chad</option>
+<option value="203">French Southern Territories</option>
+<option value="204">Togo</option>
+<option value="205">Thailand</option>
+<option value="206">Tajikistan</option>
+<option value="207">Tokelau</option>
+<option value="208">Turkmenistan</option>
+<option value="209">Tunisia</option>
+<option value="210">Tonga</option>
+<option value="211">East Timor</option>
+<option value="212">Turkey</option>
+<option value="213">Trinidad and Tobago</option>
+<option value="214">Tuvalu</option>
+<option value="215">Taiwan</option>
+<option value="216">Tanzania</option>
+<option value="217">Ukraine</option>
+<option value="218">Uganda</option>
+<option value="219">United Kingdom</option>
+<option value="220">United States Minor Outlying Islands</option>
+<option value="221">United States</option>
+<option value="222">Uruguay</option>
+<option value="223">Uzbekistan</option>
+<option value="224">Vatican City</option>
+<option value="225">St. Vincent and the Grenadines</option>
+<option value="226">Venezuela</option>
+<option value="227">Virgin Islands (British)</option>
+<option value="228">Virgin Islands (US)</option>
+<option value="229">Vietnam</option>
+<option value="230">Vanuatu</option>
+<option value="231">Wallis and Futuna Islands</option>
+<option value="232">Samoa</option>
+<option value="233">Yemen</option>
+<option value="234">Mayotte</option>
+<option value="235">Serbia and Montenegro</option>
+<option value="236">South Africa</option>
+<option value="237">Zambia</option>
+<option value="238">Zimbabwe</option>
+</select>
+
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','Indicates the primary country or geographic region that will be targeted by the Subscription for reference purposes')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+
+                <script type="text/javascript">
+                    var htmlElement = document.getElementById("SubscriptionCountryId");
+                    for (idx = 0; idx < htmlElement.length; idx++) {
+                        var subscriptionCountryText = 'Andorra';
+
+                        if (htmlElement.options[idx].text.trim() == subscriptionCountryText.trim()) {
+                            htmlElement.selectedIndex = idx;
+                            break;
+                        }
+                    }
+                </script>
+            </div>
+
+
+            <div class="row">
+                <div class="Column">
+                    <label for="IsActive">Active</label>
+                </div>
+                <div class="Column">
+                    <div>
+                                <div style="float:left;width:30%">
+                                    <input checked="checked" data-val="true" data-val-number="The field IsActiveId must be a number." data-val-required="The IsActiveId field is required." id="IsActiveId" name="IsActiveId" type="radio" value="1">  Yes
+                                </div>
+                                <div style="float:left;width:30%">
+                                    <input id="IsActiveId" name="IsActiveId" type="radio" value="0"> No
+                                </div>
+
+
+                    </div>
+                </div>
+                <div style="float:left;margin-left:-140px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','Indicates whether the Subscription is currently being used for Email Sends. Active Subscriptions are searchable in ExactTarget.')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="Column">
+                    <label for="DisplayOnProfileCenter">Display on Profile Center</label>
+                </div>
+                <div class="Column">
+                    <div>
+                                <div style="float:left;width:30%">
+                                    <input checked="checked" data-val="true" data-val-number="The field DisplayOnProfileCenterId must be a number." data-val-required="The DisplayOnProfileCenterId field is required." id="DisplayOnProfileCenterId" name="DisplayOnProfileCenterId" type="radio" value="1"> Yes
+                                </div>
+                                <div style="float:left;width:30%">
+                                    <input id="DisplayOnProfileCenterId" name="DisplayOnProfileCenterId" type="radio" value="0"> No
+                                </div>
+                    </div>
+                </div>
+                <div style="float:left;margin-left:-140px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','Indicates whether the Subscription is viewable to Customers on the Profile/Subscription Center.')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="Column">
+                    <label for="SubscriptionOwner">Subscription owner</label>
+                </div>
+                <div class="Column">
+                    <input data-val="true" data-val-regex="* Provided Email is in invalid format" data-val-regex-pattern="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" data-val-required="* Subscription Owner cannot be empty" id="SubscriptionOwner" maxlength="50" name="SubscriptionOwner" style="width: 400px;" type="text" value="v-kukhus@microsoft.com">
+                    <span class="field-validation-valid ErrorLabels" data-valmsg-for="SubscriptionOwner" data-valmsg-replace="true"></span>
+                    <br>
+                    <br>
+
+                    <div>
+                        <input type="submit" value="Update" class="BlueButtonStyle">
+                        &nbsp; &nbsp;
+                        <input type="button" value="Cancel" class="GrayStyle" onclick="ConfirmationBox();">
+
+                    </div>
+
+                </div>
+                <div style="float:left;margin-left:25px">
+                    <img src="/Images/ToolTip.jpg" onmouseover="hoverdiv(event, 'divTooltip','Indicates the Owner of the Subscription that will be searchable for association to an Email Send or Profiler. This can be the Campaign Owner or a person setting-up the Subscription with email format \“someone@example.com\”')" onmouseout="hoverdiv(event, 'divTooltip')">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

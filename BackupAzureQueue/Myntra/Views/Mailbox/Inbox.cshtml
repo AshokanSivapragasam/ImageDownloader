@@ -1,0 +1,285 @@
+﻿@model List<Myntra.Models.AccountEmailsModel>
+
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+	body { font-family: Segoe UI; font-size: 0.8em; color: black}
+	table { font-family: Segoe UI; border: solid 2px teal; border-collapse: collapse; font-size: 0.83em}
+	th { border: 1px solid black; text-align: left}
+	td { border: 1px solid black; }
+	table tr.header { background: #02add3; color: #FEFAFE; align: left}
+	.NoDiscrepancy { background: #87c540}
+	.LessDiscrepancyLevel { background: #FFFFB2}
+	.MediumDiscrepancyLevelWithinThreshold { background: #FFC4C4}
+	.HighDiscrepancyLevelAboveThreshold { background: #FF4D4D}
+    .emailItem:hover {
+        background-color: #e7f1f5;
+        border:2px dotted #ffeda3;
+    }
+</style>
+
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+<section class="inboxView">
+    <h2>Click on any email item to read the complete email</h2>
+     @Html.AntiForgeryToken()
+     @Html.ValidationSummary(true)
+    <div style="height: 430px;overflow:auto; width: 48%; border:2px solid #a7e591; float: left;">
+        <h2>Email Items</h2>
+        @{var counter = 0;}
+        @foreach (var accountEmail in Model)
+        {
+            counter += 1;
+            <div id="@counter" class="emailItem">
+                <b>From:</b> @Html.ValueForModel(accountEmail.EmailSenderFirstName) (@Html.ValueForModel(accountEmail.SenderEmailAddress))<br/>
+                <b>Subject:</b> @Html.ValueForModel(accountEmail.EmailSubject)<br/>
+                <b>Recipients:</b> @Html.ValueForModel(accountEmail.ReceiverEmailAddresses)<br/>
+             </div>
+            <hr style="color: #FFC4C4" /><br/>
+        }
+    </div>
+    <div style="height: 430px;overflow:auto; width: 48%; border:2px solid #a7e591; float: right;">
+        <p>
+            <b>From:</b> Ashok (ashok@gmail.com)<br/>
+            <b>Subject:</b> This is 1st test mail<br/>
+            <b>Recipients:</b> ashok@gmail.com,vinoth@gmail.com,prasanna@gmail.com<br/>
+        </p>
+
+        Hi All,
+		        <br/>
+		        <br/>
+		        <b>
+			        <u>Geneva:</u>
+		        </b>
+		        <br/>
+        It is a database solution that downloads the useful data from other data systems and organizes/ manages those data in a Data-Mart. For example,<br/>
+			        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- NotSent<br/>
+			        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Bounces<br/>
+			        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Unsub<br/>
+			        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- SendJobs<br/>
+			        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- SendLog<br/>
+		        <br/>
+
+		        <b>
+			        <u>Salesforce Marketing Cloud (SFMC):</u>
+		        </b>
+		        <br/>
+        It is a web based solution that manages the whole cycle of email and email-associated features like,<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Subscriptions/ Unsubcriptions<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Planned notifications<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Email tracking abilities<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Email customizations<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Automation<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Segmentation of users by fields<br/>
+		        <br/>
+
+		        <b>
+			        <u>Genesis:</u>
+		        </b>
+		        <br/>
+        It is a database solution that exposes the APIs to create any communications (<i>Newsletters, Limited-Programs,...</i>) and is considered to be primary source for all communications.<br/>
+		        <br/>
+
+		        <b>
+			        <u>Subscription Management:</u>
+		        </b>
+		        <br/>
+        It is a web based solution that allows end users to create any communications (<i>Newsletters, Limited-Programs,...</i>) via Genesis APIs and the data will be shared across all data systems (<i>Genesis, SFMC</i>) to keep them in sync with each other.<br/>
+		        <br/>
+		        <br/>
+        The purpose of this email is to confirm & handshake that data in all of our data systems involved are in sync with each other.
+		        <br/>
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Genesis<br/>
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Geneva<br/>
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Salesforce Marketing Cloud<br/>
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Subscription Management<br/>
+		        <br/>
+
+		        <table>
+			        <tr class='header'>
+				        <td colspan='2' align='center' style='font-size: 1.3em; font-weight: bold'>COLOR CODES</td>
+			        </tr>
+			        <tr class='header'>
+				        <th>Color code</th>
+				        <th>Description</th>
+			        </tr>
+			        <tr>
+				        <td class='NoDiscrepancy'>Code green</td>
+				        <td>No action</td>
+			        </tr>
+			        <tr>
+				        <td class='LessDiscrepancyLevel'>Code light yellow</td>
+				        <td>Discrepancies are at ignorable level</td>
+			        </tr>
+			        <tr>
+				        <td class='MediumDiscrepancyLevelWithinThreshold'>Code light red</td>
+				        <td>Discrepancies are considerably high but within threshold</td>
+			        </tr>
+			        <tr>
+				        <td class='HighDiscrepancyLevelAboveThreshold'>Code red</td>
+				        <td>Attention! Discrepancy level exceeded threshold</td>
+			        </tr>
+		        </table>
+		        <br/>
+
+		        <table>
+			        <tr class='header'>
+				        <td colspan='3' align='center' style='font-size: 1.3em; font-weight: bold'>THRESHOLD LEVELS</td>
+			        </tr>
+			        <tr class='header'>
+				        <th>Threshold value</th>
+				        <th>Severity</th>
+				        <th>Description</th>
+			        </tr>
+			        <tr class='LessDiscrepancyLevel'>
+				        <td>1-400</td>
+				        <td>Low & ignorable</td>
+				        <td>Discrepancies within this band can be ignorable</td>
+			        </tr>
+			        <tr class='MediumDiscrepancyLevelWithinThreshold'>
+				        <td>401-10000000</td>
+				        <td>Medium, within threshold</td>
+				        <td>Discrepancies within this band needs attention; but within threshold level</td>
+			        </tr>
+			        <tr class='HighDiscrepancyLevelAboveThreshold'>
+				        <td> &gt;10000000</td>
+				        <td>High</td>
+				        <td>Discrepancies in this band are not desirable and needs attention</td>
+			        </tr>
+		        </table>
+		        <br/>
+
+		        <table>
+			        <tr class='header'>
+				        <td colspan='2' align='center' style='font-size: 1.3em; font-weight: bold'>STATUS OF TASKS</td>
+			        </tr>
+			        <tr class='header'>
+				        <th>TaskName</th>
+				        <th>ProcessingStatus</th>
+			        </tr>
+			        <tr>
+				        <td>Genesis_DataPull</td>
+				        <td>Completed</td>
+			        </tr>
+			        <tr>
+				        <td>SFMC_DataPull</td>
+				        <td>Completed</td>
+			        </tr>
+			        <tr>
+				        <td class='HighDiscrepancyLevelAboveThreshold'>Geneva_DataPull</td>
+				        <td class='HighDiscrepancyLevelAboveThreshold'>NotDoneYet</td>
+			        </tr>
+			        <tr>
+				        <td>SM_DataPull</td>
+				        <td>Completed</td>
+			        </tr>
+		        </table>
+		        <br/>
+		        <table>
+			        <tr class='header'>
+				        <td colspan='4' align='center' style='font-size: 1.3em; font-weight: bold'>VARIANCE REPORT (SALESFORCE MARKETING CLOUD VS GENEVA)</td>
+			        </tr>
+			        <tr class='header'>
+				        <th>Attribute name</th>
+				        <th>Salesforce Marketing Cloud</th>
+				        <th>Geneva</th>
+				        <th>Difference (Salesforce Marketing Cloud - Geneva)</th>
+			        </tr>
+			        <tr>
+				        <td>Subscription Subscribed</td>
+				        <td align='center'>47644452</td>
+				        <td align='center'>0</td>
+				        <td align='center' class='HighDiscrepancyLevelAboveThreshold'>47644452</td>
+			        </tr>
+			        <tr>
+				        <td>Subscription Distinct Subscribed</td>
+				        <td align='center'>24238430</td>
+				        <td align='center'>0</td>
+				        <td align='center' class='HighDiscrepancyLevelAboveThreshold'>24238430</td>
+			        </tr>
+			        <tr>
+				        <td>Subscription Distinct Subscribed And Contactable</td>
+				        <td align='center'>3645462</td>
+				        <td align='center'>0</td>
+				        <td align='center' class='MediumDiscrepancyLevelWithinThreshold'>3645462</td>
+			        </tr>
+			        <tr>
+				        <td>Standalone Subscribed</td>
+				        <td align='center'>151174082</td>
+				        <td align='center'>0</td>
+				        <td align='center' class='HighDiscrepancyLevelAboveThreshold'>151174082</td>
+			        </tr>
+			        <tr>
+				        <td>Standalone Distinct Subscribed</td>
+				        <td align='center'>131391790</td>
+				        <td align='center'>0</td>
+				        <td align='center' class='HighDiscrepancyLevelAboveThreshold'>131391790</td>
+			        </tr>
+			        <tr>
+				        <td>Standalone Distinct Subscribed And Contactable</td>
+				        <td align='center'>131227389</td>
+				        <td align='center'>0</td>
+				        <td align='center' class='HighDiscrepancyLevelAboveThreshold'>131227389</td>
+			        </tr>
+			        <tr>
+				        <td>Answer Total</td>
+				        <td align='center'>269591128</td>
+				        <td align='center'>0</td>
+				        <td align='center' class='HighDiscrepancyLevelAboveThreshold'>269591128</td>
+			        </tr>
+		        </table>
+		        <br/>
+		        <table>
+			        <tr class='header'>
+				        <td colspan='7' align='center' style='font-size: 1.3em; font-weight: bold'>VARIANCE REPORT (SALESFORCE MARKETING CLOUD VS GENESIS VS SUBSCRIPTION MANAGEMENT)</td>
+			        </tr>
+			        <tr class='header'>
+				        <th>Attribute name</th>
+				        <th>Salesforce Marketing Cloud</th>
+				        <th>Genesis</th>
+				        <th>Subscription Management</th>
+				        <th>Difference #1 (ET - Genesis)</th>
+				        <th>Difference #1 (SM - ET)</th>
+				        <th>Difference #1 (SM - Genesis)</th>
+			        </tr>
+			        <tr>
+				        <td>Communication Total</td>
+				        <td align='center'>5624</td>
+				        <td align='center'>5219</td>
+				        <td align='center'>5219</td>
+				        <td align='center' class='MediumDiscrepancyLevelWithinThreshold'>405</td>
+				        <td align='center' class='MediumDiscrepancyLevelWithinThreshold'>-405</td>
+				        <td align='center' class='NoDiscrepancy'>0</td>
+			        </tr>
+			        <tr>
+				        <td>Communication Active</td>
+				        <td align='center'>1186</td>
+				        <td align='center'>799</td>
+				        <td align='center'>799</td>
+				        <td align='center' class='LessDiscrepancyLevel'>387</td>
+				        <td align='center' class='LessDiscrepancyLevel'>-387</td>
+				        <td align='center' class='NoDiscrepancy'>0</td>
+			        </tr>
+			        <tr>
+				        <td>CommunicationClass Total</td>
+				        <td align='center'>889</td>
+				        <td align='center'>730</td>
+				        <td align='center'>730</td>
+				        <td align='center' class='LessDiscrepancyLevel'>159</td>
+				        <td align='center' class='LessDiscrepancyLevel'>-159</td>
+				        <td align='center' class='NoDiscrepancy'>0</td>
+			        </tr>
+		        </table>
+		        <br/>
+        Please reach out to Email Interchange Engineering Team (eiengind@microsoft.com)
+		        <br/>
+		        <br/>
+        Thanks,<br/>
+        EI Engg Team<br/>
+    </div>
+</section>

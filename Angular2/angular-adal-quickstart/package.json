@@ -1,0 +1,43 @@
+{
+  "name": "angular2-adal-quickstart",
+  "version": "2.0.0",
+  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "e2e": "",
+    "lint": "",
+    "lite": "lite-server",
+    "test": "tsc",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
+  },
+  "keywords": [],
+  "author": "Ranveer Aggarwal <ranveerag2arwal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@types/adal": "^1.0.22",
+    "adal-angular": "^1.0.14",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.5.6",
+    "systemjs": "0.19.40",
+    "core-js": "^2.4.1",
+    "zone.js": "^0.8.11",
+    "ng2-adal": "^2.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranveeraggarwal/ng2-adal-QuickStart.git"
+  }
+}

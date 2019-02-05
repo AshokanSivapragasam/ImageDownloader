@@ -1,0 +1,113 @@
+music-zune-player {
+    text-align: center;
+    padding: 100px 0 0 0;
+    color: #fff;
+    background: ivory;
+}
+
+.container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+#disc {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    left: 0;
+    right: -23px;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#disc.playing {
+    -webkit-animation: rotation 18s infinite linear;
+    animation: rotation 18s infinite linear;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#disc.paused {
+    -webkit-animation: rotation 18s infinite linear;
+    animation: rotation 18s infinite linear;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+#spindle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 130px;
+    opacity: 0;
+}
+
+#spindle.playing {
+    opacity: 1;
+    transform-origin: 100% 10%;
+    -webkit-animation: arc 1s 1 cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: arc 1s 1 cubic-bezier(0.215, 0.610, 0.355, 1);
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+#spindle.paused {
+    opacity: 1;
+    transform-origin: 100% 10%;
+    -webkit-animation: arc 1s 1 cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: arc 1s 1 cubic-bezier(0.215, 0.610, 0.355, 1);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes arc {
+    from {
+        -webkit-transform: rotateZ(-90deg);
+        transform: rotateZ(-90deg);
+    }
+    to {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes arc {
+    from {
+        -webkit-transform: rotateZ(-90deg);
+        transform: rotateZ(-90deg);
+    }
+    to {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}

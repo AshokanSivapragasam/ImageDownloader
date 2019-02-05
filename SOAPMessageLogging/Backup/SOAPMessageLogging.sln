@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientSubscriber", "ClientSubscriber\ClientSubscriber.csproj", "{6E99B695-F38D-4722-9CC8-CEDF439685C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldWebService", "HelloWorldWebService\HelloWorldWebService.csproj", "{A1E39D69-588B-4B39-9388-FA6E1B72623E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapMessageUtility", "SoapMessageUtility\SoapMessageUtility.csproj", "{315B4FE9-08DC-44C9-BE9E-D93604DB8A70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E99B695-F38D-4722-9CC8-CEDF439685C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E99B695-F38D-4722-9CC8-CEDF439685C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E99B695-F38D-4722-9CC8-CEDF439685C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E99B695-F38D-4722-9CC8-CEDF439685C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E39D69-588B-4B39-9388-FA6E1B72623E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E39D69-588B-4B39-9388-FA6E1B72623E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E39D69-588B-4B39-9388-FA6E1B72623E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E39D69-588B-4B39-9388-FA6E1B72623E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315B4FE9-08DC-44C9-BE9E-D93604DB8A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315B4FE9-08DC-44C9-BE9E-D93604DB8A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315B4FE9-08DC-44C9-BE9E-D93604DB8A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315B4FE9-08DC-44C9-BE9E-D93604DB8A70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

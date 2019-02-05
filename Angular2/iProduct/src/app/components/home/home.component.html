@@ -1,0 +1,9 @@
+<mat-sidenav-container (click)="isOpened=!isOpened">
+  <mat-sidenav mode="side" [opened]='isOpened'>
+    <a routerLink="/"></a>
+    <a routerLink="/addStudent"></a>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

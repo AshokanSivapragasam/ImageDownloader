@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Attribute" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Attribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.RequestTypeSourceMapEntry" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.RequestPacket" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAIAAAAIAAAAAAAgEEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.RequestList" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.RequestSchedule" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.RequestScheduleCollection" Collapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.DataEndpoint" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAIAIAAAAQAAAAAgAQAAAAAAAEAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.ColumnDefinition" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.FilterDefinition" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.InterchangeMessage" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAAAgAgQAgAAoAABBIAAAAAAAAAAEAIAAIAQAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.ThreadManagementLookupEntry" Collapsed="true">
+    <Position X="19" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEgAAAABAAAAAAAAEAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.CurrentThreadManagementEntry" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.ResourceDetails" Collapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAgAAAAAAAAEAAAAQAAAAAAAAAIAAAAAAQAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.CommunicationData" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAQCgAAQhAMAAAgEAABAIAIAIAAAoQAAgAAAAIIA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.EventRequestData">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAEAAAAEAAAAAAAAAAAAABAAAAAAQAAAAA=</HashCode>
+      <FileName>EventRequestData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.EventSubscriber" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAgAAAAEoAAAIABAACAAAAAAAAAAAAgAAAAgIA=</HashCode>
+      <FileName>EventSubscriber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.GenericSubscriber" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GenericSubscriber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.LimitedProgramSubscriber" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAgAAAQAAAAAAASAAAAAwAAAAAAAACACQAAAAg=</HashCode>
+      <FileName>LimitedProgramSubscriber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.PartnerTriggerSubscriber" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAAAAAAAAAIAAQAAAAAQAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>PartnerTriggerSubscriber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Request" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kIEIBBECigABEgAJAmAAIAERAAAAQFEAhAAhQICGQAI=</HashCode>
+      <FileName>Request.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.RequestBase" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RequestBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.SubscriberBase" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>SubscriberBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.TagmTriggerSubscriber" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAgAAAQAAAAAAASAAAAAwAAAAAAAACACAAAAAg=</HashCode>
+      <FileName>TagmTriggerSubscriber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.ThreadLookupData" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>ThreadLookupData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.TriggeredRequest" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAIAAUAAgAFEAAJEEAAIBAAAAAAAUFAAAAgAYCEAAA=</HashCode>
+      <FileName>TriggeredRequest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.TriggeredRequestBase" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAAAAEAAAAAAAAABAAAAAAAQAAAAAgAYAAAAA=</HashCode>
+      <FileName>TriggeredRequestBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IResponseDispatcherClient&lt;TRequestObject&gt;" Collapsed="true">
+    <Position X="19" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IResourceManagement" Collapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IResourceManagementData" Collapsed="true">
+    <Position X="17.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IActivity&lt;TRequestObject&gt;" Collapsed="true">
+    <Position X="12" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IExecutionAdapter&lt;TRequestObject&gt;" Collapsed="true">
+    <Position X="15.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IRequestPacket&lt;TRequestObject&gt;" Collapsed="true">
+    <Position X="12" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAQAAAAAAAAAAAAAgEEAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IConfigurationReader" Collapsed="true">
+    <Position X="13.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IRequestStateManager" Collapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IPollEngine" Collapsed="true">
+    <Position X="17.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAIAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Interfaces\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Interfaces.IRequest" Collapsed="true">
+    <Position X="19" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIAAEAAgABEAAJAEAAIAAAAAAQAEEAAAAAAACEAAA=</HashCode>
+      <FileName>Interfaces\IRequest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ResourceOperation" Collapsed="true">
+    <Position X="19" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ActivityStatus" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ResourceManagementServiceType" Collapsed="true">
+    <Position X="17.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ObjectIdentifier" Collapsed="true">
+    <Position X="19" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.RequestStatus" Collapsed="true">
+    <Position X="13.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAIAAACA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ComponentType" Collapsed="true">
+    <Position X="13.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAACAAAACAAAACAAAAAAAIgECAEBAEAAAAAAAgQAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.DataStoreName" Collapsed="true">
+    <Position X="17.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEIaAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.RequestDirection" Collapsed="true">
+    <Position X="19" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.MessageLevel" Collapsed="true">
+    <Position X="17.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.FilterType" Collapsed="true">
+    <Position X="15.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.SeverityType" Collapsed="true">
+    <Position X="12" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ObjectType" Collapsed="true">
+    <Position X="12" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ConnectionType" Collapsed="true">
+    <Position X="15.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAICAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ProcessStatus" Collapsed="true">
+    <Position X="15.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAECAAAAAAABAAgAAAAQAAAAAAFQAQAAAAAAAAABA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.Process" Collapsed="true">
+    <Position X="13.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.RequestExecutionStatus" Collapsed="true">
+    <Position X="12" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAACBAAABAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.EmailType" Collapsed="true">
+    <Position X="12" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators_V2.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.TriggeredSendType" Collapsed="true">
+    <Position X="17.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators_V2.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.TriggerDataSource" Collapsed="true">
+    <Position X="15.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAEAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>Enumerators\Enumerators_V2.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.EmailInterchangeResult" Collapsed="true">
+    <Position X="19" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAgAAAAAAAAEAAABAAkAAAIAEAAAAAAEAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators_V2.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.QueueDomain" Collapsed="true">
+    <Position X="17.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAkAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerators\Enumerators_V2.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.ErrorSource" Collapsed="true">
+    <Position X="13.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAIAAAAAABAAAAAEAAAA=</HashCode>
+      <FileName>Enumerators\ErrorSource.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.RequestType" Collapsed="true">
+    <Position X="15.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAEgIACIAiAAAAgAAACAABAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enumerators\RequestType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core.Enumerators.TransactionType" Collapsed="true">
+    <Position X="13.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enumerators\TransactionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

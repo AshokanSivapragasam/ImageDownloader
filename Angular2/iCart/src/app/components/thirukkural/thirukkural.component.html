@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <span>Thirukkural</span>
+</mat-toolbar>
+
+<div class="thirukkural-container">
+  <section>
+    <mat-table #table [dataSource]="dataSource">
+      <ng-container matColumnDef="number" style="width: 20px;">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.number}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="section">
+        <mat-header-cell *matHeaderCellDef> Section </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.section}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="chapter">
+        <mat-header-cell *matHeaderCellDef> Chapter </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.chapter}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="kural">
+        <mat-header-cell *matHeaderCellDef> Kural </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.kural[0]}} <br> {{element.kural[1]}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+    </mat-paginator>
+  </section>
+</div>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/otf")
+    @Styles.Render("~/bundles/materialdesign")
+
+    <link href="~/Content/w3.css" rel="stylesheet" />
+    <link href="~/Content/themes/materialdesign/w3-theme-light-green.css" rel="stylesheet" />
+</head>
+<body class="w3-theme-light">
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" id="myHeader">
+        <div class="w3-center">
+            <div class="w3-padding-24">
+                <img class="w3-card-8" src="~/Content/themes/base/images/TamilYogi.jpg" />
+            </div>
+        </div>
+    </header>
+    <br />
+    <div class="w3-center w3-theme">
+        @Html.Partial("_loginPartial")
+    </div>
+    <div class="w3-topnav w3-large w3-theme w3-center">
+        <nav>
+            @Html.ActionLink("Home", "Index", "Home", null, null) | 
+            @Html.ActionLink("Restaurants", "Index", "Restaurant", null, null) | 
+            @Html.ActionLink("Reviews", "List", "Review", new { restaurantId = 1 }, null)
+        </nav>
+    </div>
+    <div class="main-content" style="padding: 10px; width: 50%; margin: auto">
+        @RenderBody()
+    </div>
+</body>
+</html>

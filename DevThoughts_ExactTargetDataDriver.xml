@@ -1,0 +1,11 @@
+<DriverFile>
+	<RegexPatterns>
+		<Regex Pattern='Number of communications \(Genesis.dbo.Communication\)   -\s*(\d+)' Variable='TotalNumberOfCommunications'/>
+		<Regex Pattern='Number of active communications \(Genesis.dbo.Communication\)   -\s*(\d+)' Variable='TotalNumberOfActiveCommunications'/>
+		<Regex Pattern='Number of communication-categories \(Genesis.dbo.CommunicationClass\)  -\s*(\d+)' Variable='TotalNumberOfCommunicationClass'/>
+	</RegexPatterns>
+	<SqlCommands>
+		INSERT INTO ExactTargetSummary (TotalNumberOfCommunications, TotalNumberOfActiveCommunications, TotalNumberOfCommunicationClass, ReportCreatedDatetime, RecordInsertedDatetime) 
+		VALUES ('{TotalNumberOfCommunications}', '{TotalNumberOfActiveCommunications}', '{TotalNumberOfCommunicationClass}', getutcdate(), getutcdate())
+	</SqlCommands>
+</DriverFile>

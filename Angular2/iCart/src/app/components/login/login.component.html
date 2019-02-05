@@ -1,0 +1,23 @@
+<section class="imagebackgroundcontainer">
+  <img src="~/../assets/SpectaclesBackground001.jpg" class="imagebackground">
+</section>
+
+<section class="screenoverlay"></section>
+
+<section class="foreground-container">
+  <form [formGroup]="loginForm" (ngSubmit)="challengeIdentity()" class="foreground">
+    <mat-form-field color="primary">
+      <input matInput type="email" placeholder="Email" formControlName="email"/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" formControlName="password">
+      <mat-icon matSuffix (click)="hide = !hide" [svgIcon]="hide? 'eye' : 'eye-off'"></mat-icon>
+    </mat-form-field>
+
+    <span style="padding: 10px; margin: 10px;">
+      <button mat-raised-button color="primary" style="margin: 10px; float: left !important;">Login</button>
+      <button mat-raised-button color="warn" style="margin: 10px; float: right !important;" (click)="register()">Register</button>
+    </span>
+  </form>
+</section>

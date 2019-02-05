@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-ionic","cordova-plugin-geofence","cordova-plugin-geolocation","cordova-sms-plugin","cordova-plugin-add-swift-support","cordova-plugin-compat","es6-promise-plugin","cordova-plugin-splashscreen","cordova-plugin-whitelist","cordova-plugin-device","cordova-plugin-ionic-webview","cordova-plugin-ionic-keyboard"]}

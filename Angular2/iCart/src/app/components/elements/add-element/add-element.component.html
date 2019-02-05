@@ -1,0 +1,34 @@
+<form [formGroup]="addElementForm" (ngSubmit)="addElement()" class="add-element-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Position</mat-label>
+    <input matInput formControlName="position">
+    <mat-icon matSuffix>dehaze</mat-icon>
+    <mat-hint></mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+    <mat-icon matSuffix>dehaze</mat-icon>
+    <mat-hint></mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Weight</mat-label>
+    <input matInput formControlName="weight">
+    <mat-icon matSuffix>dehaze</mat-icon>
+    <mat-hint></mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Symbol</mat-label>
+    <input matInput formControlName="symbol">
+    <mat-icon matSuffix>dehaze</mat-icon>
+    <mat-hint></mat-hint>
+  </mat-form-field>
+
+  <span>
+    <a routerLink="/elements">Back to list</a>
+    <button mat-raised-button>Add</button>
+  </span>
+</form>

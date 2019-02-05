@@ -1,0 +1,32 @@
+Infosys.Encoding.dll
+	- IEncode
+	   -- Encode()
+ 	   -- Decode()
+	- Base64EncodingClass : IEncode
+	   -- Encode()
+ 	   -- Decode()
+	- SubstitutionEncodingClass : IEncode
+	   -- Encode()
+ 	   -- Decode()
+ 	- Utf8EncodingClass : IEncode
+	   -- Encode()
+ 	   -- Decode()
+
+<spring>
+	<object name='base64encoder' type='Infosys.Encoding.Base64EncodingClass'/>
+	<object name='substitutionencoder' type='Infosys.Encoding.SubstitutionEncodingClass'/>
+	<object name='utf8encoder' type='Infosys.Encoding.Utf8EncodingClass'/>
+
+	<object name='customerAencoder' type='Infosys.Encoding.Base64EncodingClass'/>
+	<object name='customerBsubstitutionencoder' type='Infosys.Encoding.SubstitutionEncodingClass'/>
+	<object name='customerCutf8encoder' type='Infosys.Encoding.Utf8EncodingClass'/>
+
+	<object name='customerXencoder' type='Infosys.Encoding.SubstitutionEncodingClass'/>
+</spring>
+
+public void DoEncode(string encodingType)
+{
+	ApplicationContext appContext = (IEncode)ApplicationContext.GetContext(encodingType + 'encoder');
+    appContext.Encode();
+    appContext.Decode();	
+}

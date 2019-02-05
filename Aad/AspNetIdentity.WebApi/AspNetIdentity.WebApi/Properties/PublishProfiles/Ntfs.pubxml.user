@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Usr\Ashok\IIS\AspIdentityWebApi</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AspNetIdentity.WebApi.dll">
+      <publishTime>10/05/2018 18:59:12</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Cors.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Jwt.dll">
+      <publishTime>08/19/2014 14:42:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/SendGrid.SmtpApi.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/SendGridMail.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>11/02/2014 16:40:08</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>10/05/2018 13:42:02</publishTime>
+    </File>
+    <File Include="bin/Thinktecture.IdentityModel.Core.dll">
+      <publishTime>12/05/2014 14:58:06</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/05/2018 13:42:01</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/05/2018 18:59:13</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

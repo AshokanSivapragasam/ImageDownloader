@@ -1,0 +1,45 @@
+<md-dialog aria-label="Login">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Login</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-icon="mdi:close" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <h2>Welcome!
+                    <small>Join us here</small>
+                    <md-icon md-svg-icon="mdi:emoticon-happy"></md-icon>
+                </h2>
+                <md-input-container class="md-block">
+                    <label>Username</label>
+                    <input type="text" required name="username" ng-model="LoginUserId">
+
+                    <div class="hint">Tell us what we should call you!</div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input type="password" required name="password" ng-model="LoginPassword">
+
+                    <div class="hint">Tell system your secret!</div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Confirm password</label>
+                    <input type="password" required name="confirmpassword" ng-model="ConfirmLoginPassword">
+
+                    <div class="hint">Retype your secret!</div>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="register(LoginUserId, LoginPassword)" style="margin-right:20px;" aria-label="Register">
+                <md-icon md-svg-icon="mdi:account-plus"></md-icon>
+                Register
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

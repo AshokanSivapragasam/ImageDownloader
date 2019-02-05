@@ -1,0 +1,33 @@
+{
+	"$schema" : "http://json-schema.org/draft-04/schema#",
+	"properties" : {
+		"template" : {
+			"items" : {
+				"properties" : {
+					"element" : {
+						"items" : {
+							"properties" : {
+								"@name" : {
+									"type" : "string"
+								},
+								"value-of" : {
+									"properties" : {
+										"select" : {
+											"type" : "string"
+										}
+									},
+									"type" : "object"
+								}
+							},
+							"type" : "object"
+						},
+						"type" : "array"
+					}
+				},
+				"type" : "object"
+			},
+			"type" : "array"
+		}
+	},
+	"type" : "object"
+}

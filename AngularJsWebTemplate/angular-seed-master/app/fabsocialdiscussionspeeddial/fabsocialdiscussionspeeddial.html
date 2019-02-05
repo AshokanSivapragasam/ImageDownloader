@@ -1,0 +1,57 @@
+<div layout="column" ng-cloak>
+    <md-content class="md-padding" layout="column">
+        <div class="lock-size" layout="row" layout-align="center center">
+            <md-fab-speed-dial md-open="isOpen" md-direction="{{selectedDirection}}"
+                               ng-class="selectedMode">
+                <md-fab-trigger>
+                    <md-button aria-label="menu" class="md-fab md-warn">
+                        <md-icon md-svg-src="mdi:menu"></md-icon>
+                    </md-button>
+                </md-fab-trigger>
+                <md-fab-actions>
+                    <md-button aria-label="Twitter" href="http://www.twitter.com" class="md-fab md-raised md-mini">
+                        <md-icon md-svg-src="mdi:twitter" aria-label="Twitter"></md-icon>
+                    </md-button>
+                    <md-button aria-label="Facebook" href="http://www.facebook.com" class="md-fab md-raised md-mini">
+                        <md-icon md-svg-src="mdi:facebook" aria-label="Facebook"></md-icon>
+                    </md-button>
+                    <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini md-disabled">
+                        <md-icon md-svg-src="mdi:hangouts" aria-label="Google Hangout"></md-icon>
+                    </md-button>
+                    <md-button aria-label="Google Plus" class="md-fab md-raised md-mini md-disabled">
+                        <md-icon md-svg-src="mdi:google-plus" aria-label="Google Plus"></md-icon>
+                    </md-button>
+                    <md-button aria-label="Pinterest" href="http://www.pinterest.com" class="md-fab md-raised md-mini">
+                        <md-icon md-svg-src="mdi:pinterest" aria-label="Pinterest"></md-icon>
+                    </md-button>
+                </md-fab-actions>
+            </md-fab-speed-dial>
+        </div>
+        <!--<div layout="row" layout-align="space-around">
+            <div layout="column" layout-align="start center">
+                <b>Direction</b>
+                <md-radio-group ng-model="selectedDirection">
+                    <md-radio-button ng-repeat="direction in availableDirections"
+                                     ng-value="direction" class="text-capitalize">
+                        {{direction}}
+                    </md-radio-button>
+                </md-radio-group>
+            </div>
+            <div layout="column" layout-align="start center">
+                <b>Open/Closed</b>
+                <md-checkbox ng-model="isOpen">
+                    Open
+                </md-checkbox>
+            </div>
+            <div layout="column" layout-align="start center">
+                <b>Animation Modes</b>
+                <md-radio-group ng-model="selectedMode">
+                    <md-radio-button ng-repeat="mode in availableModes" ng-value="mode">
+                        {{mode}}
+                    </md-radio-button>
+                </md-radio-group>
+            </div>
+        </div>-->
+    </md-content>
+</div>
+

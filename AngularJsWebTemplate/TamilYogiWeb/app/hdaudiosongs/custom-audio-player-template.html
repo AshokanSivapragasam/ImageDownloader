@@ -1,0 +1,44 @@
+<div class="customaudioskin">
+    <img ng-src="{{audiothumbnailurl}}" alt="{{audiotitle}}">
+    <span layout="column" style="background-color: deepskyblue; color: #C6FF00"
+          class="md-headline">{{audiotitle}}</span>
+    <!--<md-button layout="column" class="md-icon-button" target="_self" ng-href="{{audiourl}}"
+               download="{{audiotitle+'.mp3'}}">
+        <md-icon md-svg-icon="mdi:download"></md-icon>
+    </md-button>
+    <md-button layout="column" class="md-icon-button" href="" ng-hide="openaudioplayer"
+               ng-click="openaudioplayer=!openaudioplayer; playMusic(audioplayerid)">
+        <md-icon md-svg-icon="mdi:play"></md-icon>
+    </md-button>
+    <md-button layout="column" class="md-icon-button" href="" ng-hide="!openaudioplayer"
+               ng-click="openaudioplayer=!openaudioplayer; stopMusic(audioplayerid)">
+        <md-icon md-svg-icon="mdi:stop"></md-icon>
+    </md-button>-->
+    <audio id="{{audioplayerid}}" class="customaudioplayer" controls ng-hide="!openaudioplayer">
+        <source ng-src="{{audiourl}}" type="{{audiotype}}">
+    </audio>
+    <div ng-class="customaudioskinoverlayclass">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;"
+             ng-class="radialprogressbardecoratorclass">
+            <md-button layout="column" class="md-icon-button" href="" style="position: absolute; z-index: 1; top: 15px; left: -60px;"
+                       ng-click="pauseMusic(audioplayerid)">
+                <md-icon md-svg-icon="mdi:pause" style="fill: #C6FF00"></md-icon>
+            </md-button>
+            <span ng-click="playMusic(audioplayerid)">
+                <md-button layout="column" class="md-icon-button" href="" style="position: absolute; z-index: 1; top: 15px; left: 10px;"
+                           ng-click="pauseMusic(audioplayerid)" ng-hide="audioplayedpercentage > 0">
+                    <md-icon md-svg-icon="mdi:play" style="fill: #C6FF00"></md-icon>
+                </md-button>
+                <div ng-show="audioplayedpercentage > 0">{{audioplayedpercentage}}%</div>
+            </span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+            <md-button layout="column" class="md-icon-button" href="" style="position: absolute; z-index: 1; top: 15px; left: 75px;"
+                       ng-click="stopMusic(audioplayerid)">
+                <md-icon md-svg-icon="mdi:stop" style="fill: #C6FF00"></md-icon>
+            </md-button>
+        </div>
+    </div>
+</div>

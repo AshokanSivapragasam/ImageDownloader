@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MvcApp01.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model) {
+    <div style="font-weight: bold">
+        @Html.DisplayFor(modelItem => item.Name)
+    </div>
+    <div>
+        @Html.DisplayFor(modelItem => item.City), @Html.DisplayFor(modelItem => item.Country)
+    </div>
+    <div>
+        Ratings: @item.Reviews.Count()
+    </div>
+    <hr />
+}
+
+</table>

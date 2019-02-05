@@ -1,0 +1,17 @@
+{
+	"SystemContext": {
+		"xceedLicenseKey": "ZIN41-TE1EG-WXE84-8HBA",
+		"aesEncryptionKey": "EIisPENSreplacement!",
+		"archiveDirectory": "D:\\RIOTempLocation",
+		"storageQueueConnectionString": "DefaultEndpointsProtocol=https;AccountName=interchangeapistoraged7;AccountKey=jYX1Ho1YFQbGiDqFJj4YfjrE4ubjFyL1DJn52dTQ0ChshfjSjJ6VQew97hOSGdiU/jXO4eii5/bntIgrp9tovg==",
+		"queueName": "queue001",
+		"requestType": "FileTriggerData",
+		"sfmcParentAccountId": "96540",
+		"sfmcChildAccountId": "96540",
+		"sqlConnectionString": "Data Source=.;Initial Catalog=Ntm;Integrated Security=True"
+	},
+	"TriggerContext": {
+		"folderPath": "D:\\Usr\\Trupti\\Gd_Ops_Mgr_Tool",
+		"fileSearchPattern": "*.txt"
+	}
+}

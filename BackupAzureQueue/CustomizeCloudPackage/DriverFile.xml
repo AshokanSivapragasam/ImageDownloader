@@ -1,0 +1,6 @@
+<cloudpkgdriver>
+	<files>
+		<file srcpath="\import\DisableSslv3.cmd" destpath="\approot\bin\DisableSslv3.cmd" overwrite="true" />
+    <file srcpath="\import\DisableSslv3.ps1" destpath="\approot\bin\DisableSslv3.ps1" overwrite="true" />
+	</files>
+</cloudpkgdriver>

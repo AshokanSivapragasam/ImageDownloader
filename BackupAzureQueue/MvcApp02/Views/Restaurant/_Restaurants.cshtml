@@ -1,0 +1,32 @@
+﻿@model IPagedList<MvcApp02.Models.Restaurant>
+
+<div id="restaurantListPanel">
+    <span><b>Results:</b> #@Model.Count()</span>
+    <div class="pagedList" data-otf-target="#restaurantListPanel">
+        @Html.PagedListPager(Model, page => Url.Action("Search", new { pageNumber = page })
+        , PagedListRenderOptions.MinimalWithPageCountText)
+    </div>
+
+    <div class="w3-card-4 w3-container">
+        <h2>Results</h2>
+        <ul class="w3-ul">
+            @foreach (var item in Model)
+            {
+                <li>
+                    <div style="font-weight: bolder">@Html.DisplayFor(modelItem => item.Name)</div>
+                    <div>@Html.DisplayFor(modelItem => item.City), @Html.DisplayFor(modelItem => item.Country)</div>
+                    <div>
+                        @Html.ActionLink("View reviews", "List", "Review", new { restaurantId = item.Id }, null) |
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </div>
+                </li>
+            }
+        </ul>
+        <br>
+    </div>
+
+    <div style="font-weight: bold">
+        @Html.ActionLink("Create New", "Create")
+    </div>
+</div>

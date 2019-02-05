@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Item Information</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <h2 text-center *ngIf='selectedItem'>
+        {{selectedItem.title}}
+    </h2>
+    <hr/>
+    <h4 *ngIf='selectedItem'>
+        This is the general description for this page, '{{selectedItem.title}}'.
+    </h4>
+</ion-content>

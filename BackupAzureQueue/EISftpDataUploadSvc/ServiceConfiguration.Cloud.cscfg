@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="EISftpDataUploadSvc" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2014-01.2.3">
+  <Role name="SftpUploader">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="storageAcConnectionString" value="DefaultEndpointsProtocol=https;AccountName=interchangeapistoraged7;AccountKey=jYX1Ho1YFQbGiDqFJj4YfjrE4ubjFyL1DJn52dTQ0ChshfjSjJ6VQew97hOSGdiU/jXO4eii5/bntIgrp9tovg==" />
+      <Setting name="blobContainerName" value="eidevteam" />
+      <Setting name="sftpTimeout" value="30000" />
+      <Setting name="blobName" value="MPSIT_Reverse KT Template1.1.pptx" />
+      <Setting name="sftpServer" value="ftp1.exacttarget.com" />
+      <Setting name="sftpUser" value="10420810" />
+      <Setting name="sftpPassword" value="Ri9..Sn2s7" />
+      <Setting name="licenseKey" value="" />
+      <Setting name="ftpDirectory" value="reports" />
+      <Setting name="storageTableName" value="eidevteam" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="eiadmin" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIB+wYJKoZIhvcNAQcDoIIB7DCCAegCAQAxggGsMIIBqAIBADCBjzCBgDETMBEGCgmSJomT8ixkARkWA2NvbTEZMBcGCgmSJomT8ixkARkWCW1pY3Jvc29mdDEUMBIGCgmSJomT8ixkARkWBGNvcnAxFzAVBgoJkiaJk/IsZAEZFgdyZWRtb25kMR8wHQYDVQQDExZNU0lUIE1hY2hpbmUgQXV0aCBDQSAyAgoVwlVgAAEAADFXMA0GCSqGSIb3DQEBAQUABIIBAClkgcYR4cqgtqkq5tzgWW2wRZXI5Pb/WXEuPkwLK6A4qd04jKSZmzOawJ8n+Pk1Lu4hOwgG0V4jPo9MRIUkm+xbqtvmh+ePFvGR0tWNE9p2XRU0tZjQjgWhMsOXOYln14APlYpZ8cPMSMwta6oPvQzTSMlMWKxp2fwALP30xNLcLPK2jKj1Km62zihcgZPtJzR/l0WOLOHFhshBvw/8yRlJj6Bib84mRQ1i/1RdxVMFY2ZQeNrDPoT9GU5AqYALvBb+NNGcMNOGOT97HZaygNVSPleli+EfM1GeSZEgUZJyTNl5mZ8AkMWiws105UWdMUbSO8uUzRP2u1jdwglSIS8wMwYJKoZIhvcNAQcBMBQGCCqGSIb3DQMHBAjk9uiZpz80ioAQb9nxgb2qbA6pm8gcmkpG/A==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-12-31T23:59:59.0000000+05:30" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SecretCertificate" thumbprint="1B647BE314FBC0E8ECCD885C3442A9E63C7EB5B5" thumbprintAlgorithm="sha1" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="27A7F3DC52CE888BADB26112B45CA34463FDB3A0" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

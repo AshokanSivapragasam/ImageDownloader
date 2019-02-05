@@ -1,0 +1,45 @@
+<html>
+  <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ODataResources/1.0.25/odataresources.min.js"></script>
+  </head>
+
+  <script>
+	var app = angular.module('links', []);
+	app.controller('feedLinks', function($scope, $http) {
+		const BASE_URL = 'http://services.odata.org/V3/OData/OData.svc/'
+		$http.get(BASE_URL)
+		.then(function(response) {
+			$scope.rawdata = response.data; //array with two elements - one link, and an array with data
+		});
+	});
+  </script>
+
+  <body>
+		<div class="container main-container">
+			<div class="row">
+				<div class="col menu">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+						<a class="navbar-brand" href="#">Navbar</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+						<ul>
+							<div ng-app="links" ng-controller="feedLinks">
+								<li ng-repeat="element in rawdata.value">
+									<a class="nav-link" href="{{ element }}">{{ element.name }}</a>
+								</li>
+							</div>
+						</ul>
+					  </div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

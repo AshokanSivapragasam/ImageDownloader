@@ -1,0 +1,31 @@
+﻿{
+  "xsl:template": {
+    "@match": "",
+    "defaultroot": {
+      "xsl:for-each": {
+        "@select": "",
+        "Content": {
+          "id": {
+            "xsl:value-of": {
+              "@select": ""
+            }
+          },
+          "leadid": {
+            "xsl:value-of": {
+              "@select": ""
+            }
+          },
+          "xsl:for-each": {
+            "@select": "",
+            "xsl:element": {
+              "@name": "",
+              "xsl:value-of": {
+                "@select": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.nav-section-group {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-section {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 14px;
+    margin-left: 0;
+}
+
+.nav-section a {
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    margin: 4px;
+    letter-spacing: 0.4px;
+}
+
+.nav-section a:hover {
+    color: chartreuse;
+}
+
+.nav-float-left {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-float-right {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+

@@ -1,0 +1,42 @@
+﻿@model Myntra.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+<section class="registerForm">
+    <h2>Register a new account to our site</h2>
+    @using (Html.BeginForm(new {ReturnUrl = ViewBag.ReturnUrl})){
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>Register</legend>
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(m=>m.UserName)</td>
+                    <td>@Html.TextBoxFor(m=>m.UserName)</td>
+                    <td>@Html.ValidationMessageFor(m=>m.UserName)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(m=>m.Password)</td>
+                    <td>@Html.PasswordFor(m=>m.Password)</td>
+                    <td>@Html.ValidationMessageFor(m=>m.Password)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(m=>m.ConfirmPassword)</td>
+                    <td>@Html.PasswordFor(m=>m.ConfirmPassword)</td>
+                    <td>@Html.ValidationMessageFor(m=>m.ConfirmPassword)</td>
+                </tr>
+                <tr>
+                    <td />
+                    <td align="left"><input type="submit" value="Register"/></td>
+                </tr>
+            </table>
+        </fieldset>
+    }
+</section>

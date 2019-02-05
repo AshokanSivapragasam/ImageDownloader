@@ -1,0 +1,33 @@
+﻿@model Irctc.Web.Models.SearchTrainViewModel
+
+@{
+    ViewBag.Title = "IRCTC";
+    ViewBag.Message = "Indian Railways Catering & Tourism Corporation";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<article>
+    @Html.Partial("_SearchTrains")
+</article>
+<aside>
+    <h3>How to: Search Trains</h3>
+    <ol class="round">
+        <li class="one">
+            <h5>Fill in details</h5>
+            Write down your trip details as appropriate.
+        </li>
+
+        <li class="two">
+            <h5>Search now</h5>
+            Hit 'Search' to get trains available between your junctions
+        </li>
+    </ol>
+</aside>

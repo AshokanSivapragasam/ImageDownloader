@@ -1,0 +1,8 @@
+﻿@model MvcApp02.Models.BestRestaurantViewModel
+
+<h3 style="font-weight: 900"><u>Best rating</u></h3>
+<div style="font-weight: bolder">@Html.DisplayFor(modelItem => Model.Name)</div>
+<div>@Html.DisplayFor(modelItem => Model.City), @Html.DisplayFor(modelItem => Model.Country)</div>
+<div><b>@Html.LabelFor(modelItem => Model.ReviewerName):</b> @Html.DisplayFor(modelItem => Model.ReviewerName) | <b>@Html.LabelFor(modelItem => Model.BestRating):</b> @Html.DisplayFor(modelItem => Model.BestRating)</div>
+<div><b>@Html.LabelFor(modelItem => Model.ReviewBody):</b> @Html.DisplayFor(modelItem => Model.ReviewBody)</div>
+<br/>

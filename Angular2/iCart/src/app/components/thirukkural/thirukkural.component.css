@@ -1,0 +1,56 @@
+.thirukkural-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-column-number {
+    max-width: 50px;
+}
+
+.mat-column-section {
+    max-width: 250px;
+}
+
+.mat-column-kural {
+    max-width: 500px;
+}
+
+.mat-column-chapter {
+    max-width: 400px;
+}
+
+.mat-cell {
+    font-size: 10px;
+}
+
+mat-table, mat-paginator {
+    max-width: 90%;
+    width: 90%;
+}
+
+.thirukkural-container>section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-row:nth-child(even) {
+    background-color: #c6cde8;
+}
+
+.mat-row:nth-child(even)>.mat-cell {
+    color: rgb(8, 156, 209);
+}
+
+/*.mat-row:nth-child(odd) {
+    background-color: #4960af;
+}*/
+
+.mat-row:nth-child(odd)>.mat-cell {
+    color: #3f51b5;
+}

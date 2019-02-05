@@ -1,0 +1,41 @@
+﻿@model IPagedList<MvcApp02.Models.Restaurant>
+
+@{
+    ViewBag.Title = "List of restaurants";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div style="border: 2px dashed green" class="w3-container w3-theme w3-border-dashed w3-card-4">
+    @Html.Action("BestRestaurant", "Restaurant")
+</div>
+<br/>
+<br/>
+
+<form method="get" action="@Url.Action("Search")"
+    data-otf-isajaxenabled="true" data-otf-targetelementid="#restaurantListPanel">
+    <input type="text" name="restaurantName" data-otf-autocomplete="@Url.Action("AutoComplete")"/>
+    <input type="submit" name="btnSearch" value="Search" class="w3-btn w3-large w3-theme"/>
+
+</form>
+
+@*@using (Ajax.BeginForm(
+    new AjaxOptions
+    {
+        Url = Url.Action("Search", "Restaurant"),
+        HttpMethod = "get",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "restaurantListPanel"
+    }))
+{
+    @Html.ValidationSummary(true)
+
+    @Html.Label("SearchByName", "SearchByName: ")
+    @Html.TextBox("restaurantName")
+    <input type="submit" name="btnSearch" value="Search" />
+    <span><b>Results:</b> #@Model.Count()</span>
+}*@
+
+<br/>
+
+@Html.Partial("_Restaurants")

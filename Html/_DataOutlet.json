@@ -1,0 +1,40 @@
+{
+	"TriggerContext": {
+		"folderPath": "D:\\Usr\\Trupti\\Gd_Ops_Mgr_Tool",
+		"fileSearchPattern": "*.txt"
+	},
+	"ListenToFolderOutlet001": [
+	{
+		"folder": "",
+		"name": "filefullname001",
+		"ext": "tsv",
+		"size": 1024,
+		"createdAt": "dd-MM-yyyy HH:mm:ss",
+		"lastModifiedAt": "dd-MM-yyyy HH:mm:ss"
+	},{
+		"folder": "",
+		"name": "filefullname002",
+		"ext": "tsv",
+		"size": 1024,
+		"createdAt": "dd-MM-yyyy HH:mm:ss",
+		"lastModifiedAt": "dd-MM-yyyy HH:mm:ss"
+	},{
+		"folder": "",
+		"name": "filefullname003",
+		"ext": "tsv",
+		"size": 1024,
+		"createdAt": "dd-MM-yyyy HH:mm:ss",
+		"lastModifiedAt": "dd-MM-yyyy HH:mm:ss"
+	}],
+	"ForeachOutlet001": {
+		"folder": "",
+		"name": "filefullname001",
+		"ext": "tsv",
+		"size": 1024,
+		"createdAt": "dd-MM-yyyy HH:mm:ss",
+		"lastModifiedAt": "dd-MM-yyyy HH:mm:ss"
+	},
+	"CompressFileOutlet001": {
+		"isCompleted": "true|false"
+	}
+}

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<MvcApp01.Models.Restaurant>
+
+<div id="restaurantListPanel">
+    @foreach (var item in Model) {
+    
+        <div style="font-weight: bolder">@Html.DisplayFor(modelItem => item.Name)</div>
+        <div>@Html.DisplayFor(modelItem => item.City), @Html.DisplayFor(modelItem => item.Country)</div>
+        @*<div>@Html.Partial("_Reviews", item.Reviews)</div>*@
+        <div>
+            @Html.ActionLink("View reviews", "List", "Review", new { restaurantId = item.Id }, null) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })</div>
+        <hr />
+    }
+
+    <div style="font-weight: bold">
+        @Html.ActionLink("Create New", "Create")
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<md-content class="md-padding" layout="row" layout-wrap layout-align="center start" layout-xs="column" style="width: 70%">
+      <md-card layout="column" ng-repeat="movie in movies" style="position: relative; float: left" layout-padding>
+          <img ng-src="{{movie.ThumbnailUrl}}" class="md-card-image" alt="Avatar: {{movie.Title}}" style="width: 228px; height: 160px;"/>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-subheader text-ellipsis" style="width: 228px">{{movie.Title}}</span>
+            <md-tooltip md-delay="1000" md-direction="bottom">{{movie.Title}}</md-tooltip>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <br/>
+            <div class="text-ellipsis" style="width: 228px">Genre: {{movie.Genre}}
+                <md-tooltip md-delay="1000" md-direction="bottom">Genre: {{movie.Genre}}</md-tooltip>
+            </div>
+            <div class="text-ellipsis" style="width: 228px">Quality: {{movie.Quality}}
+                <md-tooltip md-delay="1000" md-direction="bottom">Quality: {{movie.Quality}}</md-tooltip>
+            </div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="play this video">
+                <md-icon md-svg-icon="mdi:play"></md-icon>
+                <md-tooltip md-delay="1000" md-direction="bottom">Play this video</md-tooltip>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="download this video">
+                <md-icon md-svg-icon="mdi:download"></md-icon>
+                <md-tooltip md-delay="1000" md-direction="bottom">Download this video</md-tooltip>
+            </md-button>
+        </md-card-actions>
+      </md-card>
+</md-content>

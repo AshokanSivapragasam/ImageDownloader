@@ -1,0 +1,8 @@
+{
+  "name": "wifealert",
+  "app_id": "1e5e6a16",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

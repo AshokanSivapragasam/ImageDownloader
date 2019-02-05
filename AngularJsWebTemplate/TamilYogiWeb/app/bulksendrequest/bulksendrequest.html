@@ -1,0 +1,114 @@
+<div layout="row">
+    <div layout="column" ng-cloak class="md-inline-form" flex="60">
+        <md-content layout-padding>
+            <form name="userForm">
+                <div layout="row">
+                    <md-input-container class="md-block" flex="50">
+                        <label>Batch Id</label>
+                        <input ng-model="bulkSendModel.BatchId">
+                        <span class="hint">Mandatory for email tracking</span>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="50">
+                        <label>Bulksend Id</label>
+                        <input ng-model="bulkSendModel.BulksendId">
+                        <span class="hint">Mandatory for email tracking and static data extension</span>
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                    <md-input-container class="md-block" flex="50">
+                        <label>Tenant Account Id</label>
+                        <input ng-model="bulkSendModel.TenantAccountId">
+                        <span class="hint">Business unit account id (aka) MID</span>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="50">
+                        <label>Content Id</label>
+                        <input ng-model="bulkSendModel.EmailContentId">
+                        <span class="hint">Email content identifier from SFMC Portal</span>
+                    </md-input-container>
+                </div>
+                <custom-upload-file layout="row" flex="100"></custom-upload-file>
+
+                <div layout="row">
+                    <div layout="column" flex="60">
+                        <div layout="row">
+                            <md-switch ng-init="bulkSendModel.BulksendApproach=true" class="md-primary" md-no-ink aria-label="Switch No Ink" ng-model="bulkSendModel.BulksendApproach" ng-change="bulkSendModel.DataImportType = !bulkSendModel.BulksendApproach" layout-padding>
+                                BulksendApproach: {{bulkSendModel.BulksendApproach? 'Static Data extension': 'Dynamic data extension'}}
+                            </md-switch>
+                        </div>
+                        <div layout="row">
+                            <md-input-container class="md-block" flex="80" ng-hide="bulkSendModel.BulksendApproach" md-autofocus>
+                                <label>Data Extension Template Name</label>
+                                <input ng-model="bulkSendModel.DataExtensionTemplateName">
+                                <span class="hint">Name of the data extension template; not external key</span>
+                            </md-input-container>
+                        </div>
+                        <div layout="row">
+                            <md-input-container class="md-block" flex="80">
+                                <label>Friendly tenant name</label>
+                                <input ng-model="bulkSendModel.FriendlyTenantName">
+                                <span class="hint">Friendly name to classify your requests</span>
+                            </md-input-container>
+                        </div>
+                    </div>
+                    <div layout="column" flex="35">
+                        <div layout="row">
+                            <md-switch class="md-primary" md-no-ink aria-label="Switch No Ink" ng-model="bulkSendModel.EmailClassification">
+                                EmailClassification: {{bulkSendModel.EmailClassification? 'Promotional': 'Transactional'}}
+                            </md-switch>
+                        </div>
+                        <div layout="row">
+                            <md-switch class="md-primary" ng-disabled="!bulkSendModel.BulksendApproach" md-no-ink aria-label="Switch No Ink" ng-model="bulkSendModel.DataImportType">
+                                DataImportType: {{bulkSendModel.DataImportType? 'Overwrite': 'AddOrUpdate'}}
+                            </md-switch>
+                        </div>
+                        <div layout="row">
+                            <md-switch class="md-primary" md-no-ink aria-label="Switch No Ink" ng-model="bulkSendModel.IsEmailSendInvoke">
+                                IsEmailSendInvoke: {{bulkSendModel.IsEmailSendInvoke? 'true ': 'false'}}
+                            </md-switch>
+                        </div>
+                    </div>
+                </div>
+
+                <div layout="row">
+                    <div layout="column" flex="45">
+                        <md-switch class="md-primary" md-no-ink aria-label="Switch No Ink" ng-model="bulkSendModel.WantToScheduleEmailSendTime" layout-padding>
+                            WantToScheduleEmailSendTime: {{bulkSendModel.WantToScheduleEmailSendTime? 'true ': 'false'}}
+                        </md-switch>
+                    </div>
+                    <div layout="column" flex="65" ng-hide="bulkSendModel.WantToScheduleEmailSendTime" style="color: darkseagreen"><br/>Your message should be in flight within the cadence of 20-30 minutes</div>
+                    <div class="dropdown" flex="65" ng-hide="!bulkSendModel.WantToScheduleEmailSendTime">
+                        <md-input-container class="dropdown-toggle" id="dropdown" role="button" data-toggle="dropdown" data-target="#" href="#" style="width: 80%">
+                            <label>Email Scheduled Datetime</label>
+                            <input type="text" required class="input-large" data-ng-model="bulkSendModel.EmailSendScheduleDatetime">
+                        </md-input-container>
+                        <!--<span class="add-on"><i class="icon-calendar"></i></span>-->
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="top:-260px">
+                            <datetimepicker data-ng-model="bulkSendModel.EmailSendScheduleDatetime" data-datetimepicker-config="{ dropdownSelector: '#dropdown' }"></datetimepicker>
+                        </ul>
+                    </div>
+                </div>
+
+                <div layout="row">
+                    <div layout="column" flex="100">
+                        <md-button class="md-primary md-raised" ng-click="sendBulkSendRequest()">
+                            <md-icon md-svg-icon="mdi:arrow-top-right"></md-icon> Send bulk-send request now
+                        </md-button>
+                    </div>
+                </div>
+            </form>
+        </md-content>
+    </div>
+    <div layout="column" ng-cloak class="md-inline-form" flex="40">
+        <md-content layout-padding>
+            <form name="userForm">
+                <div layout="row">
+                    <md-input-container class="md-block" flex="50">
+                        <label>Batch Id</label>
+                        <input ng-model="bulkSendModel.BatchId">
+                        <span class="hint">Mandatory for email tracking</span>
+                    </md-input-container>
+                </div>
+            </form>
+        </md-content>
+    </div>
+</div>

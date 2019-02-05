@@ -1,0 +1,38 @@
+.page-container-group {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-form-field {
+    width: 300px;
+}
+
+.sub-action-links {
+    margin-top: 10px;
+}
+
+.sub-action-links a {
+    text-decoration: none;
+    color: #cc1c5d;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.sub-action-links a::after {
+    content: " | ";
+}
+
+.sub-action-links a:last-child::after {
+    content: "";
+}

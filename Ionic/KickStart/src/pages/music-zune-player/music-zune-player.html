@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Zune</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item class="container" *ngFor="let disc of discs">
+      <span col-10>
+        <div style="z-index: 10;" (click)="playItAndPauseOtherInstances(disc);">
+          <svg height="322" width="294">
+              <circle cx="161" cy="147" r="130" stroke="ivory" stroke-width="1.8" fill="transparent" />
+              <circle cx="161" cy="147" r="100" stroke="ivory" stroke-width="1.8" fill="transparent" />
+              <circle cx="161" cy="147" r="70" stroke="ivory" stroke-width="1.8" fill="transparent" />
+              <circle cx="161" cy="147" r="20" stroke="ivory" stroke-width="1.8" fill="ivory" />
+              <!--<circle cx="161" cy="147" r="8" stroke="ivory" stroke-width="1" fill="grey" />-->
+          </svg>
+        </div>
+        <img id="disc" 
+          [class.playing]="disc.playState === 'playing'"
+          [class.paused]="disc.playState === 'paused'"
+          [src]="disc.albumPictureUri" item-end>
+
+        <img id="spindle" [class.active]="disc.playState"
+          [class.playing]="disc.playState === 'playing'"
+          [class.paused]="disc.playState === 'paused'"
+          src="../../assets/imgs/GramophoneSpindle.jpg">
+      </span>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+      <button col-3 ion-button icon-right color="danger">
+        <ion-icon name="rewind"></ion-icon>
+      </button>
+      <button col-3 ion-button icon-right color="primary" (click)="playOrPauseCurrentMedia()">
+        <ion-icon [name]="musicSystemPlayState === 'paused'? 'play': 'pause'"></ion-icon>
+      </button>
+      <button col-3 ion-button icon-right color="danger">
+        <ion-icon name="fastforward"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,18 @@
+IfthenAction
+-------------
+
+Data-source for any exceptions,
+ - Log table
+ - Request table
+ - Event viewer
+
+	If											Data-source			Action
+--------------------------------------------------------------------------------
+SELECT DateDiff(HOUR, MAX(RequestEndTime)		  DbName			STOP|(RE)START|EMAIL|
+,CurrentUtcDate()) FROM LogTable
+
+SELECT DateDiff(HOUR, MAX(RequestEndTime)		  DbName			EMAIL|
+,CurrentUtcDate()) FROM RequestTable
+
+SELECT * FROM EventViewer						  EventViewer		STOP|EMAIL|
+

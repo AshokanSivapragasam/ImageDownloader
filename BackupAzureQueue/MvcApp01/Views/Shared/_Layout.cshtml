@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    @Styles.Render("~/bundles/styles")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color:#F5EDD1">
+    <header class="center" style="background: repeat-x">
+        <img src="../../Content/themes/base/images/TamilYogi.jpg"/>
+    </header>
+    <br/>
+    <div style="text-align:center">
+        <nav>
+            @Html.ActionLink("Home", "Index", "Home", null, null) | 
+            @Html.ActionLink("Restaurants", "Index", "Restaurant", null, null) | 
+            @Html.ActionLink("Reviews", "List", "Review", new { restaurantId = 1}, null)
+        </nav>
+    </div>
+    <div style="padding: 10px; width:50%; margin: auto">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/otf")
+</body>
+</html>

@@ -1,0 +1,93 @@
+{
+	"activities": [
+	{
+		"name": "ListenToFolder",
+		"sequence": 0,
+		"inputProperties": {
+			"folderPath": "$.TriggerContext.folderPath",
+			"fileSearchPattern": "$.TriggerContext.fileSearchPattern",
+			"message": {
+					"requestType": "$.SystemContext.requestType",
+					"sfmcParentAccountId": "$.SystemContext.sfmcParentAccountId",
+					"sfmcChildAccountId": "$.SystemContext.sfmcChildAccountId",
+					"fileDetails": "$.ForeachOutlet.currentItem",
+					"subTag": {
+						"tag1": "$.SystemContext.sfmcChildAccountId",
+						"tag2": "$.SystemContext.sfmcChildAccountId",
+						"tag3": "$.SystemContext.sfmcChildAccountId",
+						"tag4": "$.SystemContext.sfmcChildAccountId"
+					}
+				}
+		},
+		"outputProperties": {},
+		"outputContext": "ListenToFolderOutlet"
+	},
+	{
+		"name": "Foreach",
+		"sequence": 1,
+		"inputProperties": {
+			"iteratorCollection": "$.ListenToFolderOutlet.fileObjects"
+		},
+		"outputProperties": {},
+		"outputContext": "ForeachOutlet",
+		"activities": [
+		{
+			"name": "CompressFile",
+			"sequence": 0,
+			"inputProperties": {
+				"sourceFile": "$.ForeachOutlet.currentItem.fileFolderPath,{\\},$.ForeachOutlet.currentItem.fileNameWithoutExtension,$.ForeachOutlet.currentItem.fileExtension",
+				"targetFile": "$.ForeachOutlet.currentItem.fileFolderPath,{\\},$.ForeachOutlet.currentItem.fileNameWithoutExtension,{_},$.ForeachOutlet.currentItem.fileRequestId,{.zip}",
+				"licenseKey": "$.SystemContext.xceedLicenseKey"
+			},
+			"outputProperties": {},
+			"outputContext": "CompressFileOutlet"
+		},
+		{
+			"name": "EncryptFile",
+			"sequence": 1,
+			"inputProperties": {
+				"sourceFile": "$.ForeachOutlet.currentItem.fileFolderPath,{\\},$.ForeachOutlet.currentItem.fileNameWithoutExtension,{_},$.ForeachOutlet.currentItem.fileRequestId,{.zip}",
+				"targetFile": "$.ForeachOutlet.currentItem.fileFolderPath,{\\},$.ForeachOutlet.currentItem.fileNameWithoutExtension,{_},$.ForeachOutlet.currentItem.fileRequestId,{.aes}",
+				"aesEncryptionKey": "$.SystemContext.aesEncryptionKey"
+			},
+			"outputProperties": {},
+			"outputContext": "EncryptFileOutlet"
+		},
+		{
+			"name": "MoveFile",
+			"sequence": 2,
+			"inputProperties": {
+				"sourceFile": "$.ForeachOutlet.currentItem.fileFolderPath,{\\},$.ForeachOutlet.currentItem.fileNameWithoutExtension,{_},$.ForeachOutlet.currentItem.fileRequestId,{.aes}",
+				"targetFile": "$.SystemContext.archiveDirectory,{\\},$.ForeachOutlet.currentItem.fileNameWithoutExtension,{_},$.ForeachOutlet.currentItem.fileRequestId,{.aes}"
+			},
+			"outputProperties": {},
+			"outputContext": "MoveFileOutlet"
+		},
+		{
+			"name": "AddMessageToStorageQueue",
+			"sequence": 3,
+			"inputProperties": {
+				"connectionString": "$.SystemContext.storageQueueConnectionString",
+				"queueName": "$.SystemContext.queueName",
+				"message": {
+					"requestType": "$.SystemContext.requestType",
+					"sfmcParentAccountId": "$.SystemContext.sfmcParentAccountId",
+					"sfmcChildAccountId": "$.SystemContext.sfmcChildAccountId",
+					"fileDetails": "$.ForeachOutlet.currentItem"
+				}
+			},
+			"outputProperties": {},
+			"outputContext": "AddMessageToStorageQueueOutlet"
+		},
+		{
+			"name": "RunNonQueryAtSqlDatabase",
+			"sequence": 3,
+			"inputProperties": {
+				"connectionString": "$.SystemContext.sqlConnectionString",
+				"query": "INSERT INTO"
+			},
+			"outputProperties": {},
+			"outputContext": "RunNonQueryAtSqlDatabaseOutlet"
+		}]
+	}]
+}

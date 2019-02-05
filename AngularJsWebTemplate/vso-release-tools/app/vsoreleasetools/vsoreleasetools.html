@@ -1,0 +1,24 @@
+<div>
+    <h2>Welcome to Vso Release Aux Tools Utility...</h2>
+    <md-content class="md-padding">
+        <form ng-submit="$event.preventDefault()">
+          <p>Use <code>md-autocomplete</code> to search for matches from local or remote data sources.</p>
+          <md-autocomplete
+              ng-disabled="selectReleaseDefinition.isDisabled"
+              md-no-cache="selectReleaseDefinition.noCache"
+              md-selected-item="selectReleaseDefinition.selectedItem"
+              md-search-text="selectReleaseDefinition.searchText"
+              md-items="releaseDefinition in query(selectReleaseDefinition.searchText)"
+              md-item-text="releaseDefinition.name"
+              md-min-length="0"
+              placeholder="Which is your release definition?">
+            <md-item-template>
+              <span md-highlight-text="selectReleaseDefinition.searchText" md-highlight-flags="^i">{{releaseDefinition.name}}</span>
+            </md-item-template>
+            <md-not-found>
+              No states matching "{{selectReleaseDefinition.searchText}}" were found.
+            </md-not-found>
+          </md-autocomplete>
+        </form>
+    </md-content>
+</div>

@@ -1,0 +1,6 @@
+﻿@model IEnumerable<MvcApp02.Models.RestaurantReview>
+
+@foreach (var item in Model) {    
+    <div><b>@Html.LabelFor(modelItem => item.ReviewerName):</b> @Html.DisplayFor(modelItem => item.ReviewerName) | <b>@Html.LabelFor(modelItem => item.Rating):</b> @Html.DisplayFor(modelItem => item.Rating)</div>
+    <div><b>@Html.LabelFor(modelItem => item.ReviewBody):</b> @Html.DisplayFor(modelItem => item.ReviewBody)</div>    
+}

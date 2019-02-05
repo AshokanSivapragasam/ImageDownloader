@@ -1,0 +1,11 @@
+<DriverFile>
+	<Datasource>
+		<Data Xpath='/Report/TotalNumberOfCommunications' Variable='TotalNumberOfCommunications'/>
+		<Data Xpath='/Report/TotalNumberOfActiveCommunications' Variable='TotalNumberOfActiveCommunications'/>
+		<Data Xpath='/Report/TotalNumberOfCommunicationClass' Variable='TotalNumberOfCommunicationClass'/>
+	</Datasource>
+	<SqlCommands>
+		INSERT INTO GenesisSummary (TotalNumberOfCommunications, TotalNumberOfActiveCommunications, TotalNumberOfCommunicationClass, ReportCreatedDatetime, RecordInsertedDatetime) 
+		VALUES ('{TotalNumberOfCommunications}', '{TotalNumberOfActiveCommunications}', '{TotalNumberOfCommunicationClass}', getutcdate(), getutcdate())
+	</SqlCommands>
+</DriverFile>

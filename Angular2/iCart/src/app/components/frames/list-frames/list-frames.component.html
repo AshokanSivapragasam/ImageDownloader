@@ -1,0 +1,53 @@
+<app-layout-offers></app-layout-offers>
+<app-seasonal-banner01></app-seasonal-banner01>
+<app-seasonal-banner02></app-seasonal-banner02>
+<app-seasonal-banner03></app-seasonal-banner03>
+<app-list-recommendations></app-list-recommendations>
+
+<!--<section class="frames-section-container">
+  <section class="frames-section" *ngFor="let frameSection of frameSections">
+    <section class="header-section">
+      <span class="headline-01">{{ frameSection.headline01 }}</span>
+      <span class="headline-02">{{ frameSection.headline02 }}</span>
+      <span class="headline-03">{{ frameSection.headline03 }}</span>
+    </section>
+    <section class="frames-carousel">
+      <mat-icon svgIcon="chevron-left"></mat-icon>
+      <img [src]="frame.imageUri" [alt]="frame.imageCaption" *ngFor="let frame of frameSection.frames | slice:0:3; ">
+      <mat-icon svgIcon="chevron-right"></mat-icon>
+    </section>
+  </section>
+</section>-->
+
+<section class="frames-section-container">
+  <section class="frames-section" *ngFor="let frameSection of frameSections">
+    <section class="header-section">
+      <span class="headline-01">{{ frameSection.headline01 }}</span>
+      <span class="headline-02">{{ frameSection.headline02 }}</span>
+      <span class="headline-03">{{ frameSection.headline03 }}</span>
+    </section>
+  
+    <section ng2-carouselamos [width]="1130" [$prev]="prevTemplate" [$next]="nextTemplate" [items]="frameSection.frames" [$item]="itemTemplate">
+    </section>
+
+    <ng-template #prevTemplate>
+      <mat-icon svgIcon="chevron-left"></mat-icon>
+    </ng-template>
+
+    <ng-template #nextTemplate>
+      <mat-icon svgIcon="chevron-right"></mat-icon>
+    </ng-template>
+
+    <ng-template #itemTemplate let-item let-i="index">
+      <section>
+          <img [src]="item.imageUri" [alt]="item.imageCaption">
+      </section>
+    
+    </ng-template>
+
+    <section class="cta-section">
+        <button mat-raised-button color="primary" style="margin: 10px; float: left !important;">VIEW RANGE</button>
+        <button mat-raised-button style="margin: 10px; float: right !important;">VIEW IN 3D</button>
+    </section>
+  </section>
+</section>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="EISftpDataUploadSvc" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-01.2.3">
+  <WorkerRole name="SftpUploader" vmsize="Small">
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="storageAcConnectionString" />
+      <Setting name="blobContainerName" />
+      <Setting name="sftpTimeout" />
+      <Setting name="blobName" />
+      <Setting name="sftpServer" />
+      <Setting name="sftpUser" />
+      <Setting name="sftpPassword" />
+      <Setting name="licenseKey" />
+      <Setting name="ftpDirectory" />
+      <Setting name="storageTableName" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SecretCertificate" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WorkerRole>
+</ServiceDefinition>

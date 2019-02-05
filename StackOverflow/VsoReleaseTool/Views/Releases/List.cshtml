@@ -1,0 +1,86 @@
+﻿@model List<VsoReleaseTool.Models.ReleasesModel>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+@{
+    foreach (var item in Model)
+    {
+        <div>
+            <h4>ReleasesModel</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => item.name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => item.name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.createdBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => item.createdBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.createdOn)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => item.createdOn)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.modifiedBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => item.modifiedBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.modifiedOn)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => item.modifiedOn)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.selfViewLink)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => item.selfViewLink)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.webViewLink)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => item.webViewLink)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.noOfGlobalVariables)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => item.noOfGlobalVariables)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Details", "Details", new { id = item.id })
+        </p>
+    }
+}

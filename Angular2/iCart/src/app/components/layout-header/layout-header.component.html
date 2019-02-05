@@ -1,0 +1,50 @@
+<section class="quicklinks">
+  <span class="quicklinks-container">
+    <span class="quicklinks-lhs">
+      <span><a routerLink="">Try in 3D</a></span>
+      <span><a routerLink="">Home Eye Test</a></span>
+      <span><a routerLink="">Franchise</a></span>
+      <span><a routerLink="">Lenskart At Office</a></span>
+      <span><a routerLink="">Blog</a></span>
+      <span><a routerLink="">Refer & Earn</a></span>
+    </span>
+    <span class="quicklinks-rhs">
+      <span><a routerLink="">Locate store: 1800 111 111</a></span>
+      <span><a routerLink="">Support: (0)99998 99998</a></span>
+      <span><a routerLink="">www.johnjacobs.com</a></span>
+    </span>
+  </span>
+</section>
+<section class="header-container">
+  <mat-toolbar>
+    <span class="left-hand-side">
+      <!--<span (click)="sideNav.toggle()">Menu</span>-->
+      <img src="//static.lenskart.com/media/desktop/img/menu/logo.png" width="186.73" height="25.16" alt="lenskart" title="lenskart">
+      <!--<span>{{site.title}}</span>-->
+      <span>
+        <!--<mat-form-field class="filter-container">
+          <mat-label>Search</mat-label>
+          <input matInput type="search" placeholder="ElementId:12345, Kart Blu Lens,..">
+          <mat-icon matSuffix>search</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>-->
+        <input type="search" class="searchBox" placeholder="ElementId:12345, Blu Lens, Polariods,.."/>
+      </span>
+    </span>
+    <span class="right-hand-side">
+      <span *ngIf="!isUseridentified">
+        <button mat-button (click)="register()">Register</button>
+        <button mat-button (click)="login()">Login</button>
+      </span>
+      <span *ngIf="isUseridentified">
+        <span style="color: lightskyblue;">Ashok</span>
+        <button mat-button (click)="logout()">Logout</button>
+      </span>
+      <span>
+        <button mat-button (click)="acquireTracker()">Tracker</button>
+        <button mat-button (click)="getWishList()">Wishlist</button>
+        <button mat-button (click)="seeWhatIsInCart()">Cart</button>
+      </span>
+    </span>
+  </mat-toolbar>
+</section>

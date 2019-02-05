@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        h5:visited { color: blue;}
+        h5:hover { color: black;}
+    </style>
+</head>
+<body style="color:teal; font-family: 'Segoe UI'">
+    <h1 style="text-align:center">FLIPKART</h1>
+    <hr />
+    <div style="float: right">
+        <div style="background-color: teal; color: white; float:left; padding-right: 1em; border:1.5px outset black">
+            <h5 style="font-weight:100; margin: 0 0 0 0">Computers</h5>
+        </div>
+        <div style="background-color: teal; color: white; float:left; padding-right: 1em; border:1.5px outset black">
+            <h5 style="font-weight:100; margin: 0 0 0 0">Men</h5>
+         </div>
+        <div style="background-color: teal; color: white; float:left; padding-right: 1em; border:1.5px outset black">
+            <h5 style="font-weight:100; margin: 0 0 0 0">Women</h5>
+         </div>
+        <div style="background-color: teal; color: white; float:left; padding-right: 1em; border:1.5px outset black">
+            <h5 style="font-weight:100; margin: 0 0 0 0">Children</h5>
+         </div>
+        <div style="background-color: teal; color: white; float:left; padding-right: 1em; border:1.5px outset black">
+            <h5 style="font-weight:100; margin: 0 0 0 0">About</h5>
+         </div>
+    </div>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

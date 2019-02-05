@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-device","cordova-plugin-splashscreen","cordova-plugin-ionic-webview","cordova-plugin-ionic-keyboard","cordova-plugin-add-swift-support","cordova-plugin-compat","es6-promise-plugin","cordova-plugin-media","cordova-plugin-file","cordova-plugin-filepath","cordova-plugin-file-transfer","cordova-plugin-ionic"]}

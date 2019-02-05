@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<style>
+			body {
+				text-align: center;
+				padding: 100px 0 0 0;
+				color: #fff;
+				background: ivory;
+			}
+			
+			.container {
+				position: relative;
+				height: 400px;
+				width: 400px;
+			}
+			
+			#disc {
+				position: absolute;
+				-webkit-animation: rotation 7s infinite linear;
+			}
+
+			@-webkit-keyframes rotation {
+				from {
+					-webkit-transform: rotate(0deg);
+				}
+				to {
+					-webkit-transform: rotate(359deg);
+				}
+			}
+			
+			#spindle {
+				position: absolute;
+				right: -43px;
+				top: -45px;
+				-webkit-animation: arc 1s 1 alternate;
+			}
+
+			@-webkit-keyframes arc {
+				from {
+					-webkit-transform: rotate(-60deg);
+				}
+				to {
+					-webkit-transform: rotate(9deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<img id="disc" src="http://localhost/vault/images/icons/Gramophone004.gif">
+			<img id="spindle" src="http://localhost/vault/images/icons/GramophoneHead002.jpg">
+		</div>
+	</body>
+</html>

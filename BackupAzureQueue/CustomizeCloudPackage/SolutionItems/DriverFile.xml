@@ -1,0 +1,5 @@
+<cloudpkgdriver>
+	<files>
+		<file srcpath="\import\" destpath="\approot\bin\filename.ext" overwrite="true" />
+	</files>
+</cloudpkgdriver>

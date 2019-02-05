@@ -1,0 +1,35 @@
+<form class="form-horizontal">
+    <h4>Tutorial</h4>
+    <hr/>
+    <div class="form-group">
+        <label for="title" class="col-md-2 control-label">Title</label>
+
+        <div class="col-md-10">
+            <input type="text" data-ng-model="tutorial.title"
+                   name="title" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="description" class="col-md-2 control-label">Description</label>
+
+        <div class="col-md-10">
+            <textarea data-ng-model="tutorial.description"
+                      name="description" class="form-control">
+            </textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="attachment" class="col-md-2 control-label">Attachment</label>
+
+        <div class="col-md-10">
+            <input type="file" name="attachment"
+                   class="form-control" data-file-model="tutorial.attachment"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-primary"
+                   value="Save" data-ng-click="saveTutorial(tutorial)"/>
+        </div>
+    </div>
+</form>

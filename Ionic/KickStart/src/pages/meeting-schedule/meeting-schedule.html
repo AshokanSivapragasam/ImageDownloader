@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add a meeting</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="addMeeting(_meeting_)">
+        <ion-icon name="done-all"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label>Title</ion-label>
+        <ion-input name="meeting-title" [(ngModel)]="_meeting_.title"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Description</ion-label>
+          <ion-textarea name="meeting-description" [(ngModel)]="_meeting_.description" rows="10"></ion-textarea>
+        </ion-item>
+      <ion-item>
+        <ion-label>Start Time</ion-label>
+        <ion-datetime placeholder="-NIL-" displayFormat="DD-MMM-YYYY hh:mm A" pickerFormat="DD MMM YYYY hh mm A" [(ngModel)]="_meeting_.startsAt" yearValues="2018" minuteValues="00,15,30,45"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>End Time</ion-label>
+        <ion-datetime placeholder="-NIL-" displayFormat="DD-MMM-YYYY hh:mm A" pickerFormat="DD MMM YYYY hh mm A" [(ngModel)]="_meeting_.endsAt" yearValues="2018" minuteValues="00,15,30,45"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label item-start col-3>Reminder</ion-label>
+        <ion-range col-10 min="0" max="15" step="5" pin="true" snaps="true" [(ngModel)]="_meeting_.remindBefore">
+          <ion-icon range-left small color="primary" name="clock"></ion-icon>
+          <ion-icon range-right color="primary" name="clock"></ion-icon>
+        </ion-range>
+      </ion-item>
+      <ion-item>
+        <ion-label item-start col-3>Priority</ion-label>
+        <ion-range col-10 min="0" max="3" step="1" pin="true" snaps="true" [(ngModel)]="_meeting_.priority">
+          <ion-icon range-left small color="primary" name="flame"></ion-icon>
+          <ion-icon range-right color="danger" name="flame"></ion-icon>
+        </ion-range>
+      </ion-item>
+      <ion-item>
+        <ion-label item-start col-3>Location</ion-label>
+        <ion-select col-10 [(ngModel)]="_meeting_.location" item-end>
+          <ion-option value="Skype">Skype</ion-option>
+          <ion-option value="GoogleMeet">Google Meet</ion-option>
+          <ion-option value="Cafetaria">Cafetaria</ion-option>
+          <ion-option value="ConfRoom">Conf Room</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label item-start col-3>People</ion-label>
+        <ion-row item-start>
+          <ion-col col-3 *ngFor='let teamMember of teamMembers'>
+            <ion-avatar item-start style="border-radius: 50%; margin: 2px; padding: 2px; left: 0; top: 0;" [style.border]="teamMember.pickedIn ? '4px solid lightblue': '4px solid transparent'" (click)="teamMember.pickedIn = !teamMember.pickedIn">
+              <img [src]="teamMember.gravatorUri">
+            </ion-avatar>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

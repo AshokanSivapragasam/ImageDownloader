@@ -1,0 +1,184 @@
+﻿@model Irctc.Web.Models.SearchTrainViewModel
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div ng-app="SearchTrainsModule" ng-controller="SearchTrainsController as searchTrainApi" layout="column" ng-cloak class="md-inline-form" style="padding: 20px">
+
+        @*<div class="editor-label">
+                @Html.LabelFor(model => model.FromStation)
+            </div>
+            <div class="editor-field">
+                <input type="text" id="FromStation" name="FromStation" ng-model="searchTrainApi.FromStation.display" class="text-box single-line" />
+                @Html.ValidationMessageFor(model => model.FromStation)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.ToStation)
+            </div>
+            <div class="editor-field">
+                <input type="text" id="ToStation" name="ToStation" ng-model="searchTrainApi.ToStation" class="text-box single-line" />
+                @Html.ValidationMessageFor(model => model.ToStation)
+            </div>*@
+
+        <md-content layout-padding>
+            <form name="userForm">
+                <div layout layout-sm="column">
+                    <md-autocomplete name="FromStation"
+                                     id="FromStation"
+                                     placeholder="From station"
+                                     md-item-text="item.display"
+                                     md-items="item in searchTrainApi.querySearchFromStation(searchTrainApi.searchTextFromStation)"
+                                     md-search-text="searchTrainApi.searchTextFromStation"
+                                     md-selected-item="searchTrainApi.FromStation"
+                                     md-no-cache="searchTrainApi.noCache"
+                                     md-min-length="0"
+                                     md-selected-item-change="searchTrainApi.selectedItemChangeFromStation(item)"
+                                     md-search-text-change="searchTrainApi.searchTextChangeFromStation(searchTrainApi.searchTextFromStation)"
+                                     flex
+                                     style="width:40%">
+                        <md-item-template>
+                            <span md-highlight-text="searchTrainApi.searchTextFromStation" md-highlight-flags="^i">{{item.display}}</span>
+                        </md-item-template>
+                        @*<md-not-found>
+                No states matching "{{searchTrainApi.searchText}}" were found.
+                <a ng-click="searchTrainApi.newState(searchTrainApi.searchText)">Create a new one!</a>
+            </md-not-found>*@
+                    </md-autocomplete>
+                    @Html.ValidationMessageFor(model => model.FromStation)
+                    <md-autocomplete name="ToStation"
+                                     id="ToStation"
+                                     placeholder="To station"
+                                     md-item-text="item.display"
+                                     md-items="item in searchTrainApi.querySearchToStation(searchTrainApi.searchTextToStation)"
+                                     md-search-text="searchTrainApi.searchTextToStation"
+                                     md-selected-item="searchTrainApi.ToStation"
+                                     md-no-cache="searchTrainApi.noCache"
+                                     md-min-length="0"
+                                     md-selected-item-change="searchTrainApi.selectedItemChangeToStation(item)"
+                                     md-search-text-change="searchTrainApi.searchTextChangeToStation(searchTrainApi.searchTextToStation)"
+                                     flex
+                                     style="float: right">
+                        <md-item-template>
+                            <span md-highlight-text="searchTrainApi.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                        </md-item-template>
+                        @*<md-not-found>
+                No states matching "{{searchTrainApi.searchText}}" were found.
+                <a ng-click="searchTrainApi.newState(searchTrainApi.searchText)">Create a new one!</a>
+            </md-not-found>*@
+                    </md-autocomplete>
+                    @Html.ValidationMessageFor(model => model.ToStation)
+                </div>
+            </form>
+        </md-content>
+
+        <md-content layout-padding>
+            <div layout layout-sm="column">
+                <md-datepicker flex ng-model="searchTrainApi.DateOfJourney" md-placeholder="Date Of Journey" id="DateOfJourney" name="DateOfJourney"></md-datepicker>
+                @Html.ValidationMessageFor(model => model.DateOfJourney)
+            </div>
+        </md-content>
+
+        
+        <p>
+            <input type="submit" value="Search" />
+        </p>
+    </div>
+}
+
+<script>
+    (function (angular) {
+        var app = angular.module("SearchTrainsModule", ['ngMaterial']);
+
+        app.controller("SearchTrainsController", ["$scope", "$timeout", "$log", "$q", function ($scope, $timeout, $log, $q) {
+
+            $scope.myDate = new Date();
+
+            $scope.minDate = new Date(
+                $scope.myDate.getFullYear(),
+                $scope.myDate.getMonth() - 2,
+                $scope.myDate.getDate());
+
+            $scope.maxDate = new Date(
+                $scope.myDate.getFullYear(),
+                $scope.myDate.getMonth() + 2,
+                $scope.myDate.getDate());
+
+            $scope.onlyWeekendsPredicate = function (date) {
+                var day = date.getDay();
+                return day === 0 || day === 6;
+            }
+
+            // list of `state` value/display objects
+            this.trainStations = loadAllTrainStations();
+            this.querySearchFromStation = querySearch;
+            this.querySearchToStation = querySearch;
+
+            this.selectedItemChangeFromStation = selectedItemChange;
+            this.selectedItemChangeToStation = selectedItemChange;
+
+            this.searchTextChangeFromStation = searchTextChange;
+            this.searchTextChangeToStation = searchTextChange;
+
+            // ******************************
+            // Internal methods
+            // ******************************
+
+            /**
+			 * Search for states... use $timeout to simulate
+			 * remote dataservice call.
+			 */
+            function querySearch(query) {
+                var results = query ? this.trainStations.filter(createFilterFor(query)) : this.trainStations,
+                    deferred;
+                if (this.simulateQuery) {
+                    deferred = $q.defer();
+                    $timeout(function () { deferred.resolve(results); }, Math.random() * 1000, false);
+                    return deferred.promise;
+                } else {
+                    return results;
+                }
+            }
+
+            function searchTextChange(text) {
+                $log.info('Text changed to ' + text);
+            }
+
+            function selectedItemChange(item) {
+                $log.info('Item changed to ' + JSON.stringify(item));
+            }
+
+            /**
+			 * Build `states` list of key/value pairs
+			 */
+            function loadAllTrainStations() {
+                var allTrainStations = 'Chennai, Hyderabad, Rameswaram, Bangalore';
+
+                return allTrainStations.split(/, +/g).map(function (state) {
+                    return {
+                        value: state.toLowerCase(),
+                        display: state
+                    };
+                });
+            }
+
+            /**
+			 * Create filter function for a query string
+			 */
+            function createFilterFor(query) {
+                var lowercaseQuery = angular.lowercase(query);
+
+                return function filterFn(station) {
+                    return (station.value.indexOf(lowercaseQuery) === 0);
+                };
+            }
+        }]);
+
+    })(window.angular);
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

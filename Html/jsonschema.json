@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "xsl:template": {
+      "type": "object",
+      "properties": {
+        "@match": {
+          "type": "string"
+        },
+        "defaultroot": {
+          "type": "object",
+          "properties": {
+            "City": {
+              "type": "object",
+              "properties": {
+                "xsl:value-of": {
+                  "type": "object",
+                  "properties": {
+                    "@select": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@select"
+                  ]
+                }
+              },
+              "required": [
+                "xsl:value-of"
+              ]
+            },
+            "State": {
+              "type": "object",
+              "properties": {
+                "xsl:value-of": {
+                  "type": "object",
+                  "properties": {
+                    "@select": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@select"
+                  ]
+                }
+              },
+              "required": [
+                "xsl:value-of"
+              ]
+            },
+            "PostalCode": {
+              "type": "object",
+              "properties": {
+                "xsl:value-of": {
+                  "type": "object",
+                  "properties": {
+                    "@select": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@select"
+                  ]
+                }
+              },
+              "required": [
+                "xsl:value-of"
+              ]
+            },
+            "Country": {
+              "type": "object",
+              "properties": {
+                "xsl:value-of": {
+                  "type": "object",
+                  "properties": {
+                    "@select": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@select"
+                  ]
+                }
+              },
+              "required": [
+                "xsl:value-of"
+              ]
+            }
+          },
+          "required": [
+            "City",
+            "State",
+            "PostalCode",
+            "Country"
+          ]
+        }
+      },
+      "required": [
+        "@match",
+        "defaultroot"
+      ]
+    }
+  },
+  "required": [
+    "xsl:template"
+  ]
+}

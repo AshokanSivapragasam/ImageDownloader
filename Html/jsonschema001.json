@@ -1,0 +1,159 @@
+{
+	"type" : "object",
+	"$schema" : "http://json-schema.org/draft-03/schema",
+	"id" : "http://jsonschema.net",
+	"required" : false,
+	"properties" : {
+		"msxsl:script" : {
+			"type" : "object",
+			"id" : "http://jsonschema.net/msxsl:script",
+			"required" : false,
+			"properties" : {
+				"#cdata-section" : {
+					"type" : "string",
+					"id" : "http://jsonschema.net/msxsl:script/#cdata-section",
+					"required" : false
+				},
+				"@implements-prefix" : {
+					"type" : "string",
+					"id" : "http://jsonschema.net/msxsl:script/@implements-prefix",
+					"required" : false
+				},
+				"@language" : {
+					"type" : "string",
+					"id" : "http://jsonschema.net/msxsl:script/@language",
+					"required" : false
+				},
+				"msxsl:using" : {
+					"type" : "array",
+					"id" : "http://jsonschema.net/msxsl:script/msxsl:using",
+					"required" : false,
+					"items" : {
+						"type" : "object",
+						"id" : "http://jsonschema.net/msxsl:script/msxsl:using/0",
+						"required" : false,
+						"properties" : {
+							"@namespace" : {
+								"type" : "string",
+								"id" : "http://jsonschema.net/msxsl:script/msxsl:using/0/@namespace",
+								"required" : false
+							}
+						}
+					}
+				}
+			}
+		},
+		"xsl:template" : {
+			"type" : "object",
+			"id" : "http://jsonschema.net/xsl:template",
+			"required" : false,
+			"properties" : {
+				"@match" : {
+					"type" : "string",
+					"id" : "http://jsonschema.net/xsl:template/@match",
+					"required" : false
+				},
+				"defaultroot" : {
+					"type" : "object",
+					"id" : "http://jsonschema.net/xsl:template/defaultroot",
+					"required" : false,
+					"properties" : {
+						"xsl:for-each" : {
+							"type" : "object",
+							"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each",
+							"required" : false,
+							"properties" : {
+								"@select" : {
+									"type" : "string",
+									"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/@select",
+									"required" : false
+								},
+								"Content" : {
+									"type" : "object",
+									"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content",
+									"required" : false,
+									"properties" : {
+										"id" : {
+											"type" : "object",
+											"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/id",
+											"required" : false,
+											"properties" : {
+												"xsl:value-of" : {
+													"type" : "object",
+													"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/id/xsl:value-of",
+													"required" : false,
+													"properties" : {
+														"@select" : {
+															"type" : "string",
+															"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/id/xsl:value-of/@select",
+															"required" : false
+														}
+													}
+												}
+											}
+										},
+										"leadid" : {
+											"type" : "object",
+											"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/leadid",
+											"required" : false,
+											"properties" : {
+												"xsl:value-of" : {
+													"type" : "object",
+													"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/leadid/xsl:value-of",
+													"required" : false,
+													"properties" : {
+														"@select" : {
+															"type" : "string",
+															"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/leadid/xsl:value-of/@select",
+															"required" : false
+														}
+													}
+												}
+											}
+										},
+										"xsl:for-each" : {
+											"type" : "object",
+											"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/xsl:for-each",
+											"required" : false,
+											"properties" : {
+												"@select" : {
+													"type" : "string",
+													"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/xsl:for-each/@select",
+													"required" : false
+												},
+												"xsl:element" : {
+													"type" : "object",
+													"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/xsl:for-each/xsl:element",
+													"required" : false,
+													"properties" : {
+														"@name" : {
+															"type" : "string",
+															"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/xsl:for-each/xsl:element/@name",
+															"required" : false
+														},
+														"xsl:value-of" : {
+															"type" : "object",
+															"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/xsl:for-each/xsl:element/xsl:value-of",
+															"required" : false,
+															"properties" : {
+																"@select" : {
+																	"type" : "string",
+																	"id" : "http://jsonschema.net/xsl:template/defaultroot/xsl:for-each/Content/xsl:for-each/xsl:element/xsl:value-of/@select",
+																	"required" : false
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

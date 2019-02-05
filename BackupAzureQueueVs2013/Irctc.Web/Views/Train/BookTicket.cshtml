@@ -1,0 +1,49 @@
+﻿@model Irctc.Web.Models.Train
+
+@{
+    ViewBag.Title = "IRCTC";
+    ViewBag.Message = "Indian Railways Catering & Tourism Corporation";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<article>
+        <div class="display-label">
+            <b>@Html.DisplayNameFor(model => model.TrainName)</b> | @Html.DisplayFor(model => model.TrainName)
+        </div>
+
+        <div class="display-label">
+            <b>@Html.DisplayNameFor(model => model.FromStation)</b> | @Html.DisplayFor(model => model.FromStation)
+        </div>
+
+        <div class="display-label">
+            <b>@Html.DisplayNameFor(model => model.ToStation)</b> | @Html.DisplayFor(model => model.ToStation)
+        </div>
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "GetTrains", new { FromStation = Model.FromStation, ToStation = Model.ToStation })
+    </p>
+</article>
+
+<aside>
+    <h3>How to: Book Trains</h3>
+    <ol class="round">
+        <li class="one">
+            <h5>Validate your preferences and details</h5>
+            Double-check your seat preferences, details and your personal information are correct.
+        </li>
+
+        <li class="two">
+            <h5>Pay now</h5>
+            Hit 'Pay' to buy your seat(s) in train and plan your trip for a specified day. Good luck!
+        </li>
+    </ol>
+</aside>

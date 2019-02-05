@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MvcApp01.Models.RestaurantReview>
+
+@{
+    ViewBag.Title = "Restaurant reviews";
+}
+
+<h2>Reviews</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { restaurantId = ViewData["restaurantId"]})
+</p>
+
+@using (Html.BeginForm("Search", "Review", new { restaurantId = ViewData["restaurantId"] }, FormMethod.Get, null))
+{
+    @Html.ValidationSummary(true);
+    @Html.Label("lblSearchByRating", "Search By Rating: ");
+    @Html.TextBox("searchByRating");
+    
+    <input type="submit" name="sbmtSearchByRating" value="Search" />
+}
+
+@foreach (var item in Model)
+{    
+    <div style="float: left">
+        <div><b>@Html.LabelFor(modelItem => item.ReviewerName):</b> @Html.DisplayFor(modelItem => item.ReviewerName) | <b>@Html.LabelFor(modelItem => item.Rating):</b> @Html.DisplayFor(modelItem => item.Rating)</div>
+        <div><b>@Html.LabelFor(modelItem => item.ReviewBody):</b> @Html.DisplayFor(modelItem => item.ReviewBody)</div>
+        @Html.HiddenFor(modelItem => item.RestaurantId)
+    </div>
+    <div style="float: right">
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | 
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+    </div>
+    
+    <br /><br />
+    <hr />
+}
+
+

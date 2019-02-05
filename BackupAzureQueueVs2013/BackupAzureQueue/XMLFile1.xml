@@ -1,0 +1,122 @@
+﻿<TriggeredRequestBase xmlns="http://schemas.datacontract.org/2004/07/Microsoft.IT.RelationshipManagement.Interchange.Email.Common.Core" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <AccountId>10667122</AccountId>
+  <ApplicationName>ECIT Notifications</ApplicationName>
+  <BatchId>00000000-0000-0000-0000-000000000000</BatchId>
+  <CommunicationId>0</CommunicationId>
+  <ComponentStates xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+  <ConversationId>7e97dadf-1cc0-4817-a53c-e1b24f8212a7style="font-size: 11pt; font-family: 'Segoe UI',Arial,sans-serif; color: black !important; line-height: 120%;"</ConversationId>
+  <CurrentRetryAttempt>0</CurrentRetryAttempt>
+  <CustomerKey>Dynamic_HTMLBody_Comm_Responsive</CustomerKey>
+  <DelayBeforeRetry>0</DelayBeforeRetry>
+  <DeliveryType>Html</DeliveryType>
+  <EmailInterchangeRequestId>0c9ff0d5-9125-42fc-a0f7-36d0fdb1064c</EmailInterchangeRequestId>
+  <EndDateTime>2017-03-16T18:08:36.3524651Z</EndDateTime>
+  <EnterpriseAccountId>0</EnterpriseAccountId>
+  <EventDescription>ECIT Notifications</EventDescription>
+  <ExactTargetRequestId>00000000-0000-0000-0000-000000000000</ExactTargetRequestId>
+  <InterChangeUserId>114</InterChangeUserId>
+  <LimitedProgramId>0</LimitedProgramId>
+  <MaxRetryAttempts>6</MaxRetryAttempts>
+  <OperationStatus>ExternalNew</OperationStatus>
+  <ProcessStatus>EIReceiveSuccess</ProcessStatus>
+  <RequestError>None</RequestError>
+  <RequestExecutionPriority>High</RequestExecutionPriority>
+  <RequestType>TBNData</RequestType>
+  <ScheduledDate>0001-01-01T00:00:00</ScheduledDate>
+  <StartDateTime>2017-03-16T18:08:36.3524651Z</StartDateTime>
+  <Subscribers>
+    <SubscriberBase i:type="GenericSubscriber">
+      <Attributes>
+        <Attribute>
+          <Name>CC1</Name>
+          <Value>licensingadmins@softcat.com</Value>
+        </Attribute>
+        <Attribute>
+          <Name>BCC1</Name>
+          <Value>ecxpnotc@microsoft.com</Value>
+        </Attribute>
+        <Attribute>
+          <Name>SubjectLine</Name>
+          <Value>Microsoft Online Services Activation </Value>
+        </Attribute>
+        <Attribute>
+          <Name>LocaleID</Name>
+          <Value>en-US</Value>
+        </Attribute>
+        <Attribute>
+          <Name>SourceJobID</Name>
+          <Value>21545912</Value>
+        </Attribute>
+        <Attribute>
+          <Name>HTMLBody</Name>
+          <Value>
+            &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+            &lt;body&gt;
+            &lt;div style="font-size: 11pt; font-family: 'Segoe UI',Arial,sans-serif; color: black !important; line-height: 120%;"&gt;
+            &lt;p style="margin: 0in 0in 0pt;"&gt;
+            &lt;span style="font-size: 20px; font-family: Segoe UI; color: #0070c0;"&gt;Welcome to Microsoft Volume Licensing&lt;/span&gt;
+            &lt;span style="font-size: 12pt;"&gt;
+            &lt;span style="font-family: Segoe UI;"&gt;
+            &lt;span style="font-size: 20px;"&gt; &lt;/span&gt;
+            &lt;br /&gt;​
+            &lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p style="margin: 0in 0in 0pt;"&gt;
+            &lt;span style="font-size: 12pt;"&gt;
+            &lt;span style="font-family: Segoe UI;"&gt;
+            &lt;span style="font-size: 14px;"&gt;We’re sending you this message because you’re listed as the online administrator for the volume licensing agreement that your organization recently signed with Microsoft.&lt;br /&gt; 
+            &lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p style="margin: 0in 0in 0pt;"&gt;
+            &lt;span style="font-size: 14px; font-family: Segoe UI;"&gt;Please click &lt;a href="https://LicensingOnlineservicesactivation.microsoft.com/OSA/Registration?edlicnfo=MIICkQYJKoZIhvcNAQcDoIICgjCCAn4CAQAxggHAMIIBvAIBADCBozCBizELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjEVMBMGA1UECxMMTWljcm9zb2Z0IElUMR4wHAYDVQQDExVNaWNyb3NvZnQgSVQgU1NMIFNIQTICE1oABQMGf7A1Sym24RIAAQAFAwYwDQYJKoZIhvcNAQEBBQAEggEABPw6QSeHrhhY0SZutbewNwbdiyNR%2b3xXKkR7jwaMm3Ds0QdFKgcr4yJ28bsRv8Hd%2bBwWbr5mH2QcXAIBSnk6Dq7FXx5UNJ%2f0ZeuLJexenbOpGkZqVIAYsBBe5XY2xDcahghmPLtSuz7bUftXmVOturC8xeWQWGepcDRidT3iZGU9pTIoPQ8xBMemNZp6Ypi0Gzh7JqF2Vf2aFqDnKH43H%2bW51wti2eUEBY0LjcDsI3ca2XzhwK%2b%2bSu1tE6pGWrrDq%2fAjEF4PCQ%2fJCRtub43fVN3%2fTXU%2fbFsCjbkfTg8y0Z449%2fJ0hlkOkANCJEbzWoMGgyHbkkVxLPxpI9o2HHDCkTCBtAYJKoZIhvcNAQcBMBQGCCqGSIb3DQMHBAjqtNmla8pDyICBkK9krwCKENYWFV2TnTHfqZCtudWgKCrKOh6l4%2fHUFvgaOR7qpVIQu%2fjow%2fll5D5H3Lre15BSPhf739l8jqiXLz4SmnZeuFgGGtcAt8jBNO5WyZinifb084Qow%2bvSaSyMSVs8OVQMFWq18tdTUKj%2bufvujr56hLkrijJCqckRzy5O2BoSgR3vagpVxxT6ry6BtQ%3d%3d&amp;amp;InvitationKey=66d6e90f-08dd-4969-bd6d-0dcac206060a"&gt;here&lt;/a&gt; to get started with your online service. &lt;br /&gt;​
+            &lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p style="margin: 0in 0in 0pt;"&gt;
+            &lt;span style="font-size: 14px; font-family: Segoe UI;"&gt;If you wish to manage all of your volume licensing purchases, including online services and software purchases, please visit the Microsoft Volume Licensing Service Center.  The Volume Licensing Service Center allows users at your organization to securely view your purchase agreements and other information, view volume licensing orders, download software, and much more.  If you have not used the Volume Licensing Service Center before, you will need to register to access your agreements. &lt;br /&gt;​
+            &lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p style="margin: 0in 0in 0pt;"&gt;
+            &lt;span style="font-size: 14px; font-family: Segoe UI;"&gt;For assistance please contact your Microsoft partner. &lt;br /&gt;​
+            &lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p style="margin: 0in 0in 0pt;"&gt;
+            &lt;span style="font-size: 14px; font-family: Segoe UI;"&gt;Thank you for being a Microsoft customer. &lt;/span&gt;
+            &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;br /&gt;
+            &lt;br /&gt;
+            &lt;div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10pt;padding-bottom:10px;color: black !important;"&gt;
+            &lt;span style="font-family: 'Segoe UI', 'sans-serif';"&gt;
+            &lt;font size="2"&gt;
+            &lt;a style="text-decoration: underline;" href="http://www.microsoft.com/privacystatement/en-US/core/default.aspx"&gt;Privacy Statement&lt;/a&gt;
+            &lt;/font&gt;
+            &lt;/span&gt;
+            &lt;span style="font-family: Segoe UI;"&gt;
+            &lt;span style="font-size: 13px;"&gt;
+            | &lt;a href="http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"&gt;Terms of Use&lt;/a&gt; | &lt;a href="http://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx"&gt;Trademarks&lt;/a&gt;&lt;span style="font-family: Segoe UI;"&gt;
+            © 2017 Microsoft&lt;/span&gt;&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;span style="font-family: Segoe UI;"&gt;
+            &lt;span style="font-family: 'Segoe UI', 'sans-serif';" /&gt;
+            &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+            &lt;span style="font-family:'Courier New'; font-size:8pt; float:left;"&gt;Email Id: 7e97dadf-1cc0-4817-a53c-e1b24f8212a7&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+          </Value>
+        </Attribute>
+      </Attributes>
+      <EmailAddress>louise.sims@ombudsman-wales.org.uk</EmailAddress>
+      <SubscriberKey>7e97dadf-1cc0-4817-a53c-e1b24f8212a7</SubscriberKey>
+    </SubscriberBase>
+  </Subscribers>
+  <TemplateId i:nil="true" />
+  <TransactionType>Immediate</TransactionType>
+  <TriggerDataSource>None</TriggerDataSource>
+  <TriggerType>NoDelay</TriggerType>
+</TriggeredRequestBase>

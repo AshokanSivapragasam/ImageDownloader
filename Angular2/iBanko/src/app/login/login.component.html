@@ -1,0 +1,49 @@
+<section class="content-wrapper">
+  <mat-tab-group>
+    <mat-tab label="Customer ID">
+      <section class="login-container-capsule">
+        <section class="login-container">
+          <form name="form" (ngSubmit)="login()" #f="ngForm" novalidate>
+            <mat-form-field>
+              <input matInput placeholder="Enter your username" name="userId" [(ngModel)]="model.userId" #userId="ngModel" type="email" required>
+              <!--<mat-error *ngIf="emailValidator.invalid">{{getEmailValidatorMessage()}}</mat-error>-->
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Enter your password" [type]="passwordHidden ? 'password' : 'text'">
+              <mat-icon matSuffix (click)="passwordHidden = !passwordHidden">{{passwordHidden ? 'visibility' : 'visibility_off'}}</mat-icon>
+            </mat-form-field>
+            <button mat-raised-button style="width: 100%; background-color: #b01248;">LOGIN</button>
+          </form>
+          <section class="sub-action-links">
+            <a href="#forgot_password">Forgot password</a>
+            <a href="#unlock_account">Unlock account</a>
+            <a href="#call_helpline">Call helpline</a>
+            <!--<a href="register">First time user?</a>-->
+          </section>
+        </section>
+      </section>
+    </mat-tab>
+    <mat-tab label="Debit Card No">
+      <section class="login-container-capsule">
+          <section class="login-container">
+            <form name="form" (ngSubmit)="login()" #f="ngForm" novalidate>
+              <mat-form-field>
+                <input matInput placeholder="Enter your username" name="userId" [(ngModel)]="model.userId" #userId="ngModel" type="email" required>
+                <!--<mat-error *ngIf="emailValidator.invalid">{{getEmailValidatorMessage()}}</mat-error>-->
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Enter your password" [type]="passwordHidden ? 'password' : 'text'">
+                <mat-icon matSuffix (click)="passwordHidden = !passwordHidden">{{passwordHidden ? 'visibility' : 'visibility_off'}}</mat-icon>
+              </mat-form-field>
+              <button mat-raised-button style="width: 100%; background-color: #b01248;">LOGIN</button>
+            </form>
+            <section class="sub-action-links">
+              <a href="#forgot_password">Forgot password</a>
+              <a href="#unlock_account">Unlock account</a>
+              <a href="#call_helpline">Call helpline</a>
+            </section>
+          </section>
+        </section>
+    </mat-tab>
+  </mat-tab-group>
+</section>

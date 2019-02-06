@@ -1,0 +1,33 @@
+{
+	"MappingRuleConfig" : {
+		"TruthTable" : [{
+				"SourceColumn" : "",
+				"DestinationColumn" : "Content",
+				"DataType" : "JArray",
+				"ComplexType" : {
+					"DataType" : "JArray",
+					"Node" : "$.result[*]",
+					"TruthTable" : [{
+							"SourceColumn" : "$.id",
+							"DestinationColumn" : "id",
+							"DataType" : "long"
+						}, {
+							"SourceColumn" : "$.leadId",
+							"DestinationColumn" : "leadId",
+							"DataType" : "long"
+						}, {
+							"SourceColumn" : "$.attributes[*]",
+							"DestinationColumn" : "",
+							"DataType" : "JArray",
+							"TransformValue" : {
+								"Type" : "PromoteArrayToProperty",
+								"KeyLookupField" : "$.name",
+								"ValueLookupField" : "$.value"
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

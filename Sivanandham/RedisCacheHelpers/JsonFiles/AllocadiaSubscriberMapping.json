@@ -1,0 +1,22 @@
+{
+	"MappingRuleConfig" : {
+		"TruthTable" : [{
+				"SourceColumn" : "$.MessageBody.ActivityID",
+				"DestinationColumn" : "CellTrackingCode",
+				"DataType" : "string"
+			}, {
+				"SourceColumn" : "$.MessageBody.ActivityName",
+				"DestinationColumn" : "CellName",
+				"DataType" : "string"
+			}, {
+				"SourceColumn" : "$.MessageBody.ActivityOwner",
+				"DestinationColumn" : "CellOwner",
+				"DataType" : "string"
+			}, {
+				"SourceColumn" : "$.MessageBody.ExecutionTeam",
+				"DestinationColumn" : "CellDescription",
+				"DataType" : "string"
+			}
+		]
+	}
+}

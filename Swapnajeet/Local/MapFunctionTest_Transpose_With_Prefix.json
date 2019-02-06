@@ -1,0 +1,58 @@
+{
+	"xsl:stylesheet" : {
+		"@version" : "1.0",
+		"@exclude-result-prefixes" : "msxsl mslib fo",
+		"@xmlns:fo" : "http://www.w3.org/1999/XSL/Format",
+		"@xmlns:mslib" : "http://microsoft.com/mip/libraries",
+		"@xmlns:msxsl" : "urn:schemas-microsoft-com:xslt",
+		"@xmlns:xsl" : "http://www.w3.org/1999/XSL/Transform",
+		"xsl:output" : {
+			"@indent" : "yes",
+			"@method" : "xml"
+		},
+		"msxsl:script" : {
+			"@language" : "C#",
+			"@implements-prefix" : "mslib",
+			"msxsl:using" : [{
+					"@namespace" : "System.Globalization"
+				}, {
+					"@namespace" : "System"
+				}, {
+					"@namespace" : "System.Xml"
+				}, {
+					"@namespace" : "System.Text.RegularExpressions"
+				}
+			],
+			"#cdata-section" : "public string ReplaceAll(string data, string find, string replace){try{return Regex.Replace(data, find, replace, RegexOptions.IgnoreCase);}catch{return data;}}"
+		},
+		"xsl:template" : {
+			"@match" : "/",
+			"_" : {
+				"xsl:for-each" : {
+					"@select" : "./defaultroot/result",
+					"Content" : {
+						"id" : {
+							"xsl:value-of" : {
+								"@select" : "./id"
+							}
+						},
+						"leadid" : {
+							"xsl:value-of" : {
+								"@select" : "./leadId"
+							}
+						},
+						"xsl:for-each" : {
+							"@select" : "./attributes[string(./value)]",
+							"xsl:element" : [{
+									"@name" : "{concat('Attribute', mslib:ReplaceAll(./name, ' ', ''), '')}",
+									"xsl:value-of" : {
+										"@select" : "./value"
+									}
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	}

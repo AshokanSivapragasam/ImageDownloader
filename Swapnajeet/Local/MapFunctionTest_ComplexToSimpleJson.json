@@ -1,0 +1,38 @@
+{
+	"xsl:stylesheet" : {
+		"@version" : "1.0",
+		"@xmlns:xsl" : "http://www.w3.org/1999/XSL/Transform",
+		"xsl:output" : {
+			"@method" : "xml",
+			"@indent" : "no",
+			"@omit-xml-declaration" : "yes",
+			"@encoding" : "iso-8859-1"
+		},
+		"xsl:template" : [{
+				"@match" : "/",
+				"_" : {
+					"City" : {
+						"xsl:value-of" : {
+							"@select" : "./defaultroot/address/city"
+						}
+					},
+					"State" : {
+						"xsl:value-of" : {
+							"@select" : "./defaultroot/address/state"
+						}
+					},
+					"PostalCode" : {
+						"xsl:value-of" : {
+							"@select" : "./defaultroot/address/postalCode"
+						}
+					},
+					"Country" : {
+						"xsl:value-of" : {
+							"@select" : "./defaultroot/address/country"
+						}
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"MappingRuleConfig" : {
+		"DestinationType" : "",
+		"SourceObject" : "",
+		"DestinationObject" : "",
+		"TruthTable" : [{
+				"SourceColumn" : "$.address['city']",
+				"DestinationColumn" : "City",
+				"DataType" : "string",
+				"ComplexType" : null,
+				"TransformValue" : null
+			}, {
+				"SourceColumn" : "$.address['state']",
+				"DestinationColumn" : "State",
+				"DataType" : "string",
+				"ComplexType" : null,
+				"TransformValue" : null
+			}, {
+				"SourceColumn" : "$.address['postalCode']",
+				"DestinationColumn" : "PostalCode",
+				"DataType" : "string",
+				"ComplexType" : null,
+				"TransformValue" : null
+			}, {
+				"SourceColumn" : "$.address['country']",
+				"DestinationColumn" : "Country",
+				"DataType" : "string",
+				"ComplexType" : null,
+				"TransformValue" : null
+			}
+		]
+	}
+}

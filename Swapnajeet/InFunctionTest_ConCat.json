@@ -1,0 +1,53 @@
+{
+	"eventId" : "2353",
+	"externalKey" : "AP-Azure",
+	"accountCode" : "C-and-E",
+	"eventName" : "Windows 10",
+	"eventQuestions" : {
+		"question" : [{
+				"questionField" : "evt_ans_field19",
+				"questionId" : 638,
+				"questionCode" : "Design-LPHeroImg",
+				"questionName" : "Design-LPHeroImg",
+				"answers" : {
+					"answer" : [{
+							"answerId" : null,
+							"answerCode" : null,
+							"value" : "https://info.microsoft.com"
+						}
+					]
+				}
+			}, {
+				"questionField" : "evt_ans_field24",
+				"questionId" : 996,
+				"questionCode" : "Design-EmailBannerImg",
+				"questionName" : "Design-EmailBannerImg ",
+				"answers" : {
+					"answer" : [{
+							"answerId" : null,
+							"answerCode" : null,
+							"value" : "First answer"
+						}, {
+							"answerId" : null,
+							"answerCode" : null,
+							"value" : "Last answer"
+						}
+					]
+				}
+			}, {
+				"questionField" : "evt_ans_field24",
+				"questionId" : 996,
+				"questionCode" : "Design-EmailBannerImg",
+				"questionName" : "Design-EmailBannerImg ",
+				"answers" : {
+					"answer" : [{
+							"answerId" : null,
+							"answerCode" : null,
+							"value" : ""
+						}
+					]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"MappingRuleConfig" : {
+		"TruthTable" : [{
+				"SourceColumn" : "",
+				"DestinationColumn" : "EventList",
+				"DataType" : "string",
+				"ComplexType" : {
+					"DataType" : "JArray",
+					"Node" : "$.eventQuestions.question[*]",
+					"TruthTable" : [{
+							"SourceColumn" : "",
+							"DestinationColumn" : "title",
+							"DataType" : "string",
+							"TransformValue" : {
+								"Type" : "function",
+								"Delimeter" : ",",
+								"Function" : "ConCat",
+								"Params" : ["$.answers.answer[*].value", "Hello world!"]
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

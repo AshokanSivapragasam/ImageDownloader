@@ -1,0 +1,25 @@
+{
+	"xsl:stylesheet" : {
+		"@version" : "1.0",
+		"@xmlns:xsl" : "http://www.w3.org/1999/XSL/Transform",
+		"xsl:output" : {
+			"@indent" : "yes",
+			"@method" : "xml"
+		},
+		"xsl:template" : {
+			"@match" : "/",
+			"_" : {
+				"xsl:for-each" : {
+					"@select" : "./defaultroot/eventQuestions/question",
+					"EventList" : {
+						"title" : {
+							"xsl:value-of" : {
+								"@select" : "concat(./answers/answer[1]/value, ', Hello world', ./answers/answer[1]/answerId)"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,190 @@
+﻿
+
+<#
+    HAVE YOU INSTALLED AzSK?  
+
+   INSTALL COMMAND:  
+   
+   iwr 'https://aka.ms/AzSK/install.ps1' -UseBasicParsing | iex
+  
+    NOTES: 
+    For best experiance CLOSE all open PowerShell Sessions. Start a
+    new session and run the installation. After it's completed, close
+    and start again with a new session.  
+         
+#>
+
+
+<#    
+             1) UPDATE YOUR CONFIGURATION
+#>
+
+<#
+    $SecContactEmail = "secowneremail@microsoft.com"
+
+    Please Establish and update this value.
+
+    Security Contact EMAIl (User or DL)  DL's must be enabled to
+    accept mail from external sources.  This is the email where 
+    Monitored activity notification  will be sent. 
+
+    It's use in Security Center
+    It's use in AzSK Action Group
+    It's used for SQL Thread Detection Alerts
+    possibly other locations.
+
+#>
+
+    $SecContactEmail = "eiengind@microsoft.com,eiops@microsoft.com"
+    #Selecte and Execute Selection 
+    
+<#
+    $SecContactPhone = "4257035384"
+
+    Azure Security Center Emergency Contact Phone Number.  This number
+    will be engaged if BLUE team discovers a Subscription has been
+    comprimized or priority suspicious
+
+    Format = ############ numbers only.
+
+    To my knowlede it's used in Security Center only.
+
+#>
+
+    $SecContactPhone = "4257065000"
+    #Selecte and Execute Selection 
+    #$SecContactPhone = "4257065000"  
+
+<#
+    $OMSWorkspaceId = "afb44087-d657-4e1f-a87e-f6d272593219" 
+    $OMSSharedKey = "DchkTquuRodoD/blYr6z8xDG2E6hgFw2v51yCXf8CLiVrOLx5+mBeco83fsyyALU8/twXvUM7z4WW5mMoEbROw=="
+
+    CENTRALIZED OMS WorkSpace Id and Key.
+    Members of SMAzSKLeads has Read Permission.
+
+    AzSK OMS Solution EndPoint:
+    https://smitcloudmonitoring.portal.mms.microsoft.com/#Workspace/overview/solutions/details/index?_timeInterval.intervalDuration=86400&solutionId=Azure%2520Security%2520Health%2520View%2520-%2520SecurityCompliance&_timeInterval.intervalEnd=2018-01-07T22%3A45%3A41.956Z
+
+    AzSK OMS Advanced Analytics Query
+
+
+
+#>
+    
+    $OMSWorkspaceId = "afb44087-d657-4e1f-a87e-f6d272593219" 
+    $OMSSharedKey = "DchkTquuRodoD/blYr6z8xDG2E6hgFw2v51yCXf8CLiVrOLx5+mBeco83fsyyALU8/twXvUM7z4WW5mMoEbROw=="
+    #Selecte and Execute Selection 
+
+
+<#
+    $MySubscriptions = (one or more subscritpions) paste your sub id between the @" and "@.
+    a foreach will be invoked agains this list.  Remove any Blank Lines or Headers
+
+    You can retreive the list of subs assigned to you from the AzSK Leads Team Site.
+    Filter on AzSK-Subscription-Lead and select copy your list of Subscription IDs.
+
+    https://teams.microsoft.com/_#/xlsm/viewer/teams/https%3A~2F~2Fmicrosoft.sharepoint.com~2Fteams~2FSales%26MarketingAzSKLeads~2FShared%20Documents~2FAzSK%20-%20Team%20Leads~2FSubscription_To_ServiceOwnersLeads.xlsm?threadId=19%3A26f8889eac564bb18a40932a1ccf128b%40thread.skype&baseUrl=https%3A~2F~2Fmicrosoft.sharepoint.com~2Fteams~2FSales%26MarketingAzSKLeads&fileId=3BE91812-E5E5-49AD-9887-B41ACE50BED6&ctx=files&viewerAction=view
+         
+For Exampe:
+
+$MySubscriptions = @"
+40815E9F-57B6-4D96-A639-5BE085B0791F
+5114322F-7947-40DD-9DB0-CC3E7E5CF6CB
+37626BFF-A6A4-43C2-AFB0-807B4D7A5EFD
+E5BFE638-DBB6-41BD-911B-C75219B7F624
+"@.Replace([char]10+[char]13, "|").Split("|")
+
+#>
+
+
+$MySubscriptions = @"
+ca87dc93-813b-492f-8140-11918ab89fab
+c4664314-27c1-4ef8-a8b1-3eff7b7a8037
+30756a8e-d07d-43d1-87cc-bdcfdf2ce596
+"@.Replace([char]13+[char]10, "|").Split("|")
+#Selecte and Execute Selection 
+
+
+
+<#          
+    INVOKES a LOGIN Azure Login if needed.        
+#>
+   
+    Get-AzSKInfo -DoNotOpenOutputFolder
+    #Select and Execute Selection to Invoke Azure Login
+
+
+
+    #Checks your Access Level
+     $accountid = (Get-AzureRmContext).Account.id
+    foreach($SubID in $MySubscriptions) {
+        $Sub = Select-AzureRmSubscription -SubscriptionId $SubID 
+        Write-Host $sub.Subscription.Name $sub.Subscription.Id
+        write-host '=============================================='
+
+        $Perms = Get-AzureRmRoleAssignment -SignInName $accountid -IncludeClassicAdministrators 
+        
+        $isCoadmin = $false
+        foreach($p in $perms) { 
+            if($p.RoleDefinitionName -eq 'CoAdministrator') {
+                $isCoadmin = $true
+                Write-Host $p.roledefinitionname Found OK!
+                write-host ""
+                write-host ""
+            }
+        }
+
+        if($isCoadmin -eq $false) {
+                write-host 'Explicit permission not Found Adding yourself as Owner.'
+                $user = Get-AzureRmADUser -UserPrincipalName $accountid
+                New-AzureRmRoleAssignment -ObjectId $user.Id -RoleDefinitionName "Owner" -Scope $('/subscriptions/'+$sub.Subscription.Id)
+                Write-host 'You will need to manually elevate your self to CoAdministrator via the portal'
+                Write-host 'Find your login under subscription IAM (Access Control) click the elipse context meanu and select Add as CoAdministrator.'
+        }
+    }
+    #Select and Execute 
+
+   
+    # This loop will set Email, Phone and OMS info then run an Update on Subscription Policy
+    foreach($SubID in $MySubscriptions) {
+        Set-AzSKSubscriptionSecurity -SubscriptionId $SubID -SecurityContactEmails $SecContactEmail -SecurityPhoneNumber $SecContactPhone -DoNotOpenOutputFolder -Force
+        Set-AzSKAzureSecurityCenterPolicies -SubscriptionId $subid  -SecurityContactEmails $SecContactEmail -SecurityPhoneNumber $SecContactPhone  -DoNotOpenOutputFolder     
+        Update-AzSKSubscriptionSecurity -SubscriptionId $SubID -DoNotOpenOutputFolder
+        Set-AzSKAlerts -subscriptionid $subid -DoNotOpenOutputFolder
+        Update-AzSKContinuousAssurance -SubscriptionId $subID -OMSWorkspaceId $OMSWorkspaceId -OMSSharedKey $OMSSharedKey  
+    }
+    #Select and Execute Selection to run this loop
+
+
+    # This loop will set RBAC Security / ADD and REMOVE -Standard Activity for Subscription Security Clean Up
+    foreach($SubID in $MySubscriptions) {
+        Remove-AzSKSubscriptionRBAC -SubscriptionId $subid -DoNotOpenOutputFolder
+        Set-AzSKSubscriptionRBAC -SubscriptionId $subid -DoNotOpenOutputFolder
+    }
+    #Select and Execute Selection to run this loop
+
+<#
+
+    2)  RUN THE SECURITY SCANS 
+
+#>
+
+    #RUN THE SCANS for your subscriptions
+
+    # you may want to clean up working directores first
+    $LogDir = $env:LOCALAPPDATA + '\Microsoft\AzSKLogs'
+    Invoke-Item $LogDir
+    #Select and Exectue it will open the working log diretory -- clean Up as Appropriate.
+        
+
+    foreach($SubID in $MySubscriptions) {
+        Get-AzSKSubscriptionSecurityStatus -SubscriptionId $subid  -DoNotOpenOutputFolder  -UseBaselineControls
+        Get-AzSKAzureServicesSecurityStatus  -SubscriptionId $subid  -DoNotOpenOutputFolder  -UseBaselineControls -GenerateFixScript
+    }
+    #Select and Execute Selection to run this loop
+
+   
+
+
+   
+    

@@ -55,26 +55,17 @@
     #Selecte and Execute Selection 
     #$SecContactPhone = "4257065000"  
 
-<#
-    $OMSWorkspaceId = "afb44087-d657-4e1f-a87e-f6d272593219" 
-    $OMSSharedKey = "DchkTquuRodoD/blYr6z8xDG2E6hgFw2v51yCXf8CLiVrOLx5+mBeco83fsyyALU8/twXvUM7z4WW5mMoEbROw=="
-
-    CENTRALIZED OMS WorkSpace Id and Key.
+<#CENTRALIZED OMS WorkSpace Id and Key.
     Members of SMAzSKLeads has Read Permission.
 
     AzSK OMS Solution EndPoint:
-    https://smitcloudmonitoring.portal.mms.microsoft.com/#Workspace/overview/solutions/details/index?_timeInterval.intervalDuration=86400&solutionId=Azure%2520Security%2520Health%2520View%2520-%2520SecurityCompliance&_timeInterval.intervalEnd=2018-01-07T22%3A45%3A41.956Z
-
+  
     AzSK OMS Advanced Analytics Query
 
 
 
 #>
-    
-    $OMSWorkspaceId = "afb44087-d657-4e1f-a87e-f6d272593219" 
-    $OMSSharedKey = "DchkTquuRodoD/blYr6z8xDG2E6hgFw2v51yCXf8CLiVrOLx5+mBeco83fsyyALU8/twXvUM7z4WW5mMoEbROw=="
-    #Selecte and Execute Selection 
-
+  
 
 <#
     $MySubscriptions = (one or more subscritpions) paste your sub id between the @" and "@.
